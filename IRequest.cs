@@ -4,7 +4,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace OpenTrack.Requests
+namespace OpenTrack
 {
     public abstract class IRequest<T>
     {

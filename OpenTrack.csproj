@@ -46,7 +46,7 @@
     <Compile Include="Requests\ServiceTechsTableRequest.cs" />
     <Compile Include="Requests\ServiceWritersTableRequest.cs" />
     <Compile Include="Requests\GetRepairOrderDetail.cs" />
-    <Compile Include="Requests\IRequest.cs" />
+    <Compile Include="IRequest.cs" />
     <Compile Include="Requests\OpenRepairOrderLookup.cs" />
     <Compile Include="OpenTrackAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
