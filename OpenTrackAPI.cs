@@ -40,6 +40,8 @@ namespace OpenTrack
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
         {
+            CheckDealerInfo(query);
+
             var response = SubmitRequest<OpenRepairOrderLookupResponse>(query);
 
             // TODO Handle errors?
@@ -49,11 +51,20 @@ namespace OpenTrack
 
         public IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(ClosedRepairOrderLookup query)
         {
+            CheckDealerInfo(query);
+
             var response = SubmitRequest<ClosedRepairOrderLookupResponse>(query);
 
             // TODO Handle errors?
 
             return response.Items;
+        }
+
+        internal void CheckDealerInfo<T>(IRequest<T> request)
+        {
+            if (String.IsNullOrWhiteSpace(request.DealerCode)) throw new ArgumentNullException("Invalid DealerCode provided.");
+
+            if (String.IsNullOrWhiteSpace(request.EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
         }
 
         /// <summary>
