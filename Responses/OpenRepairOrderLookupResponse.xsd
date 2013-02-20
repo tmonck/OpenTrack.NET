@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OpenRepairOrderLookupResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="OpenRepairOrderLookupResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OpenRepairOrder">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalKey" type="xs:string" minOccurs="0" />
+              <xs:element name="CounterPersonID" type="xs:string" minOccurs="0" />
+              <xs:element name="RecordStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="DocumentType" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionType" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTransactionDate" type="xs:string" minOccurs="0" />
+              <xs:element name="RepairOrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerKey" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPhoneNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress1" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress2" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerCity" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerState" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerZipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="ShipToKey" type="xs:string" minOccurs="0" />
+              <xs:element name="PaymentMethod" type="xs:string" minOccurs="0" />
+              <xs:element name="SaleType" type="xs:string" minOccurs="0" />
+              <xs:element name="PriceLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxExempt" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="ShippingTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderDeposit" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderDepositCR" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderDepositPercent" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderDepositOverride" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderOnHold" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsSalesTax1" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsSalesTax2" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsSalesTax3" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsSalesTax4" type="xs:string" minOccurs="0" />
+              <xs:element name="CounterPersonName" type="xs:string" minOccurs="0" />
+              <xs:element name="SortKey" type="xs:string" minOccurs="0" />
+              <xs:element name="AuthorizeCounterPersonID" type="xs:string" minOccurs="0" />
+              <xs:element name="CreditCardARCustomerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PurchaseOrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ReceiptNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="OriginalDocNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalAccountNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ROType" type="xs:string" minOccurs="0" />
+              <xs:element name="ROStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyRO" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsApproved" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceApproved" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceWriterID" type="xs:string" minOccurs="0" />
+              <xs:element name="ROTechnicianID" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalEstimate" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractComp" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractComp2" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractDeduct" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractDeduct2" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyDeduct" type="xs:string" minOccurs="0" />
+              <xs:element name="VIN" type="xs:string" minOccurs="0" />
+              <xs:element name="StockNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Make" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelYear" type="xs:string" minOccurs="0" />
+              <xs:element name="Truck" type="xs:string" minOccurs="0" />
+              <xs:element name="FranchiseCode" type="xs:string" minOccurs="0" />
+              <xs:element name="OdometerIn" type="xs:string" minOccurs="0" />
+              <xs:element name="OdometerOut" type="xs:string" minOccurs="0" />
+              <xs:element name="TimeIn" type="xs:string" minOccurs="0" />
+              <xs:element name="PromisedDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="RemainingTime" type="xs:string" minOccurs="0" />
+              <xs:element name="TagNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="HeaderComments" type="xs:string" minOccurs="0" />
+              <xs:element name="ShopSupplyOverride" type="xs:string" minOccurs="0" />
+              <xs:element name="HazardousMaterialOverride" type="xs:string" minOccurs="0" />
+              <xs:element name="LaborTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="SubletTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="SCDeductPaid" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayHazardousMaterial" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayTax1" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayTax2" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayTax3" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayTax4" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyTax1" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyTax2" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyTax3" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyTax4" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalTax1" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalTax2" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalTax3" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalTax4" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractTax1" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractTax2" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractTax3" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractTax4" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayShopSup" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyShopSup" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalShopSup" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceContractShopSup" type="xs:string" minOccurs="0" />
+              <xs:element name="CouponNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CouponDiscount" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCouponDiscount" type="xs:string" minOccurs="0" />
+              <xs:element name="PaidByManufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="PaidByDealer" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPayTotalDue" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="DateToArrive" type="xs:string" minOccurs="0" />
+              <xs:element name="ARCustomerKey" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyRONumber" type="xs:string" minOccurs="0" />
+              <xs:element name="WorkStationID" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalAuthorizedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="AppointmentDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="DateTimeLastLineComplete" type="xs:string" minOccurs="0" />
+              <xs:element name="DateTimePreInvoiced" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalPayType" type="xs:string" minOccurs="0" />
+              <xs:element name="RepairOrderPriority" type="xs:string" minOccurs="0" />
+              <xs:element name="DailyRentalAgreementNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TowedInIndicator" type="xs:string" minOccurs="0" />
+              <xs:element name="LastModified" type="xs:string" minOccurs="0" />
+              <xs:element name="Details" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="OpenRepairOrderDetail" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ServiceLineNo" type="xs:string" minOccurs="0" />
+                          <xs:element name="LineType" type="xs:string" minOccurs="0" />
+                          <xs:element name="SequenceNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="CounterPersonID" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="SpecialOrderEmergencyPurchase" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransDate" type="xs:string" minOccurs="0" />
+                          <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+                          <xs:element name="PartNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="PartNoLength" type="xs:string" minOccurs="0" />
+                          <xs:element name="StockGroup" type="xs:string" minOccurs="0" />
+                          <xs:element name="BinLocation" type="xs:string" minOccurs="0" />
+                          <xs:element name="Quantity" type="xs:string" minOccurs="0" />
+                          <xs:element name="Cost" type="xs:string" minOccurs="0" />
+                          <xs:element name="ListPrice" type="xs:string" minOccurs="0" />
+                          <xs:element name="TradePrice" type="xs:string" minOccurs="0" />
+                          <xs:element name="FlatPrice" type="xs:string" minOccurs="0" />
+                          <xs:element name="NetPrice" type="xs:string" minOccurs="0" />
+                          <xs:element name="BookList" type="xs:string" minOccurs="0" />
+                          <xs:element name="PriceMethod" type="xs:string" minOccurs="0" />
+                          <xs:element name="PricePercent" type="xs:string" minOccurs="0" />
+                          <xs:element name="PriceBase" type="xs:string" minOccurs="0" />
+                          <xs:element name="SpecialCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="PriceOverride" type="xs:string" minOccurs="0" />
+                          <xs:element name="GroupPrice" type="xs:string" minOccurs="0" />
+                          <xs:element name="IsCorePart" type="xs:string" minOccurs="0" />
+                          <xs:element name="AddNSPart" type="xs:string" minOccurs="0" />
+                          <xs:element name="SpecialOrderPriority" type="xs:string" minOccurs="0" />
+                          <xs:element name="OriginalSpecialOrder" type="xs:string" minOccurs="0" />
+                          <xs:element name="ExcludeFromHistory" type="xs:string" minOccurs="0" />
+                          <xs:element name="Comments" type="xs:string" minOccurs="0" />
+                          <xs:element name="LineStatus" type="xs:string" minOccurs="0" />
+                          <xs:element name="ServiceType" type="xs:string" minOccurs="0" />
+                          <xs:element name="LinePaymentMethod" type="xs:string" minOccurs="0" />
+                          <xs:element name="PolicyAdjustment" type="xs:string" minOccurs="0" />
+                          <xs:element name="TechnicianID" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborOpCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="CorrectionLaborOpCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborCostHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="ActualRetailAmount" type="xs:string" minOccurs="0" />
+                          <xs:element name="FailureCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="PriceLevel" type="xs:string" minOccurs="0" />
+                          <xs:element name="PriceStrategyAssignment" type="xs:string" minOccurs="0" />
+                          <xs:element name="SubletVendorNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="SubletInvoiceNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="CouponNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="FactoryLaborHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="AuthorizationCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="BatteryWarrantyCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="DateTimeLineCompleted" type="xs:string" minOccurs="0" />
+                          <xs:element name="InternalAccount" type="xs:string" minOccurs="0" />
+                          <xs:element name="Authorizer" type="xs:string" minOccurs="0" />
+                          <xs:element name="NetItemTotal" type="xs:string" minOccurs="0" />
+                          <xs:element name="AdministrativeLaborAmount" type="xs:string" minOccurs="0" />
+                          <xs:element name="AdministrativeHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="PaintAndMaterialsCost" type="xs:string" minOccurs="0" />
+                          <xs:element name="PaintAndMaterialsRetail" type="xs:string" minOccurs="0" />
+                          <xs:element name="RepeatRepairFlag" type="xs:string" minOccurs="0" />
+                          <xs:element name="TaxableInternalLine" type="xs:string" minOccurs="0" />
+                          <xs:element name="UpsellFlag" type="xs:string" minOccurs="0" />
+                          <xs:element name="WarrantyClaimType" type="xs:string" minOccurs="0" />
+                          <xs:element name="VATCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="VATAmount" type="xs:string" minOccurs="0" />
+                          <xs:element name="ReturnToInventoryFlag" type="xs:string" minOccurs="0" />
+                          <xs:element name="SkillLevel" type="xs:string" minOccurs="0" />
+                          <xs:element name="OEMReplacementFlag" type="xs:string" minOccurs="0" />
+                          <xs:element name="CostDifferential" type="xs:string" minOccurs="0" />
+                          <xs:element name="OptionSequenceNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="DispatchStartTime" type="xs:string" minOccurs="0" />
+                          <xs:element name="TotalDiscountLabor" type="xs:string" minOccurs="0" />
+                          <xs:element name="TotalDiscountParts" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

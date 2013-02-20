@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServiceTechsTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ServiceTechsTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServiceTechRecord">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TechnicianId" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="EmployeeNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PayrollEmployeeNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="StateCertificationNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Active" type="xs:string" minOccurs="0" />
+              <xs:element name="AssignedServiceWriter" type="xs:string" minOccurs="0" />
+              <xs:element name="DefaultServiceType" type="xs:string" minOccurs="0" />
+              <xs:element name="LaborRateA" type="xs:string" minOccurs="0" />
+              <xs:element name="LaborRateB" type="xs:string" minOccurs="0" />
+              <xs:element name="LaborRateC" type="xs:string" minOccurs="0" />
+              <xs:element name="LaborRateD" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalLaborRateA" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalLaborRateB" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalLaborRateC" type="xs:string" minOccurs="0" />
+              <xs:element name="InternalLaborRateD" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceLaborRateA" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceLaborRateB" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceLaborRateC" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceLaborRateD" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyLaborRateA" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyLaborRateB" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyLaborRateC" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyLaborRateD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
