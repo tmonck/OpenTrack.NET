@@ -146,8 +146,29 @@ namespace OpenTrack
                 // Take the element from the first content item of the response payload.
                 var response = payload.content[0].Any;
 
+                // Check for errors
+                ErrorCheck(response);
+
                 // Process the request with the appropriate parser/handler.
                 return request.ProcessResponse(response);
+            }
+        }
+
+        internal virtual void ErrorCheck(XmlElement xml)
+        {
+            foreach (XmlNode child in xml.ChildNodes)
+            {
+                // <Error>
+                //      <Code>311</Code>
+                //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
+                // </Error>
+
+                if ("Error" == child.Name)
+                {
+                    // TODO Check error codes
+
+                    throw new Exception(child.InnerXml);
+                }
             }
         }
 
