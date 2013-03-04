@@ -19,7 +19,7 @@ namespace OpenTrack.TestApp
 
             var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup()
                 {
-                    EnterpriseCode = "7E",
+                    EnterpriseCode = "ZE",
                     DealerCode = "ZE7",
                     ServerName = "arkonap.arkona.com"
                 });

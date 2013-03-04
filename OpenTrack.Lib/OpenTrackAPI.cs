@@ -1,4 +1,5 @@
-﻿using OpenTrack.Definitions;
+﻿using Microsoft.Web.Services3.Security.Tokens;
+using OpenTrack.Definitions;
 using OpenTrack.Requests;
 using System;
 using System.Collections.Generic;
@@ -155,7 +156,7 @@ namespace OpenTrack
         /// </summary>
         internal virtual Definitions.OpenTrack GetService()
         {
-            return new Definitions.OpenTrack()
+            var service = new Definitions.OpenTrack()
             {
                 Url = this.Url,
                 Credentials = new NetworkCredential()
@@ -164,6 +165,10 @@ namespace OpenTrack
                     Password = this.Password
                 }
             };
+
+            service.RequestSoapContext.Security.Tokens.Add(new UsernameToken(this.Username, this.Password, PasswordOption.SendHashed));
+
+            return service;
         }
     }
 }

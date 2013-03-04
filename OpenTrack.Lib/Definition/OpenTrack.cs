@@ -25,7 +25,8 @@ namespace OpenTrack.Definitions {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="starTransport", Namespace="http://www.starstandards.org/webservices/2005/10/transport/bindings")]
-    public partial class OpenTrack : System.Web.Services.Protocols.SoapHttpClientProtocol {
+    public partial class OpenTrack : Microsoft.Web.Services3.WebServicesClientProtocol
+    {
         
         private PayloadManifest payloadManifestValueField;
         
