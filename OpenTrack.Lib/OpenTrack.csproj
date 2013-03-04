@@ -37,6 +37,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Definition\OpenTrack.cs" />
     <Compile Include="IOpenTrackAPI.cs" />
     <Compile Include="Requests\ClosedRepairOrderLookup.cs" />
     <Compile Include="Requests\ServiceTechsTableRequest.cs" />
@@ -60,6 +61,45 @@
     <Compile Include="Responses\OpenRepairOrderLookupResponse.cs" />
     <Compile Include="Responses\ServiceTechsTable.cs" />
     <Compile Include="Responses\ServiceWritersTable.cs" />
+    <Compile Include="Service References\Definitions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\Definitions\OpenTrack.Definitions.Payload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Definitions\OpenTrack.Definitions.PayloadManifest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Definitions\OpenTrack.Definitions.ProcessMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Definitions\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Definitions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Definitions\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Definitions\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Definitions\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Definitions\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

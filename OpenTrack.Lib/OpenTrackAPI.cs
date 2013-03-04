@@ -1,9 +1,8 @@
-﻿using Microsoft.Web.Services3.Security.Tokens;
-using OpenTrack.Definitions;
+﻿using OpenTrack.Definitions;
 using OpenTrack.Requests;
 using System;
 using System.Collections.Generic;
-using System.Net;
+using System.ServiceModel;
 using System.Xml;
 
 namespace OpenTrack
@@ -127,7 +126,7 @@ namespace OpenTrack
                 };
 
                 // Tell the web service how to interpret the XML we're sending along.
-                svc.PayloadManifestValue = new PayloadManifest()
+                var manifest = new PayloadManifest()
                 {
                     manifest = new[]
                     {
@@ -141,7 +140,7 @@ namespace OpenTrack
                 };
 
                 // Send the message and it'll load the response into the same object.
-                svc.ProcessMessage(ref payload);
+                svc.ProcessMessage(ref manifest, ref payload);
 
                 // Take the element from the first content item of the response payload.
                 var response = payload.content[0].Any;
@@ -175,21 +174,18 @@ namespace OpenTrack
         /// <summary>
         /// Return a configured proxy reference to the web service.
         /// </summary>
-        internal virtual Definitions.OpenTrack GetService()
+        internal virtual Definitions.starTransportClient GetService()
         {
-            var service = new Definitions.OpenTrack()
-            {
-                Url = this.Url,
-                Credentials = new NetworkCredential()
-                {
-                    UserName = this.Username,
-                    Password = this.Password
-                }
-            };
+            var binding = new BasicHttpBinding();
 
-            service.RequestSoapContext.Security.Tokens.Add(new UsernameToken(this.Username, this.Password, PasswordOption.SendHashed));
+            binding.Security.Mode = BasicHttpSecurityMode.TransportWithMessageCredential;
 
-            return service;
+            var client = new starTransportClient(binding, new EndpointAddress(this.Url));
+
+            client.ClientCredentials.UserName.UserName = this.Username;
+            client.ClientCredentials.UserName.Password = this.Password;
+
+            return client;
         }
     }
 }

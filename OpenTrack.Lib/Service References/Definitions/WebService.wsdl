@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.starstandards.org/webservices/2005/10/transport/bindings" xmlns:s0="http://www.starstandards.org/webservices/2005/10/transport" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.starstandards.org/webservices/2005/10/transport/bindings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.starstandards.org/webservices/2005/10/transport">
+      <s:element name="ProcessMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="payload" type="s0:Payload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Payload">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="content" type="s0:Content" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="Content">
+        <s:sequence>
+          <s:any minOccurs="0" maxOccurs="1" />
+        </s:sequence>
+        <s:attribute name="id" type="s:ID" />
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ProcessMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="payload" type="s0:Payload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayloadManifest" type="s0:PayloadManifest" />
+      <s:complexType name="PayloadManifest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="manifest" type="s0:Manifest" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:complexType name="Manifest">
+        <s:attribute name="contentID" type="s:IDREF" />
+        <s:attribute name="namespaceURI" type="s:anyURI" />
+        <s:attribute name="element" type="s:string" />
+        <s:attribute name="relatedID" type="s:string" />
+        <s:attribute name="version" type="s:string" />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessMessageSoapIn">
+    <wsdl:part name="parameters" element="s0:ProcessMessage" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMessageSoapOut">
+    <wsdl:part name="parameters" element="s0:ProcessMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMessagePayloadManifest">
+    <wsdl:part name="PayloadManifest" element="s0:PayloadManifest" />
+  </wsdl:message>
+  <wsdl:portType name="starTransport">
+    <wsdl:operation name="ProcessMessage">
+      <wsdl:input message="tns:ProcessMessageSoapIn" />
+      <wsdl:output message="tns:ProcessMessageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="starTransport" type="tns:starTransport">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessMessage">
+      <soap:operation soapAction="http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ProcessMessagePayloadManifest" part="PayloadManifest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:ProcessMessagePayloadManifest" part="PayloadManifest" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="starTransport1" type="tns:starTransport">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessMessage">
+      <soap12:operation soapAction="http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ProcessMessagePayloadManifest" part="PayloadManifest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ProcessMessagePayloadManifest" part="PayloadManifest" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="starTransport" binding="tns:starTransport">
+      <soap:address location="https://opentrackqa.arkona.com/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="starTransport1" binding="tns:starTransport1">
+      <soap12:address location="https://opentrackqa.arkona.com/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
