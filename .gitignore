@@ -102,7 +102,4 @@ UpgradeLog*.XML
 [Ss]ession.[Cc]onfig
 
 # #2596 remove NuGet packages from solution
-Solutions/packages/*
-
-Web Applications/win.asrpro.web/App_Data/XmlProfiles/ASRPro/*.xml
-ProceduresAndViews.sql
+packages/*
