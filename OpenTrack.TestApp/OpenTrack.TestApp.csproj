@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Local.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenTrack.Lib\OpenTrack.csproj">
