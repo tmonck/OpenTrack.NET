@@ -17,12 +17,12 @@ namespace OpenTrack.TestApp
 
             var api = new OpenTrackAPI(url, username, password);
 
-            var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup()
+            var result = api.FindClosedRepairOrders(new Requests.ClosedRepairOrderLookup()
                 {
                     EnterpriseCode = "ZE",
                     DealerCode = "ZE7",
                     ServerName = "arkonap.arkona.com",
-                    CustomerName = "DOE, JOHN"
+                    RepairOrderNumber = "7004255"
                 });
 
             foreach (var r in result)

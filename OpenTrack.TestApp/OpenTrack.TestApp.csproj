@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenTrack.Lib\OpenTrack.csproj">
+    <ProjectReference Include="..\OpenTrack.Lib\OpenTrack.Lib.csproj">
       <Project>{76114f3e-5b27-4173-97cb-02a0f2d202b3}</Project>
-      <Name>OpenTrack</Name>
+      <Name>OpenTrack.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

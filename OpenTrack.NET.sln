@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrack", "OpenTrack.Lib\OpenTrack.csproj", "{76114F3E-5B27-4173-97CB-02A0F2D202B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrack.Lib", "OpenTrack.Lib\OpenTrack.Lib.csproj", "{76114F3E-5B27-4173-97CB-02A0F2D202B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrack.TestApp", "OpenTrack.TestApp\OpenTrack.TestApp.csproj", "{68E81602-235E-4EE4-BAA1-076E852E785F}"
 EndProject
