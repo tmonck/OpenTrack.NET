@@ -8,8 +8,6 @@ namespace OpenTrack
 {
     public abstract class IRequest<T>
     {
-        internal static readonly XmlSerializer Serializer = new XmlSerializer(typeof(T));
-
         // Not sure if these are per-dealer yet or what.
         public String EnterpriseCode { get; set; }
 
@@ -29,7 +27,7 @@ namespace OpenTrack
         {
             using (var reader = XmlReader.Create(new StringReader(xml.OuterXml)))
             {
-                return (T)Serializer.Deserialize(reader);
+                return (T)new XmlSerializer(typeof(T)).Deserialize(reader);
             }
         }
 
