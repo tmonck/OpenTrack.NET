@@ -178,8 +178,13 @@ namespace OpenTrack
         {
             var binding = new BasicHttpBinding();
 
+            // We could be getting back a lot of data. Let's just try and get it all!
+            binding.MaxReceivedMessageSize = int.MaxValue;
+
+            // We need to send the credential along with the message.
             binding.Security.Mode = BasicHttpSecurityMode.TransportWithMessageCredential;
 
+            // Create a client with the given endpoint.
             var client = new starTransportClient(binding, new EndpointAddress(this.Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
