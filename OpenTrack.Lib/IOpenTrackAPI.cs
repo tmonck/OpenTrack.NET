@@ -8,8 +8,14 @@ namespace OpenTrack
     /// </summary>
     public interface IOpenTrackAPI
     {
+        /// <summary>
+        /// Returns a list of open repair orders matching the given query criteria.
+        /// </summary>
         IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query);
 
+        /// <summary>
+        /// Returns a list of closed repair orders matching the given query criteria.
+        /// </summary>
         IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(ClosedRepairOrderLookup query);
     }
 }
