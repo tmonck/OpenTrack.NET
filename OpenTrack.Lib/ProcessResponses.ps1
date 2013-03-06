@@ -7,4 +7,9 @@ pushd Responses
 ls *.xml | foreach-object { xsd $_ }
 ls *.xsd | foreach-object { xsd $_  /classes}
 
+foreach($file in (Get-ChildItem *.cs))
+{
+	(Get-Content $file.PSPath) | ForEach-Object { $_ -replace "\[\]\[\]", "[]" } | Set-Content $file.PSPath
+}
+
 popd
