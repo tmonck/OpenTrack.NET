@@ -2,6 +2,7 @@
 using OpenTrack.Requests;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.ServiceModel;
 using System.Xml;
 
@@ -140,6 +141,15 @@ namespace OpenTrack
 
                 // Check for errors
                 ErrorCheck(response);
+
+                // In debug, let's write out all of the XML to files.
+#if DEBUG
+                using(var w = new StreamWriter(String.Format("{0}.xml", Guid.NewGuid())))
+                {
+                    w.Write(response.OuterXml);
+                }
+#endif
+
 
                 // Process the request with the appropriate parser/handler.
                 return request.ProcessResponse(response);
