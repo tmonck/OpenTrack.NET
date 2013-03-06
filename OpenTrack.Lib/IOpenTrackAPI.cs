@@ -8,7 +8,7 @@ namespace OpenTrack
     /// </summary>
     public interface IOpenTrackAPI
     {
-
+        IEnumerable<ServiceLaborOpcodesTableServiceLaborOpcodeRecord> GetOpcodes(ServiceLaborOpcodesTableRequest query);
 
         /// <summary>
         /// Returns a list of open repair orders matching the given query criteria.
@@ -23,11 +23,11 @@ namespace OpenTrack
         /// <summary>
         /// Returns a list of service advisors for the dealership.
         /// </summary>
-        IEnumerable<ServiceWritersTableServiceWriterRecord> FindServiceAdvisors(ServiceWritersTableRequest query);
+        IEnumerable<ServiceWritersTableServiceWriterRecord> GetServiceAdvisors(ServiceWritersTableRequest query);
 
         /// <summary>
         /// Returns a list of technicians for the dealership.
         /// </summary>
-        IEnumerable<ServiceTechsTableServiceTechRecord> FindTechnicians(ServiceTechsTableRequest query);
+        IEnumerable<ServiceTechsTableServiceTechRecord> GetTechnicians(ServiceTechsTableRequest query);
     }
 }

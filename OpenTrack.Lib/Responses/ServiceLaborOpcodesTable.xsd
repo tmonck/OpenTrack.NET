@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServiceLaborOpcodesTable" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="ServiceLaborOpcodesTable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServiceLaborOpcodeRecord">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="OperationCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Description1" type="xs:string" minOccurs="0" />
+              <xs:element name="Description2" type="xs:string" minOccurs="0" />
+              <xs:element name="Description3" type="xs:string" minOccurs="0" />
+              <xs:element name="Description4" type="xs:string" minOccurs="0" />
+              <xs:element name="MajorCode" type="xs:string" minOccurs="0" />
+              <xs:element name="MinorCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="Make" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="Engine" type="xs:string" minOccurs="0" />
+              <xs:element name="Year" type="xs:string" minOccurs="0" />
+              <xs:element name="DefLinePaymentMethod" type="xs:string" minOccurs="0" />
+              <xs:element name="CorrectionLOP" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="ExcludeDiscount" type="xs:string" minOccurs="0" />
+              <xs:element name="SkillLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="Taxable" type="xs:string" minOccurs="0" />
+              <xs:element name="HazardMaterialCharge" type="xs:string" minOccurs="0" />
+              <xs:element name="ShopSupplyCharge" type="xs:string" minOccurs="0" />
+              <xs:element name="RetailMethod" type="xs:string" minOccurs="0" />
+              <xs:element name="RetailAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="CostMethod" type="xs:string" minOccurs="0" />
+              <xs:element name="CostAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsMethod" type="xs:string" minOccurs="0" />
+              <xs:element name="PartsAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="Estimate" type="xs:string" minOccurs="0" />
+              <xs:element name="EstimatedHours" type="xs:string" minOccurs="0" />
+              <xs:element name="WaiterFlag" type="xs:string" minOccurs="0" />
+              <xs:element name="PredefinedCauseDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="AdditionalDescriptionLine1" type="xs:string" minOccurs="0" />
+              <xs:element name="AdditionalDescriptionLine2" type="xs:string" minOccurs="0" />
+              <xs:element name="PredefinedComplaintDescription" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

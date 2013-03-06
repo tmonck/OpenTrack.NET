@@ -57,7 +57,7 @@ namespace OpenTrack
             return response.Items;
         }
 
-        public IEnumerable<ServiceWritersTableServiceWriterRecord> FindServiceAdvisors(ServiceWritersTableRequest query)
+        public IEnumerable<ServiceWritersTableServiceWriterRecord> GetServiceAdvisors(ServiceWritersTableRequest query)
         {
             var response = SubmitRequest<ServiceWritersTable>(query);
 
@@ -66,9 +66,18 @@ namespace OpenTrack
             return response.Items;
         }
 
-        public IEnumerable<ServiceTechsTableServiceTechRecord> FindTechnicians(ServiceTechsTableRequest query)
+        public IEnumerable<ServiceTechsTableServiceTechRecord> GetTechnicians(ServiceTechsTableRequest query)
         {
             var response = SubmitRequest<ServiceTechsTable>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
+        public IEnumerable<ServiceLaborOpcodesTableServiceLaborOpcodeRecord> GetOpcodes(ServiceLaborOpcodesTableRequest query)
+        {
+            var response = SubmitRequest<ServiceLaborOpcodesTable>(query);
 
             // TODO Handle errors?
 

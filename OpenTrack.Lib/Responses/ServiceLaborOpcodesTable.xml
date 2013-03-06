@@ -1,0 +1,1550 @@
+<ServiceLaborOpcodesTable xmlns="">
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR10</OperationCode>
+    <Description1>LABOR10</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod>CP</DefLinePaymentMethod>
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>99</HazardMaterialCharge>
+    <ShopSupplyCharge>Y</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>199</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>150</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>300</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>5</EstimatedHours>
+    <WaiterFlag>Y</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR1</OperationCode>
+    <Description1>LABOR OP 1</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>2</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>100</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR</OperationCode>
+    <Description1>LABOR OP</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>100</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR2</OperationCode>
+    <Description1>LABOR 2</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod>C</DefLinePaymentMethod>
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>1</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>5</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>6</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>7</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>2</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR3</OperationCode>
+    <Description1>LABOR 3</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>3</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR4</OperationCode>
+    <Description1>LABOR OP CODE 4</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>25</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>4</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR5</OperationCode>
+    <Description1>LABOR OP CODE 5</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>B</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>5</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>5.5</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR6</OperationCode>
+    <Description1>LABOR OP 6</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>N</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>2</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR7</OperationCode>
+    <Description1>LABOR OP 7</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag />
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR9</OperationCode>
+    <Description1>LABOR CODE DESCRIPTION 1</Description1>
+    <Description2>LABOR CODE DESCRIPTION 2</Description2>
+    <Description3>LABOR CODE DESCRIPTION 3</Description3>
+    <Description4>LABOR CODE DESCRIPTION 4</Description4>
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR11</OperationCode>
+    <Description1>LABOR OP 11</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>LABOR12</OperationCode>
+    <Description1>LABOR OP 12</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>50</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>25</CostAmount>
+    <PartsMethod>A</PartsMethod>
+    <PartsAmount>75</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>2</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000610</OperationCode>
+    <Description1>ENGINE OIL</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>39.95</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>35</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000612</OperationCode>
+    <Description1>BRAKES, FRONT</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>125</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>65</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000618</OperationCode>
+    <Description1>BRAKE FLUID</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>15.95</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>12</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000616</OperationCode>
+    <Description1>MICRO-FILTER</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>175</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>100</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000614</OperationCode>
+    <Description1>REAR BRAKES</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>125</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>75</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000622</OperationCode>
+    <Description1>SPARK PLUGS</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>95</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>50</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000624</OperationCode>
+    <Description1>VEHICLE CHECK</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>125</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>65</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0012159</OperationCode>
+    <Description1>STATUTORY VEHICLE INSPECTION</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>75</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>50</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000126</OperationCode>
+    <Description1>STATUTORY EMISSIONS TEST</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>35</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>30</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000602</OperationCode>
+    <Description1>INTAKE SILENCER</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>200</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>120</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000740</OperationCode>
+    <Description1>MAIN BATTERY</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>175</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>100</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000741</OperationCode>
+    <Description1>SPRING BLOCKER</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>300</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>200</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000742</OperationCode>
+    <Description1>SERVICE AND PARKING BRAKE</Description1>
+    <Description2>(TRANSPORT AND HOLDING TIMES 3-6 WEEKS)</Description2>
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>250</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>125</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000744</OperationCode>
+    <Description1>SERVICE AND PARKING BRAKE</Description1>
+    <Description2>(TRANSPORT AND HOLDING TIMES MORE THAN 6 WEEKS)</Description2>
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>300</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>200</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000746</OperationCode>
+    <Description1>WASH WATER PUMP, WINTER TIRES, INTER. REAR</Description1>
+    <Description2>MIRROR W. DIGIT. COMPASS</Description2>
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>295.95</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>200</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000105</OperationCode>
+    <Description1>STANDARD SCOPE</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>Y</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>150</RetailAmount>
+    <CostMethod>A</CostMethod>
+    <CostAmount>75</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000009</OperationCode>
+    <Description1>0000009</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>59.95</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000512</OperationCode>
+    <Description1>0000512</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>37.95</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>25</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000513</OperationCode>
+    <Description1>0000513</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>109.99</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000600</OperationCode>
+    <Description1>0000600</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>75</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>35</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000611</OperationCode>
+    <Description1>0000611</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>299.99</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000619</OperationCode>
+    <Description1>0000619</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>409</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000620</OperationCode>
+    <Description1>0000620</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>29.95</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000621</OperationCode>
+    <Description1>0000621</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>79.95</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000625</OperationCode>
+    <Description1>0000625</Description1>
+    <Description2>0000625</Description2>
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>1000</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000626</OperationCode>
+    <Description1>0000626</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>34.99</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000630</OperationCode>
+    <Description1>0000630</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>49.98</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000648</OperationCode>
+    <Description1>0000648</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>1.95</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0000661</OperationCode>
+    <Description1>0000661</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>99.99</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>0012559</OperationCode>
+    <Description1>0012559</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>A</RetailMethod>
+    <RetailAmount>64.35</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+  <ServiceLaborOpcodeRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <OperationCode>12345678</OperationCode>
+    <Description1>12345678</Description1>
+    <Description2 />
+    <Description3 />
+    <Description4 />
+    <MajorCode>N</MajorCode>
+    <MinorCode />
+    <Manufacturer />
+    <Make />
+    <Model />
+    <Engine />
+    <Year>Y</Year>
+    <DefLinePaymentMethod />
+    <CorrectionLOP>N</CorrectionLOP>
+    <Type />
+    <ExcludeDiscount>N</ExcludeDiscount>
+    <SkillLevel>A</SkillLevel>
+    <Taxable>Y</Taxable>
+    <HazardMaterialCharge>0</HazardMaterialCharge>
+    <ShopSupplyCharge>N</ShopSupplyCharge>
+    <RetailMethod>B</RetailMethod>
+    <RetailAmount>0</RetailAmount>
+    <CostMethod>B</CostMethod>
+    <CostAmount>0</CostAmount>
+    <PartsMethod>B</PartsMethod>
+    <PartsAmount>0</PartsAmount>
+    <Estimate>Y</Estimate>
+    <EstimatedHours>0</EstimatedHours>
+    <WaiterFlag>N</WaiterFlag>
+    <PredefinedCauseDescription />
+    <AdditionalDescriptionLine1 />
+    <AdditionalDescriptionLine2 />
+    <PredefinedComplaintDescription />
+  </ServiceLaborOpcodeRecord>
+</ServiceLaborOpcodesTable>

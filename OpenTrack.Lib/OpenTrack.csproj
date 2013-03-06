@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="IOpenTrackAPI.cs" />
     <Compile Include="Requests\ClosedRepairOrderLookup.cs" />
+    <Compile Include="Requests\ServiceLaborOpcodesTableRequest.cs" />
     <Compile Include="Requests\ServiceTechsTableRequest.cs" />
     <Compile Include="Requests\ServiceWritersTableRequest.cs" />
     <Compile Include="IRequest.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Responses\ClosedRepairOrderLookupResponse.cs" />
     <Compile Include="Responses\GetClosedRepairOrderDetailResponse.cs" />
     <Compile Include="Responses\OpenRepairOrderLookupResponse.cs" />
+    <Compile Include="Responses\ServiceLaborOpcodesTable.cs" />
     <Compile Include="Responses\ServiceTechsTable.cs" />
     <Compile Include="Responses\ServiceWritersTable.cs" />
     <Compile Include="Service References\Definitions\Reference.cs">
