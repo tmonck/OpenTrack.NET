@@ -1,56 +1,56 @@
-<ServiceTechsTable>
-<ServiceTechRecord>
-<CompanyNumber>DT1</CompanyNumber>
-<TechnicianId>BJ1</TechnicianId>
-<Name>Bart Jensen</Name>
-<EmployeeNumber>242097294</EmployeeNumber>
-<PayrollEmployeeNumber>666</PayrollEmployeeNumber>
-<StateCertificationNumber/>
-<Active/>
-<AssignedServiceWriter/>
-<DefaultServiceType>QL</DefaultServiceType>
-<LaborRateA>21.00</LaborRateA>
-<LaborRateB>21.00</LaborRateB>
-<LaborRateC>21.00</LaborRateC>
-<LaborRateD>21.00</LaborRateD>
-<InternalLaborRateA>23.00</InternalLaborRateA>
-<InternalLaborRateB>33.00</InternalLaborRateB>
-<InternalLaborRateC>43.00</InternalLaborRateC>
-<InternalLaborRateD>53.00</InternalLaborRateD>
-<ServiceLaborRateA>24.00</ServiceLaborRateA>
-<ServiceLaborRateB>34.00</ServiceLaborRateB>
-<ServiceLaborRateC>44.00</ServiceLaborRateC>
-<ServiceLaborRateD>54.00</ServiceLaborRateD>
-<WarrantyLaborRateA>22.00</WarrantyLaborRateA>
-<WarrantyLaborRateB>32.00</WarrantyLaborRateB>
-<WarrantyLaborRateC>42.00</WarrantyLaborRateC>
-<WarrantyLaborRateD>52.00</WarrantyLaborRateD>
-</ServiceTechRecord>
-<ServiceTechRecord>
-<CompanyNumber>DT1</CompanyNumber>
-<TechnicianId>GLW</TechnicianId>
-<Name>Gary</Name>
-<EmployeeNumber/>
-<PayrollEmployeeNumber/>
-<StateCertificationNumber/>
-<Active/>
-<AssignedServiceWriter/>
-<DefaultServiceType>MR</DefaultServiceType>
-<LaborRateA>0.00</LaborRateA>
-<LaborRateB>0.00</LaborRateB>
-<LaborRateC>0.00</LaborRateC>
-<LaborRateD>0.00</LaborRateD>
-<InternalLaborRateA>100.00</InternalLaborRateA>
-<InternalLaborRateB>75.00</InternalLaborRateB>
-<InternalLaborRateC>50.00</InternalLaborRateC>
-<InternalLaborRateD>25.00</InternalLaborRateD>
-<ServiceLaborRateA>100.00</ServiceLaborRateA>
-<ServiceLaborRateB>75.00</ServiceLaborRateB>
-<ServiceLaborRateC>50.00</ServiceLaborRateC>
-<ServiceLaborRateD>25.00</ServiceLaborRateD>
-<WarrantyLaborRateA>100.00</WarrantyLaborRateA>
-<WarrantyLaborRateB>75.00</WarrantyLaborRateB>
-<WarrantyLaborRateC>50.00</WarrantyLaborRateC>
-<WarrantyLaborRateD>25.00</WarrantyLaborRateD>
-</ServiceTechRecord>
+<ServiceTechsTable xmlns="">
+  <ServiceTechRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <TechnicianId>TEC</TechnicianId>
+    <Name>Technition</Name>
+    <EmployeeNumber>TECH</EmployeeNumber>
+    <PayrollEmployeeNumber />
+    <StateCertificationNumber />
+    <Active />
+    <AssignedServiceWriter />
+    <DefaultServiceType />
+    <LaborRateA>20</LaborRateA>
+    <LaborRateB>20</LaborRateB>
+    <LaborRateC>20</LaborRateC>
+    <LaborRateD>20</LaborRateD>
+    <InternalLaborRateA>0</InternalLaborRateA>
+    <InternalLaborRateB>0</InternalLaborRateB>
+    <InternalLaborRateC>0</InternalLaborRateC>
+    <InternalLaborRateD>0</InternalLaborRateD>
+    <ServiceLaborRateA>0</ServiceLaborRateA>
+    <ServiceLaborRateB>0</ServiceLaborRateB>
+    <ServiceLaborRateC>0</ServiceLaborRateC>
+    <ServiceLaborRateD>0</ServiceLaborRateD>
+    <WarrantyLaborRateA>0</WarrantyLaborRateA>
+    <WarrantyLaborRateB>0</WarrantyLaborRateB>
+    <WarrantyLaborRateC>0</WarrantyLaborRateC>
+    <WarrantyLaborRateD>0</WarrantyLaborRateD>
+  </ServiceTechRecord>
+  <ServiceTechRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <TechnicianId>DT</TechnicianId>
+    <Name>DEALERTRACK TECH</Name>
+    <EmployeeNumber />
+    <PayrollEmployeeNumber />
+    <StateCertificationNumber />
+    <Active />
+    <AssignedServiceWriter />
+    <DefaultServiceType>MR</DefaultServiceType>
+    <LaborRateA>10</LaborRateA>
+    <LaborRateB>9</LaborRateB>
+    <LaborRateC>8</LaborRateC>
+    <LaborRateD>7</LaborRateD>
+    <InternalLaborRateA>10</InternalLaborRateA>
+    <InternalLaborRateB>9</InternalLaborRateB>
+    <InternalLaborRateC>8</InternalLaborRateC>
+    <InternalLaborRateD>7</InternalLaborRateD>
+    <ServiceLaborRateA>10</ServiceLaborRateA>
+    <ServiceLaborRateB>9</ServiceLaborRateB>
+    <ServiceLaborRateC>8</ServiceLaborRateC>
+    <ServiceLaborRateD>7</ServiceLaborRateD>
+    <WarrantyLaborRateA>10</WarrantyLaborRateA>
+    <WarrantyLaborRateB>9</WarrantyLaborRateB>
+    <WarrantyLaborRateC>8</WarrantyLaborRateC>
+    <WarrantyLaborRateD>7</WarrantyLaborRateD>
+  </ServiceTechRecord>
 </ServiceTechsTable>

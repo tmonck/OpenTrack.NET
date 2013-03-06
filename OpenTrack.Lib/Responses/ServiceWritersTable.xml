@@ -1,10 +1,18 @@
-<ServiceWritersTable>
-<ServiceWriterRecord>
-<CompanyNumber>DT1</CompanyNumber>
-<ID>AU</ID>
-<Name>AUTHORIZATION</Name>
-<Initials>AU</Initials>
-<EmployeeNumber/>
-<Active>N</Active>
-</ServiceWriterRecord>
+<ServiceWritersTable xmlns="">
+  <ServiceWriterRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <ID>DT</ID>
+    <Name>DEALERTRACK SW</Name>
+    <Initials>DT</Initials>
+    <EmployeeNumber />
+    <Active>Y</Active>
+  </ServiceWriterRecord>
+  <ServiceWriterRecord xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <ID>999</ID>
+    <Name>ARKONA SUPPORT</Name>
+    <Initials />
+    <EmployeeNumber />
+    <Active>Y</Active>
+  </ServiceWriterRecord>
 </ServiceWritersTable>
