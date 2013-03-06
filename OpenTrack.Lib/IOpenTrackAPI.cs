@@ -8,6 +8,8 @@ namespace OpenTrack
     /// </summary>
     public interface IOpenTrackAPI
     {
+
+
         /// <summary>
         /// Returns a list of open repair orders matching the given query criteria.
         /// </summary>
@@ -18,8 +20,14 @@ namespace OpenTrack
         /// </summary>
         IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(ClosedRepairOrderLookup query);
 
+        /// <summary>
+        /// Returns a list of service advisors for the dealership.
+        /// </summary>
         IEnumerable<ServiceWritersTableServiceWriterRecord> FindServiceAdvisors(ServiceWritersTableRequest query);
 
+        /// <summary>
+        /// Returns a list of technicians for the dealership.
+        /// </summary>
         IEnumerable<ServiceTechsTableServiceTechRecord> FindTechnicians(ServiceTechsTableRequest query);
     }
 }
