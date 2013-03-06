@@ -21,13 +21,16 @@ namespace OpenTrack.TestApp
                 {
                     EnterpriseCode = "ZE",
                     DealerCode = "ZE7",
-                    ServerName = "arkonap.arkona.com"
+                    ServerName = "arkonap.arkona.com",
+                    CustomerName = "DOE, JOHN"
                 });
 
             foreach (var r in result)
             {
                 Console.WriteLine(r.CustomerName);
             }
+
+            Console.ReadKey();
         }
     }
 }
