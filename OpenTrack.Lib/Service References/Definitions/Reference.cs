@@ -13,7 +13,7 @@ namespace OpenTrack.Definitions {
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport/bindings", ConfigurationName="Definitions.starTransport")]
-    public interface starTransport {
+    internal interface starTransport {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMess" +
             "age", ReplyAction="*")]
@@ -269,7 +269,7 @@ namespace OpenTrack.Definitions {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessage", WrapperNamespace="http://www.starstandards.org/webservices/2005/10/transport", IsWrapped=true)]
-    public partial class ProcessMessageRequest {
+    internal partial class ProcessMessageRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport")]
         public OpenTrack.Definitions.PayloadManifest PayloadManifest;
@@ -289,7 +289,7 @@ namespace OpenTrack.Definitions {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessageResponse", WrapperNamespace="http://www.starstandards.org/webservices/2005/10/transport", IsWrapped=true)]
-    public partial class ProcessMessageResponse {
+    internal partial class ProcessMessageResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport")]
         public OpenTrack.Definitions.PayloadManifest PayloadManifest;
@@ -307,12 +307,12 @@ namespace OpenTrack.Definitions {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface starTransportChannel : OpenTrack.Definitions.starTransport, System.ServiceModel.IClientChannel {
+    internal interface starTransportChannel : OpenTrack.Definitions.starTransport, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class starTransportClient : System.ServiceModel.ClientBase<OpenTrack.Definitions.starTransport>, OpenTrack.Definitions.starTransport {
+    internal partial class starTransportClient : System.ServiceModel.ClientBase<OpenTrack.Definitions.starTransport>, OpenTrack.Definitions.starTransport {
         
         public starTransportClient() {
         }
