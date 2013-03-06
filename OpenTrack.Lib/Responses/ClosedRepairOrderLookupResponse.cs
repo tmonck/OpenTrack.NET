@@ -160,7 +160,7 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrder {
     
     private string towedInIndicatorField;
     
-    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetail[][] detailsField;
+    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetail[] detailsField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -792,7 +792,7 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrder {
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("ClosedRepairOrderDetail", typeof(ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetail), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetail[][] Details {
+    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetail[] Details {
         get {
             return this.detailsField;
         }
@@ -812,11 +812,11 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClos
     
     private string lineNumberField;
     
-    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[][] laborDetailsField;
+    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[] laborDetailsField;
     
-    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailPartsPart[][] partsField;
+    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailPartsPart[] partsField;
     
-    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailCommentsComment[][] commentsField;
+    private ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailCommentsComment[] commentsField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -832,7 +832,7 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClos
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Labor", typeof(ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[][] LaborDetails {
+    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[] LaborDetails {
         get {
             return this.laborDetailsField;
         }
@@ -844,7 +844,7 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClos
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Part", typeof(ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailPartsPart), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailPartsPart[][] Parts {
+    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailPartsPart[] Parts {
         get {
             return this.partsField;
         }
@@ -856,7 +856,7 @@ public partial class ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClos
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Comment", typeof(ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailCommentsComment), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailCommentsComment[][] Comments {
+    public ClosedRepairOrderLookupResponseClosedRepairOrderDetailsClosedRepairOrderDetailCommentsComment[] Comments {
         get {
             return this.commentsField;
         }

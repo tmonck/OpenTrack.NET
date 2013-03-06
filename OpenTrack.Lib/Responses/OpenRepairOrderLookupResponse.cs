@@ -278,7 +278,7 @@ public partial class OpenRepairOrderLookupResponseOpenRepairOrder {
     
     private string lastModifiedField;
     
-    private OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail[][] detailsField;
+    private OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail[] detailsField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1559,7 +1559,7 @@ public partial class OpenRepairOrderLookupResponseOpenRepairOrder {
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("OpenRepairOrderDetail", typeof(OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail[][] Details {
+    public OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail[] Details {
         get {
             return this.detailsField;
         }
@@ -1577,7 +1577,7 @@ public partial class OpenRepairOrderLookupResponseOpenRepairOrder {
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
 public partial class OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepairOrderDetail {
     
-    private string serviceLineNoField;
+    private string serviceLineNumberField;
     
     private string lineTypeField;
     
@@ -1723,12 +1723,12 @@ public partial class OpenRepairOrderLookupResponseOpenRepairOrderDetailsOpenRepa
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-    public string ServiceLineNo {
+    public string ServiceLineNumber {
         get {
-            return this.serviceLineNoField;
+            return this.serviceLineNumberField;
         }
         set {
-            this.serviceLineNoField = value;
+            this.serviceLineNumberField = value;
         }
     }
     

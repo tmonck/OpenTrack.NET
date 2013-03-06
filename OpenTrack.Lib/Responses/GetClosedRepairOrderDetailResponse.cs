@@ -182,7 +182,7 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder {
     
     private string towedInIndicatorField;
     
-    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetail[][] detailsField;
+    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetail[] detailsField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -814,7 +814,7 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder {
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("ClosedRepairOrderDetail", typeof(GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetail), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetail[][] Details {
+    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetail[] Details {
         get {
             return this.detailsField;
         }
@@ -834,11 +834,11 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDe
     
     private string lineNumberField;
     
-    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[][] laborDetailsField;
+    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[] laborDetailsField;
     
-    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailPartsPart[][] partsField;
+    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailPartsPart[] partsField;
     
-    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailCommentsComment[][] commentsField;
+    private GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailCommentsComment[] commentsField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -854,7 +854,7 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDe
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Labor", typeof(GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[][] LaborDetails {
+    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailLaborDetailsLabor[] LaborDetails {
         get {
             return this.laborDetailsField;
         }
@@ -866,7 +866,7 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDe
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Part", typeof(GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailPartsPart), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailPartsPart[][] Parts {
+    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailPartsPart[] Parts {
         get {
             return this.partsField;
         }
@@ -878,7 +878,7 @@ public partial class GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDe
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
     [System.Xml.Serialization.XmlArrayItemAttribute("Comment", typeof(GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailCommentsComment), Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailCommentsComment[][] Comments {
+    public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrderDetailsClosedRepairOrderDetailCommentsComment[] Comments {
         get {
             return this.commentsField;
         }

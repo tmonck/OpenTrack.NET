@@ -128,7 +128,7 @@
                     <xs:element name="OpenRepairOrderDetail" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="ServiceLineNo" type="xs:string" minOccurs="0" />
+                          <xs:element name="ServiceLineNumber" type="xs:string" minOccurs="0" />
                           <xs:element name="LineType" type="xs:string" minOccurs="0" />
                           <xs:element name="SequenceNumber" type="xs:string" minOccurs="0" />
                           <xs:element name="CounterPersonID" type="xs:string" minOccurs="0" />
