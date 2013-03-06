@@ -57,6 +57,24 @@ namespace OpenTrack
             return response.Items;
         }
 
+        public IEnumerable<ServiceWritersTableServiceWriterRecord> FindServiceAdvisors(ServiceWritersTableRequest query)
+        {
+            var response = SubmitRequest<ServiceWritersTable>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
+        public IEnumerable<ServiceTechsTableServiceTechRecord> FindTechnicians(ServiceTechsTableRequest query)
+        {
+            var response = SubmitRequest<ServiceTechsTable>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
@@ -144,12 +162,11 @@ namespace OpenTrack
 
                 // In debug, let's write out all of the XML to files.
 #if DEBUG
-                using(var w = new StreamWriter(String.Format("{0}.xml", Guid.NewGuid())))
+                using (var w = new StreamWriter(String.Format("{0}.xml", Guid.NewGuid())))
                 {
                     w.Write(response.OuterXml);
                 }
 #endif
-
 
                 // Process the request with the appropriate parser/handler.
                 return request.ProcessResponse(response);
