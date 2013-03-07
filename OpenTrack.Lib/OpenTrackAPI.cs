@@ -48,9 +48,9 @@ namespace OpenTrack
             return response.Items;
         }
 
-        public IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(ClosedRepairOrderLookup query)
+        public IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
         {
-            var response = SubmitRequest<ClosedRepairOrderLookupResponse>(query);
+            var response = SubmitRequest<ClosedRepairOrders>(query);
 
             // TODO Handle errors?
 

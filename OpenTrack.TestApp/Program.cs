@@ -17,7 +17,7 @@ namespace OpenTrack.TestApp
 
             var api = new OpenTrackAPI(url, username, password);
 
-            var result = api.FindClosedRepairOrders(new Requests.ClosedRepairOrderLookup()
+            var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest()
                 {
                     EnterpriseCode = "ZE",
                     DealerCode = "ZE7",
