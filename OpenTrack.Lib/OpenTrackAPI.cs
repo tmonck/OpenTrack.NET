@@ -3,6 +3,7 @@ using OpenTrack.Requests;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.ServiceModel;
 using System.Xml;
 
@@ -82,6 +83,18 @@ namespace OpenTrack
             // TODO Handle errors?
 
             return response.Items;
+        }
+
+        public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query)
+        {
+            var response = SubmitRequest<GetClosedRepairOrderDetailResponse>(query);
+
+            if (!response.Items.Any())
+            {
+                // TODO Throw not found exception.
+            }
+
+            return response.Items.First().RepairOrder.First();
         }
 
         /// <summary>

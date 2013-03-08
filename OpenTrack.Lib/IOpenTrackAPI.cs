@@ -29,5 +29,10 @@ namespace OpenTrack
         /// Returns a list of technicians for the dealership.
         /// </summary>
         IEnumerable<ServiceTechsTableServiceTechRecord> GetTechnicians(ServiceTechsTableRequest query);
+
+        /// <summary>
+        /// Get detailed information about an individual repair order.
+        /// </summary>
+        GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query);
     }
 }
