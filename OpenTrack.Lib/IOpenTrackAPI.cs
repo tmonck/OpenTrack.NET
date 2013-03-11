@@ -60,5 +60,15 @@ namespace OpenTrack
         /// Find a single customer by number.
         /// </summary>
         CustomerLookupResponseCustomer GetCustomer(CustomerLookupRequest query);
+
+        /// <summary>
+        /// Add a new customer to the DMS. Must have DataToken property filled in from the customer search or lookup methods.
+        /// </summary>
+        void AddCustomer(CustomerAddRequest query);
+
+        /// <summary>
+        /// Update an existing customer in the DMS.
+        /// </summary>
+        void UpdateCustomer(CustomerUpdateRequest query);
     }
 }

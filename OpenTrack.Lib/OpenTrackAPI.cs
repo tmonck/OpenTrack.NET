@@ -143,6 +143,24 @@ namespace OpenTrack
             return response.Items.Single();
         }
 
+        public void AddCustomer(CustomerAddRequest query)
+        {
+            var response = SubmitRequest<CustomerAddResponse>(query);
+
+            // TODO How to check for success?
+
+            // response.Items.Any();
+        }
+
+        public void UpdateCustomer(CustomerUpdateRequest query)
+        {
+            var response = SubmitRequest<CustomerUpdateResponse>(query);
+
+            // TODO How to check for success?
+
+            // response.Items.Any();
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
