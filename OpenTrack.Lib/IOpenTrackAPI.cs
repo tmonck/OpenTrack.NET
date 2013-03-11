@@ -34,5 +34,10 @@ namespace OpenTrack
         /// Get detailed information about an individual repair order.
         /// </summary>
         GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query);
+
+        /// <summary>
+        ///  Get the parts inventory or a specific part in inventory from the DMS Parts Inventory database.
+        /// </summary>
+        IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query);
     }
 }

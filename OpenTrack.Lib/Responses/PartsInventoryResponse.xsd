@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PartsInventoryResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="PartsInventoryResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Part">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+              <xs:element name="PartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PartDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="StockingGroup" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="Obsolete" type="xs:string" minOccurs="0" />
+              <xs:element name="ReturnCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrivalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="StockPromoCode" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecialOrderCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PriceUpdate" type="xs:string" minOccurs="0" />
+              <xs:element name="KitPart" type="xs:string" minOccurs="0" />
+              <xs:element name="ComponentPart" type="xs:string" minOccurs="0" />
+              <xs:element name="AssociateWithPart" type="xs:string" minOccurs="0" />
+              <xs:element name="AlternatePart" type="xs:string" minOccurs="0" />
+              <xs:element name="CorePart" type="xs:string" minOccurs="0" />
+              <xs:element name="MerchCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PriceSymbol" type="xs:string" minOccurs="0" />
+              <xs:element name="ProdCodeClass" type="xs:string" minOccurs="0" />
+              <xs:element name="FleetAllowance" type="xs:string" minOccurs="0" />
+              <xs:element name="GroupCode" type="xs:string" minOccurs="0" />
+              <xs:element name="BinLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="ShelfLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantityOnHand" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantityReserved" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantityOnOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantityOnBackOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantityOnSpecialOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="PlaceOnOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="PlaceOnSpecialOrder" type="xs:string" minOccurs="0" />
+              <xs:element name="PackQuantity" type="xs:string" minOccurs="0" />
+              <xs:element name="MinSalesQuantity" type="xs:string" minOccurs="0" />
+              <xs:element name="Cost" type="xs:string" minOccurs="0" />
+              <xs:element name="ListPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="TradePrice" type="xs:string" minOccurs="0" />
+              <xs:element name="WholesaleComp" type="xs:string" minOccurs="0" />
+              <xs:element name="WholesaleCompFleet" type="xs:string" minOccurs="0" />
+              <xs:element name="FlatPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="MinMaxPackAdj" type="xs:string" minOccurs="0" />
+              <xs:element name="DynamDaysSupply" type="xs:string" minOccurs="0" />
+              <xs:element name="MinimumOnHand" type="xs:string" minOccurs="0" />
+              <xs:element name="MaximumOnHand" type="xs:string" minOccurs="0" />
+              <xs:element name="LowModelYear" type="xs:string" minOccurs="0" />
+              <xs:element name="HighModelYear" type="xs:string" minOccurs="0" />
+              <xs:element name="DateInInventory" type="xs:string" minOccurs="0" />
+              <xs:element name="DatePhasedOut" type="xs:string" minOccurs="0" />
+              <xs:element name="DateLastSold" type="xs:string" minOccurs="0" />
+              <xs:element name="InventoryTurns" type="xs:string" minOccurs="0" />
+              <xs:element name="BestStockLevel" type="xs:string" minOccurs="0" />
+              <xs:element name="StockStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="RecentDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="PriorDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="RecentWorkDays" type="xs:string" minOccurs="0" />
+              <xs:element name="PriorWorkDays" type="xs:string" minOccurs="0" />
+              <xs:element name="WeightedDailyAverage" type="xs:string" minOccurs="0" />
+              <xs:element name="SalesDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="LostSalesDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="SpecOrderDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="NonStockDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="ReturnDemand" type="xs:string" minOccurs="0" />
+              <xs:element name="InventoryValue" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalQuantitySold" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCostSales" type="xs:string" minOccurs="0" />
+              <xs:element name="StockPurchases" type="xs:string" minOccurs="0" />
+              <xs:element name="DisplayPartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="SortPartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="OldPartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="NewPartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CorePartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="DisplayRemarks" type="xs:string" minOccurs="0" />
+              <xs:element name="BulkItemActualWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="SecondaryBinLocation" type="xs:string" minOccurs="0" />
+              <xs:element name="ClassCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartDealerToDealerPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="PartSubsidiaryPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="PartDealerToDealerCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EmergencyRepairPackage" type="xs:string" minOccurs="0" />
+              <xs:element name="PartLsgCode" type="xs:string" minOccurs="0" />
+              <xs:element name="BrandCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Partcommondcode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartCrossShipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartDiscountCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartDirectshipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartHazardCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartInterchangeSubstitute" type="xs:string" minOccurs="0" />
+              <xs:element name="PartLargeQuantityCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartMaximumOrderQuantity" type="xs:string" minOccurs="0" />
+              <xs:element name="PartMinimumOrderQuantity" type="xs:string" minOccurs="0" />
+              <xs:element name="PartObsoleteStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="ProgramPartAllowanceCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartPricingDiscountPer" type="xs:string" minOccurs="0" />
+              <xs:element name="ProgramPartReturnableCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartSizeCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PartType" type="xs:string" minOccurs="0" />
+              <xs:element name="PartVolumeDiscountFlag" type="xs:string" minOccurs="0" />
+              <xs:element name="SecondaryShelf" type="xs:string" minOccurs="0" />
+              <xs:element name="WeightCode" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitOfMeasure" type="xs:string" minOccurs="0" />
+              <xs:element name="StockCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
