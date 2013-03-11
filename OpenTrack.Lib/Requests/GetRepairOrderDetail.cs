@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace OpenTrack.Requests
 {
-    public class GetRepairOrderDetail : IRequest<GetClosedRepairOrderDetailResponse>
+    public class GetRepairOrderDetail : IRequest<OpenTrack.Responses.GetClosedRepairOrderDetailResponse>
     {
         public GetRepairOrderDetail(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)

@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace OpenTrack.Requests
 {
-    public class ServiceWritersTableRequest : IRequest<ServiceWritersTable>
+    public class ServiceWritersTableRequest : IRequest<OpenTrack.Responses.ServiceWritersTable>
     {
         public ServiceWritersTableRequest(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)

@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace OpenTrack.Requests
 {
-    public class AddRepairOrderRequest : IRequest<AddRepairOrderResponse>
+    public class AddRepairOrderRequest : IRequest<OpenTrack.Responses.AddRepairOrderResponse>
     {
         public AddRepairOrderRequest(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)
@@ -26,7 +26,7 @@ namespace OpenTrack.Requests
         }
     }
 
-    public class AddRepairOrderLinesRequest : IRequest<AddRepairOrderLinesResponse>
+    public class AddRepairOrderLinesRequest : IRequest<OpenTrack.Responses.AddRepairOrderLinesResponse>
     {
         public AddRepairOrderLinesRequest(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)
