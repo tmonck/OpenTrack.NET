@@ -1,0 +1,61 @@
+<CustomerLookupResponse xmlns="">
+  <Customer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CompanyNumber>ZE7</CompanyNumber>
+    <CustomerNumber>1000171</CustomerNumber>
+    <TypeCode>I</TypeCode>
+    <LastName>SHIER</LastName>
+    <FirstName>PAUL</FirstName>
+    <MiddleName />
+    <Salutation />
+    <Gender />
+    <Language />
+    <Address1>5629 STRAND BLVD</Address1>
+    <Address2 />
+    <Address3 />
+    <City>NAPLES</City>
+    <County />
+    <StateCode>FL</StateCode>
+    <ZipCode>341100000</ZipCode>
+    <PhoneNumber>4075558899</PhoneNumber>
+    <BusinessPhone>0</BusinessPhone>
+    <BusinessExt>0</BusinessExt>
+    <FaxNumber>0</FaxNumber>
+    <BirthDate>0</BirthDate>
+    <DriversLicense />
+    <Contact />
+    <PreferredContact />
+    <MailCode />
+    <TaxExmptNumber />
+    <AssignedSalesperson />
+    <CustomerType />
+    <PreferredPhone>4</PreferredPhone>
+    <CellPhone>0</CellPhone>
+    <PagePhone>0</PagePhone>
+    <OtherPhone>0</OtherPhone>
+    <OtherPhoneDesc />
+    <Email1 />
+    <Email2 />
+    <OptionalField />
+    <AllowContactByPostal>Y</AllowContactByPostal>
+    <AllowContactByPhone>Y</AllowContactByPhone>
+    <AllowContactByEmail>Y</AllowContactByEmail>
+    <BusinessPhoneExtension />
+    <InternationalBusinessPhone />
+    <InternationalCellPhone />
+    <ExternalCrossReferenceKey>0</ExternalCrossReferenceKey>
+    <InternationalFaxNumber />
+    <InternationalOtherPhone />
+    <InternationalHomePhone>4075558899</InternationalHomePhone>
+    <CustomerPreferredName />
+    <InternationalPagerPhone />
+    <PreferredLanguage />
+    <InternationalZipCode>341100000</InternationalZipCode>
+    <LastChangeDate>20120716</LastChangeDate>
+    <Vehicles>
+      <VIN>JTEDP21A870132574</VIN>
+      <VIN>1N4BA41E57C800234</VIN>
+      <VIN>1ZVHT80N275198191</VIN>
+      <VIN>1G1AK52F457634013</VIN>
+    </Vehicles>
+  </Customer>
+</CustomerLookupResponse>

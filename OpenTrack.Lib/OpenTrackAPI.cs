@@ -121,6 +121,28 @@ namespace OpenTrack
             // TODO Handle errors?
         }
 
+        public IEnumerable<CustomerSearchResponseCustomerSearchResult> FindCustomers(CustomerSearchRequest query)
+        {
+            var response = SubmitRequest<CustomerSearchResponse>(query);
+
+            // TODO Handle errors?
+
+            // TODO Also need to pass back the token for searching so users can then create.
+
+            return response.CustomerSearchResult;
+        }
+
+        public CustomerLookupResponseCustomer GetCustomer(CustomerLookupRequest query)
+        {
+            var response = SubmitRequest<CustomerLookupResponse>(query);
+
+            // TODO Handle errors?
+
+            // TODO This will only return one customer, but may have none?
+
+            return response.Items.Single();
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

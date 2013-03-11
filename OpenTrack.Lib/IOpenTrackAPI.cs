@@ -50,5 +50,15 @@ namespace OpenTrack
         /// Add repair order lines to an existing repair order.
         /// </summary>
         void AddRepairOrderLines(AddRepairOrderLinesRequest query);
+
+        /// <summary>
+        /// Find a list of customers matching the given criteria.
+        /// </summary>
+        IEnumerable<CustomerSearchResponseCustomerSearchResult> FindCustomers(CustomerSearchRequest query);
+
+        /// <summary>
+        /// Find a single customer by number.
+        /// </summary>
+        CustomerLookupResponseCustomer GetCustomer(CustomerLookupRequest query);
     }
 }

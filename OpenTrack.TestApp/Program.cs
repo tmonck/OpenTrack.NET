@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Linq;
 
 namespace OpenTrack.TestApp
 {
@@ -17,11 +18,14 @@ namespace OpenTrack.TestApp
 
             var api = new OpenTrackAPI(url, username, password);
 
-            var result = api.GetPartsInventory(new Requests.PartsInventoryRequest(enterpriseCode, dealerCode, serverName));
-
-            foreach (var r in result)
+            var response = api.FindCustomers(new Requests.CustomerSearchRequest(enterpriseCode, dealerCode, serverName)
             {
-                Console.WriteLine(r.DisplayPartNumber);
+                State = "FL"
+            });
+
+            foreach (var r in response)
+            {
+                Console.WriteLine("{0} {1}", r.LastName, r.Email1);
             }
 
             Console.ReadKey();
