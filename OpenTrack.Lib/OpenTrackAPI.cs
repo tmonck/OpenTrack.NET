@@ -97,6 +97,15 @@ namespace OpenTrack
             return response.Items.First().RepairOrder.First();
         }
 
+        public IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query)
+        {
+            var response = SubmitRequest<PartsInventoryResponse>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
@@ -141,7 +150,7 @@ namespace OpenTrack
                 var xml = new XmlDocument();
 
                 // Load up the request XML into a document object.
-                xml.LoadXml(request.XML.ToString());
+                xml.LoadXml(request.XML);
 
                 // Create a unique request identifier.
                 var requestId = Guid.NewGuid().ToString();

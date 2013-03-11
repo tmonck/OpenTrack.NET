@@ -43,7 +43,7 @@ namespace OpenTrack.Requests
         /// </summary>
         public String FinalCloseDateEnd { get; set; }
 
-        internal override XElement XML
+        internal override XElement Elements
         {
             get
             {

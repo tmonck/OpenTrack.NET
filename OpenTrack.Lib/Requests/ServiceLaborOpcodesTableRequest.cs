@@ -10,7 +10,7 @@ namespace OpenTrack.Requests
         {
         }
 
-        internal override XElement XML
+        internal override XElement Elements
         {
             get
             {

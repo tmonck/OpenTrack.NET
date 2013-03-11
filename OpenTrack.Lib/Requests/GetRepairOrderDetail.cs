@@ -15,7 +15,7 @@ namespace OpenTrack.Requests
         /// </summary>
         public String RepairOrderNumber { get; set; }
 
-        internal override XElement XML
+        internal override XElement Elements
         {
             get
             {
