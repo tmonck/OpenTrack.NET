@@ -5,6 +5,11 @@ namespace OpenTrack.Requests
 {
     public class OpenRepairOrderLookup : IRequest<OpenRepairOrderLookupResponse>
     {
+        public OpenRepairOrderLookup(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String RepairOrderNumber { get; set; }
 
         public String VIN { get; set; }

@@ -8,12 +8,18 @@ namespace OpenTrack
 {
     public abstract class IRequest<T>
     {
-        // Not sure if these are per-dealer yet or what.
-        public String EnterpriseCode { get; set; }
+        public String EnterpriseCode { get; private set; }
 
-        public String DealerCode { get; set; }
+        public String DealerCode { get; private set; }
 
-        public String ServerName { get; set; }
+        public String ServerName { get; private set; }
+
+        public IRequest(String EnterpriseCode, String DealerCode, String ServerName)
+        {
+            this.EnterpriseCode = EnterpriseCode;
+            this.DealerCode = DealerCode;
+            this.ServerName = ServerName;
+        }
 
         /// <summary>
         /// A property representing the XML content of a specific request.

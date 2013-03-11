@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OpenTrack.TestApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var url = ConfigurationManager.AppSettings["url"];
             var username = ConfigurationManager.AppSettings["username"];
@@ -17,13 +13,7 @@ namespace OpenTrack.TestApp
 
             var api = new OpenTrackAPI(url, username, password);
 
-            var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest()
-                {
-                    EnterpriseCode = "ZE",
-                    DealerCode = "ZE7",
-                    ServerName = "arkonap.arkona.com",
-                    RepairOrderNumber = "7004255"
-                });
+            var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup("ZE", "ZE7", "arkonap.arkona.com"));
 
             foreach (var r in result)
             {
