@@ -1,0 +1,6 @@
+<AddRepairOrderLinesResponse>
+  <RepairOrderNumber>600034</RepairOrderNumber>
+  <Success>
+    <Message>Repair Order successfully updated.</Message>
+  </Success>
+</AddRepairOrderLinesResponse>

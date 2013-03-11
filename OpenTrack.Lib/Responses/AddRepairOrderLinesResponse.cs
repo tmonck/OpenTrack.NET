@@ -22,11 +22,11 @@ using System.Xml.Serialization;
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
 [System.Xml.Serialization.XmlRootAttribute(Namespace="", IsNullable=false)]
-public partial class AddRepairOrderResponse {
+public partial class AddRepairOrderLinesResponse {
     
     private string repairOrderNumberField;
     
-    private AddRepairOrderResponseSuccess[] successField;
+    private AddRepairOrderLinesResponseSuccess[] successField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -41,7 +41,7 @@ public partial class AddRepairOrderResponse {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Success", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-    public AddRepairOrderResponseSuccess[] Success {
+    public AddRepairOrderLinesResponseSuccess[] Success {
         get {
             return this.successField;
         }
@@ -57,7 +57,7 @@ public partial class AddRepairOrderResponse {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true)]
-public partial class AddRepairOrderResponseSuccess {
+public partial class AddRepairOrderLinesResponseSuccess {
     
     private string messageField;
     

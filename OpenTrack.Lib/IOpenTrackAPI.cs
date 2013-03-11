@@ -44,5 +44,10 @@ namespace OpenTrack
         /// Add a new repair order to the DMS.
         /// </summary>
         void AddRepairOrder(AddRepairOrderRequest query);
+
+        /// <summary>
+        /// Add repair order lines to an existing repair order.
+        /// </summary>
+        void AddRepairOrderLines(AddRepairOrderLinesRequest query);
     }
 }

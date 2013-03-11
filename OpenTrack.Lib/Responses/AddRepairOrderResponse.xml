@@ -1,6 +1,6 @@
 <AddRepairOrderResponse>
-<RepairOrderNumber>7080706</RepairOrderNumber>
-<Success>
-<Message>Repair Order successfully created.</Message>
-</Success>
+  <RepairOrderNumber>7080706</RepairOrderNumber>
+  <Success>
+    <Message>Repair Order successfully created.</Message>
+  </Success>
 </AddRepairOrderResponse>
