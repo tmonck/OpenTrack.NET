@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
@@ -46,6 +47,19 @@ namespace OpenTrack
             using (var reader = XmlReader.Create(new StringReader(xml.OuterXml)))
             {
                 return (T)new XmlSerializer(typeof(T)).Deserialize(reader);
+            }
+        }
+
+        /// <summary>
+        /// Serialize a C# model and convert it into an XElement for use in a request.
+        /// </summary>
+        protected XElement SerializeToXml<T>(Object obj)
+        {
+            using (var stream = new MemoryStream())
+            {
+                new XmlSerializer(typeof(T)).Serialize(stream, obj);
+
+                return XElement.Parse(Encoding.ASCII.GetString(stream.ToArray()));
             }
         }
 

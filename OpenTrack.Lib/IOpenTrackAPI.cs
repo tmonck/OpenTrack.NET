@@ -39,5 +39,10 @@ namespace OpenTrack
         ///  Get the parts inventory or a specific part in inventory from the DMS Parts Inventory database.
         /// </summary>
         IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query);
+
+        /// <summary>
+        /// Add a new repair order to the DMS.
+        /// </summary>
+        void AddRepairOrder(AddRepairOrderRequest query);
     }
 }

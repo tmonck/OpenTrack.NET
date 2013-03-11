@@ -106,6 +106,13 @@ namespace OpenTrack
             return response.Items;
         }
 
+        public void AddRepairOrder(AddRepairOrderRequest query)
+        {
+            var response = SubmitRequest<AddRepairOrderResponse>(query);
+
+            // TODO Handle errors?
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
