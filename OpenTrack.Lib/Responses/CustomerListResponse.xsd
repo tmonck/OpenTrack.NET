@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CustomerListResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CustomerListResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Customer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="TypeCode" type="xs:string" minOccurs="0" />
+              <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+              <xs:element name="MiddleName" type="xs:string" minOccurs="0" />
+              <xs:element name="Salutation" type="xs:string" minOccurs="0" />
+              <xs:element name="Gender" type="xs:string" minOccurs="0" />
+              <xs:element name="Language" type="xs:string" minOccurs="0" />
+              <xs:element name="Address1" type="xs:string" minOccurs="0" />
+              <xs:element name="Address2" type="xs:string" minOccurs="0" />
+              <xs:element name="Address3" type="xs:string" minOccurs="0" />
+              <xs:element name="City" type="xs:string" minOccurs="0" />
+              <xs:element name="County" type="xs:string" minOccurs="0" />
+              <xs:element name="StateCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ZipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BusinessPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="BusinessExt" type="xs:string" minOccurs="0" />
+              <xs:element name="FaxNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BirthDate" type="xs:string" minOccurs="0" />
+              <xs:element name="DriversLicense" type="xs:string" minOccurs="0" />
+              <xs:element name="Contact" type="xs:string" minOccurs="0" />
+              <xs:element name="PreferredContact" type="xs:string" minOccurs="0" />
+              <xs:element name="MailCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxExemptNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AssignedSalesperson" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerType" type="xs:string" minOccurs="0" />
+              <xs:element name="PreferredPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="CellPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="PagePhone" type="xs:string" minOccurs="0" />
+              <xs:element name="OtherPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="OtherPhoneDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Email1" type="xs:string" minOccurs="0" />
+              <xs:element name="Email2" type="xs:string" minOccurs="0" />
+              <xs:element name="OptionalField" type="xs:string" minOccurs="0" />
+              <xs:element name="AllowContactByPostal" type="xs:string" minOccurs="0" />
+              <xs:element name="AllowContactByPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="AllowContactByEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="BusinessPhoneExtension" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalBusinessPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalCellPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="ExternalCrossReferenceKey" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalFaxNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalOtherPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalHomePhone" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPreferredName" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalPagerPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="PreferredLanguage" type="xs:string" minOccurs="0" />
+              <xs:element name="InternationalZipCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

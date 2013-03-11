@@ -1,0 +1,6 @@
+<CustomerAddResponse>
+  <Success>
+    <Message>Customer successfully added.</Message>
+    <CustomerNumber>123456789</CustomerNumber>
+  </Success>
+</CustomerAddResponse>

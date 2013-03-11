@@ -1,0 +1,5 @@
+<CustomerUpdateResponse>
+  <Success>
+    <Message>Customer successfully updated.</Message>
+  </Success>
+</CustomerUpdateResponse>
