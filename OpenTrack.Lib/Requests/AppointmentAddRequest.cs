@@ -18,7 +18,7 @@ namespace OpenTrack.Requests
         {
         }
 
-        public Appointment Appointment { get; set; }
+        public Appointment Data { get; set; }
 
         internal override XElement Elements
         {
@@ -26,9 +26,81 @@ namespace OpenTrack.Requests
             {
                 return new XElement("AppointmentAdd",
                     this.Dealer,
-                    SerializeToXml<Appointment>(this.Appointment)
+                    SerializeToXml<Appointment>(this.Data)
                     );
             }
+        }
+
+        public class Appointment
+        {
+            public String CompanyNumber { get; set; }
+
+            /// <summary>
+            /// YYYYMMDD format.
+            /// </summary>
+            public String OpenTransactionDate { get; set; }
+
+            public String CustomerKey { get; set; }
+
+            public String CustomerName { get; set; }
+
+            public String CustomerPhoneNumber { get; set; }
+
+            public String ServiceWriterID { get; set; }
+
+            public Decimal TotalEstimate { get; set; }
+
+            public String VIN { get; set; }
+
+            public String StockNumber { get; set; }
+
+            public String Truck { get; set; }
+
+            public String FranchiseCode { get; set; }
+
+            public int OdometerIn { get; set; }
+
+            /// <summary>
+            /// YYYYMMDDTTTT format
+            /// </summary>
+            public String AppointmentDateTime { get; set; }
+
+            public List<AppointmentDetail> Details { get; set; }
+
+            public Appointment()
+            {
+                this.Details = new List<AppointmentDetail>();
+            }
+        }
+
+        public class AppointmentDetail
+        {
+            public String ServiceLineNumber { get; set; }
+
+            public String LineType { get; set; }
+
+            public String SequenceNumber { get; set; }
+
+            public String TransDate { get; set; }
+
+            public String Comments { get; set; }
+
+            public String ServiceType { get; set; }
+
+            /// <summary>
+            /// C/I/W/S/P
+            /// </summary>
+            public String LinePaymentMethod { get; set; }
+
+            public String TechnicianID { get; set; }
+
+            public String LaborOpCode { get; set; }
+
+            public Decimal LaborHours { get; set; }
+
+            public Decimal LaborCostHours { get; set; }
+
+            public Decimal ActualRetailAmount { get; set; }
         }
     }
 
@@ -94,76 +166,5 @@ namespace OpenTrack.Requests
                     );
             }
         }
-    }
-
-    public class Appointment
-    {
-        public String CompanyNumber { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public String OpenTransactionDate { get; set; }
-
-        public String CustomerKey { get; set; }
-
-        public String CustomerName { get; set; }
-
-        public String CustomerPhoneNumber { get; set; }
-
-        public String ServiceWriterID { get; set; }
-
-        public Decimal TotalEstimate { get; set; }
-
-        public String VIN { get; set; }
-
-        public String StockNumber { get; set; }
-
-        public String Truck { get; set; }
-
-        public String FranchiseCode { get; set; }
-
-        public int OdometerIn { get; set; }
-
-        /// <summary>
-        /// YYYYMMDDTTTT format
-        /// </summary>
-        public String AppointmentDateTime { get; set; }
-
-        public List<AppointmentDetail> Details { get; set; }
-
-        public Appointment()
-        {
-            this.Details = new List<AppointmentDetail>();
-        }
-    }
-
-    public class AppointmentDetail
-    {
-        public String ServiceLineNumber { get; set; }
-
-        public String LineType { get; set; }
-
-        public String SequenceNumber { get; set; }
-
-        public String TransDate { get; set; }
-
-        public String Comments { get; set; }
-
-        public String ServiceType { get; set; }
-
-        /// <summary>
-        /// C/I/W/S/P
-        /// </summary>
-        public String LinePaymentMethod { get; set; }
-
-        public String TechnicianID { get; set; }
-
-        public String LaborOpCode { get; set; }
-
-        public Decimal LaborHours { get; set; }
-
-        public Decimal LaborCostHours { get; set; }
-
-        public Decimal ActualRetailAmount { get; set; }
     }
 }
