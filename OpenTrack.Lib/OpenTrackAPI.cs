@@ -43,68 +43,37 @@ namespace OpenTrack
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
         {
-            var response = SubmitRequest<OpenRepairOrderLookupResponse>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<OpenRepairOrderLookupResponse>(query).Items;
         }
 
         public IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
         {
-            var response = SubmitRequest<ClosedRepairOrders>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<ClosedRepairOrders>(query).Items;
         }
 
         public IEnumerable<ServiceWritersTableServiceWriterRecord> GetServiceAdvisors(ServiceWritersTableRequest query)
         {
-            var response = SubmitRequest<ServiceWritersTable>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<ServiceWritersTable>(query).Items;
         }
 
         public IEnumerable<ServiceTechsTableServiceTechRecord> GetTechnicians(ServiceTechsTableRequest query)
         {
-            var response = SubmitRequest<ServiceTechsTable>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<ServiceTechsTable>(query).Items;
         }
 
         public IEnumerable<ServiceLaborOpcodesTableServiceLaborOpcodeRecord> GetOpcodes(ServiceLaborOpcodesTableRequest query)
         {
-            var response = SubmitRequest<ServiceLaborOpcodesTable>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<ServiceLaborOpcodesTable>(query).Items;
         }
 
         public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query)
         {
-            var response = SubmitRequest<GetClosedRepairOrderDetailResponse>(query);
-
-            if (!response.Items.Any())
-            {
-                // TODO Throw not found exception.
-            }
-
-            return response.Items.First().RepairOrder.First();
+            return SubmitRequest<GetClosedRepairOrderDetailResponse>(query).Items.First().RepairOrder.First();
         }
 
         public IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query)
         {
-            var response = SubmitRequest<PartsInventoryResponse>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<PartsInventoryResponse>(query).Items;
         }
 
         public void AddRepairOrder(AddRepairOrderRequest query)
@@ -123,24 +92,14 @@ namespace OpenTrack
 
         public IEnumerable<CustomerSearchResponseCustomerSearchResult> FindCustomers(CustomerSearchRequest query)
         {
-            var response = SubmitRequest<CustomerSearchResponse>(query);
-
-            // TODO Handle errors?
-
             // TODO Also need to pass back the token for searching so users can then create.
 
-            return response.CustomerSearchResult;
+            return SubmitRequest<CustomerSearchResponse>(query).CustomerSearchResult;
         }
 
         public CustomerLookupResponseCustomer GetCustomer(CustomerLookupRequest query)
         {
-            var response = SubmitRequest<CustomerLookupResponse>(query);
-
-            // TODO Handle errors?
-
-            // TODO This will only return one customer, but may have none?
-
-            return response.Items.Single();
+            return SubmitRequest<CustomerLookupResponse>(query).Items.Single();
         }
 
         public void AddCustomer(CustomerAddRequest query)
@@ -163,38 +122,24 @@ namespace OpenTrack
 
         public IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query)
         {
-            var response = SubmitRequest<VehicleInventoryResponse>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<VehicleInventoryResponse>(query).Items;
         }
 
         public VehicleLookupResponseVehicle GetVehicle(VehicleLookupRequest query)
         {
-            var response = SubmitRequest<VehicleLookupResponse>(query);
-
             // TODO Check for included items.
 
-            return response.Items.SingleOrDefault();
+            return SubmitRequest<VehicleLookupResponse>(query).Items.SingleOrDefault();
         }
 
         public IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query)
         {
-            var response = SubmitRequest<VehicleSearchResponse>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<VehicleSearchResponse>(query).Items;
         }
 
         public IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query)
         {
-            var response = SubmitRequest<AppointmentLookupResponse>(query);
-
-            // TODO Handle errors?
-
-            return response.Items;
+            return SubmitRequest<AppointmentLookupResponse>(query).Items;
         }
 
         public void AddAppointment(AppointmentAddRequest query)
