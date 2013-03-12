@@ -45,7 +45,7 @@ namespace OpenTrack.Requests
                         new XElement("DateFrom", this.DateFrom),
                         new XElement("DateTo", this.DateTo),
                         new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart),
-                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd),
+                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd)
                         )
                     );
             }

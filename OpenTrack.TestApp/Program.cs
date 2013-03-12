@@ -18,14 +18,14 @@ namespace OpenTrack.TestApp
 
             var api = new OpenTrackAPI(url, username, password);
 
-            var response = api.FindCustomers(new Requests.CustomerSearchRequest(enterpriseCode, dealerCode, serverName)
+            var response = api.FindAppointments(new Requests.AppointmentLookupRequest(enterpriseCode, dealerCode, serverName)
             {
-                State = "FL"
+                
             });
 
             foreach (var r in response)
             {
-                Console.WriteLine("{0} {1}", r.LastName, r.Email1);
+                Console.WriteLine("{0} {1} {2}", r.AppointmentNumber, r.CustomerName, r.AppointmentDateTime);
             }
 
             Console.ReadKey();
