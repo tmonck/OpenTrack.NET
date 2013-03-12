@@ -1,0 +1,31 @@
+<VehicleSearchResponse>
+  <VehicleSearchResult>
+    <CompanyNumber>DT1</CompanyNumber>
+    <VIN> JF1GD67656G511824</VIN>
+    <StockNumber/>
+    <StockStatus>C</StockStatus>
+    <Make>FORD</Make>
+    <Model>MUSTANG</Model>
+    <ModelYear>1965</ModelYear>
+    <Type>U</Type>
+    <StockDate>0</StockDate>
+    <Customers>
+      <CustomerNumber>2203705</CustomerNumber>
+      <CustomerNumber>254654</CustomerNumber>
+    </Customers>
+    <LastServiceDate>2012-10-15T00:00:00</LastServiceDate>
+  </VehicleSearchResult>
+  <VehicleSearchResult>
+    <CompanyNumber>DT1</CompanyNumber>
+    <VIN>6T07C175788</VIN>
+    <StockNumber/>
+    <StockStatus>C</StockStatus>
+    <Make>FORD</Make>
+    <Model>MUSTANG</Model>
+    <ModelYear>1965</ModelYear>
+    <Type>U</Type>
+    <StockDate>0</StockDate>
+    <Customers/>
+    <LastServiceDate>0001-01-01T00:00:00</LastServiceDate>
+  </VehicleSearchResult>
+</VehicleSearchResponse>

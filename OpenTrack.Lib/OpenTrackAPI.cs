@@ -179,6 +179,15 @@ namespace OpenTrack
             return response.Items.SingleOrDefault();
         }
 
+        public IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query)
+        {
+            var response = SubmitRequest<VehicleSearchResponse>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

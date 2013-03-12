@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="IOpenTrackAPI.cs" />
     <Compile Include="Requests\AddRepairOrderRequest.cs" />
+    <Compile Include="Requests\VehicleSearchRequest.cs" />
     <Compile Include="Requests\VehicleLookupRequest.cs" />
     <Compile Include="Requests\VehicleInventoryRequest.cs" />
     <Compile Include="Requests\CustomerListRequest.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Responses\ServiceWritersTable.cs" />
     <Compile Include="Responses\VehicleInventoryResponse.cs" />
     <Compile Include="Responses\VehicleLookupResponse.cs" />
+    <Compile Include="Responses\VehicleSearchResponse.cs" />
     <Compile Include="Service References\Definitions\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

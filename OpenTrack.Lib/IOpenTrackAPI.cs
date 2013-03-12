@@ -80,5 +80,10 @@ namespace OpenTrack
         /// Return a single vehicle's information by VIN or Stock Number. Will return null if none were found.
         /// </summary>
         VehicleLookupResponseVehicle GetVehicle(VehicleLookupRequest query);
+
+        /// <summary>
+        /// Find vehicles matching given criteria in the DMS.
+        /// </summary>
+        IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query);
     }
 }
