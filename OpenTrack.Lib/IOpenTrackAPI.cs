@@ -54,7 +54,7 @@ namespace OpenTrack
         /// <summary>
         /// Find a list of customers matching the given criteria.
         /// </summary>
-        IEnumerable<CustomerSearchResponseCustomerSearchResult> FindCustomers(CustomerSearchRequest query);
+        CustomerSearchResponse FindCustomers(CustomerSearchRequest query);
 
         /// <summary>
         /// Find a single customer by number.
@@ -86,6 +86,9 @@ namespace OpenTrack
         /// </summary>
         IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query);
 
+        /// <summary>
+        /// Returns a list of appointments which match the given criteria in the DMS.
+        /// </summary>
         IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query);
 
         /// <summary>

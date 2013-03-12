@@ -90,11 +90,9 @@ namespace OpenTrack
             // TODO Handle errors?
         }
 
-        public IEnumerable<CustomerSearchResponseCustomerSearchResult> FindCustomers(CustomerSearchRequest query)
+        public CustomerSearchResponse FindCustomers(CustomerSearchRequest query)
         {
-            // TODO Also need to pass back the token for searching so users can then create.
-
-            return SubmitRequest<CustomerSearchResponse>(query).CustomerSearchResult;
+            return SubmitRequest<CustomerSearchResponse>(query);
         }
 
         public CustomerLookupResponseCustomer GetCustomer(CustomerLookupRequest query)
