@@ -170,6 +170,15 @@ namespace OpenTrack
             return response.Items;
         }
 
+        public VehicleLookupResponseVehicle GetVehicle(VehicleLookupRequest query)
+        {
+            var response = SubmitRequest<VehicleLookupResponse>(query);
+
+            // TODO Check for included items.
+
+            return response.Items.SingleOrDefault();
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

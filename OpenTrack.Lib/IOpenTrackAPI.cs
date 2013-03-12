@@ -71,6 +71,14 @@ namespace OpenTrack
         /// </summary>
         void UpdateCustomer(CustomerUpdateRequest query);
 
+        /// <summary>
+        /// Return a list of vehicles in the DMS inventory.
+        /// </summary>
         IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query);
+
+        /// <summary>
+        /// Return a single vehicle's information by VIN or Stock Number. Will return null if none were found.
+        /// </summary>
+        VehicleLookupResponseVehicle GetVehicle(VehicleLookupRequest query);
     }
 }
