@@ -327,11 +327,26 @@ namespace OpenTrack
                 if ("Error" == child.Name)
                 {
                     // <Error>
-                    //      <Code>311</Code>
+                    //      <Code>311</Code>  {{optional}}
                     //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
                     // </Error>
 
-                    throw new OpenTrackException(child.ChildNodes[0].InnerText, child.ChildNodes[1].InnerText);
+                    String errorCode = "Unknown";
+                    String message = child.InnerText;
+
+                    foreach (XmlNode n in child.ChildNodes)
+                    {
+                        if (n.Name == "ErrorCode")
+                        {
+                            errorCode = n.InnerText;
+                        }
+                        else if (n.Name == "Message")
+                        {
+                            message = n.InnerText;
+                        }
+                    }
+
+                    throw new OpenTrackException(errorCode, message);
                 }
             }
         }
