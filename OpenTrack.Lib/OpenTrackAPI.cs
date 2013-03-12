@@ -320,18 +320,18 @@ namespace OpenTrack
 
         internal virtual void ErrorCheck(XmlElement xml)
         {
+            // TODO This could probably be done more efficiently?
+
             foreach (XmlNode child in xml.ChildNodes)
             {
-                // <Error>
-                //      <Code>311</Code>
-                //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
-                // </Error>
-
                 if ("Error" == child.Name)
                 {
-                    // TODO Check error codes
+                    // <Error>
+                    //      <Code>311</Code>
+                    //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
+                    // </Error>
 
-                    throw new Exception(child.InnerXml);
+                    throw new OpenTrackException(child.ChildNodes[0].Value, child.ChildNodes[1].Value);
                 }
             }
         }

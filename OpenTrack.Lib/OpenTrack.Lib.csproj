@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOpenTrackAPI.cs" />
+    <Compile Include="OpenTrackException.cs" />
     <Compile Include="Requests\AddRepairOrderRequest.cs" />
     <Compile Include="Requests\AppointmentLookupRequest.cs" />
     <Compile Include="Requests\AppointmentAddRequest.cs" />
