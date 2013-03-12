@@ -36,6 +36,10 @@ namespace OpenTrack
 
         public OpenTrackAPI(String Url, String Username, String Password)
         {
+            if (String.IsNullOrWhiteSpace(Url)) throw new ArgumentNullException("Invalid Url provided.");
+            if (String.IsNullOrWhiteSpace(Username)) throw new ArgumentNullException("Invalid Username provided.");
+            if (String.IsNullOrWhiteSpace(Password)) throw new ArgumentNullException("Invalid Password provided.");
+
             this.Url = Url;
             this.Username = Username;
             this.Password = Password;
