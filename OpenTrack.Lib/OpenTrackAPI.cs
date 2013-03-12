@@ -331,7 +331,7 @@ namespace OpenTrack
                     //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
                     // </Error>
 
-                    throw new OpenTrackException(child.ChildNodes[0].Value, child.ChildNodes[1].Value);
+                    throw new OpenTrackException(child.ChildNodes[0].InnerText, child.ChildNodes[1].InnerText);
                 }
             }
         }
