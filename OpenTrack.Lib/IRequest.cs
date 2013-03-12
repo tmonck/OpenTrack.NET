@@ -21,6 +21,10 @@ namespace OpenTrack
 
         public IRequest(String EnterpriseCode, String DealerCode, String ServerName)
         {
+            if (String.IsNullOrWhiteSpace(EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
+            if (String.IsNullOrWhiteSpace(DealerCode)) throw new ArgumentNullException("Invalid DealerCode provided.");
+            if (String.IsNullOrWhiteSpace(ServerName)) throw new ArgumentNullException("Invalid ServerName provided.");
+
             this.EnterpriseCode = EnterpriseCode;
             this.DealerCode = DealerCode;
             this.ServerName = ServerName;
