@@ -161,6 +161,15 @@ namespace OpenTrack
             // response.Items.Any();
         }
 
+        public IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query)
+        {
+            var response = SubmitRequest<VehicleInventoryResponse>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

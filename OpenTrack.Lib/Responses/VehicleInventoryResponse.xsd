@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VehicleInventoryResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="VehicleInventoryResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vehicle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="VIN" type="xs:string" minOccurs="0" />
+              <xs:element name="StockNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DocumentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="GLApplied" type="xs:string" minOccurs="0" />
+              <xs:element name="TypeNU" type="xs:string" minOccurs="0" />
+              <xs:element name="BusinessOfficeFranchiseCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceFranchiseCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ManufacturerCode" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelYear" type="xs:string" minOccurs="0" />
+              <xs:element name="Make" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="BodyStyle" type="xs:string" minOccurs="0" />
+              <xs:element name="Color" type="xs:string" minOccurs="0" />
+              <xs:element name="Trim" type="xs:string" minOccurs="0" />
+              <xs:element name="FuelType" type="xs:string" minOccurs="0" />
+              <xs:element name="MPG" type="xs:string" minOccurs="0" />
+              <xs:element name="Cylinders" type="xs:string" minOccurs="0" />
+              <xs:element name="Truck" type="xs:string" minOccurs="0" />
+              <xs:element name="FourWheelDrive" type="xs:string" minOccurs="0" />
+              <xs:element name="Turbo" type="xs:string" minOccurs="0" />
+              <xs:element name="ColorCode" type="xs:string" minOccurs="0" />
+              <xs:element name="EngineCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TransmissionCode" type="xs:string" minOccurs="0" />
+              <xs:element name="IgnitionKeyCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TrunkKeyCode" type="xs:string" minOccurs="0" />
+              <xs:element name="KeylessCode" type="xs:string" minOccurs="0" />
+              <xs:element name="RadioCode" type="xs:string" minOccurs="0" />
+              <xs:element name="WheelLockCode" type="xs:string" minOccurs="0" />
+              <xs:element name="DealerCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Odometer" type="xs:string" minOccurs="0" />
+              <xs:element name="DateInInventory" type="xs:string" minOccurs="0" />
+              <xs:element name="DateInService" type="xs:string" minOccurs="0" />
+              <xs:element name="DateDelivered" type="xs:string" minOccurs="0" />
+              <xs:element name="DateOrdered" type="xs:string" minOccurs="0" />
+              <xs:element name="SaleAccount" type="xs:string" minOccurs="0" />
+              <xs:element name="InventoryAccount" type="xs:string" minOccurs="0" />
+              <xs:element name="DemoName" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyMonths" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyMiles" type="xs:string" minOccurs="0" />
+              <xs:element name="WarrantyDeduct" type="xs:string" minOccurs="0" />
+              <xs:element name="ListPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="VehicleCost" type="xs:string" minOccurs="0" />
+              <xs:element name="OptionPackage" type="xs:string" minOccurs="0" />
+              <xs:element name="LicenseNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="WorkInProcess" type="xs:string" minOccurs="0" />
+              <xs:element name="InspectionMonth" type="xs:string" minOccurs="0" />
+              <xs:element name="OdometerActual" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerKey" type="xs:string" minOccurs="0" />
+              <xs:element name="KeyToCAPExplosionData" type="xs:string" minOccurs="0" />
+              <xs:element name="CO2EmissionCode" type="xs:string" minOccurs="0" />
+              <xs:element name="RegistrationDate" type="xs:string" minOccurs="0" />
+              <xs:element name="FundingExpirationDate" type="xs:string" minOccurs="0" />
+              <xs:element name="InspectionDate" type="xs:string" minOccurs="0" />
+              <xs:element name="DriversSide" type="xs:string" minOccurs="0" />
+              <xs:element name="FreeFlooringPeriod" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderedStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="PublishVehicleInfoToWeb" type="xs:string" minOccurs="0" />
+              <xs:element name="Sale" type="xs:string" minOccurs="0" />
+              <xs:element name="CertifiedUsedCar" type="xs:string" minOccurs="0" />
+              <xs:element name="LastServiceDate" type="xs:string" minOccurs="0" />
+              <xs:element name="NextServiceDate" type="xs:string" minOccurs="0" />
+              <xs:element name="OptionalFields" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VehicleOptionalField" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="OptionNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                          <xs:element name="FieldType" type="xs:string" minOccurs="0" />
+                          <xs:element name="AlphaFieldValue" type="xs:string" minOccurs="0" />
+                          <xs:element name="NumericFieldValue" type="xs:string" minOccurs="0" />
+                          <xs:element name="DateFieldValue" type="xs:string" minOccurs="0" />
+                          <xs:element name="AddToCostFlag" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Options" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VehicleOption" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="OptionCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="Description" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

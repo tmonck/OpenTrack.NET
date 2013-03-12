@@ -70,5 +70,7 @@ namespace OpenTrack
         /// Update an existing customer in the DMS.
         /// </summary>
         void UpdateCustomer(CustomerUpdateRequest query);
+
+        IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query);
     }
 }
