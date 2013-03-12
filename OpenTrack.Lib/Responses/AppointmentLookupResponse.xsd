@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AppointmentLookupResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="AppointmentLookupResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Appointment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AppointmentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="AppointmentDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="OpenTransactionDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ServiceWriterID" type="xs:string" minOccurs="0" />
+              <xs:element name="FranchiseCode" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalEstimate" type="xs:string" minOccurs="0" />
+              <xs:element name="ROStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerKey" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress1" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerAddress2" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerCity" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerState" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerZipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerPhoneNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="VIN" type="xs:string" minOccurs="0" />
+              <xs:element name="StockNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Truck" type="xs:string" minOccurs="0" />
+              <xs:element name="OdometerIn" type="xs:string" minOccurs="0" />
+              <xs:element name="Details" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AppointmentDetail" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ServiceLineNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="LineType" type="xs:string" minOccurs="0" />
+                          <xs:element name="SequenceNumber" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransDate" type="xs:string" minOccurs="0" />
+                          <xs:element name="Comments" type="xs:string" minOccurs="0" />
+                          <xs:element name="ServiceType" type="xs:string" minOccurs="0" />
+                          <xs:element name="LinePaymentMethod" type="xs:string" minOccurs="0" />
+                          <xs:element name="TechnicianID" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborOpCode" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="LaborCostHours" type="xs:string" minOccurs="0" />
+                          <xs:element name="ActualRetailAmount" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

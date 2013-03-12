@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="IOpenTrackAPI.cs" />
     <Compile Include="Requests\AddRepairOrderRequest.cs" />
+    <Compile Include="Requests\AppointmentLookupRequest.cs" />
+    <Compile Include="Requests\AppointmentAddRequest.cs" />
     <Compile Include="Requests\VehicleSearchRequest.cs" />
     <Compile Include="Requests\VehicleLookupRequest.cs" />
     <Compile Include="Requests\VehicleInventoryRequest.cs" />
@@ -65,6 +67,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Responses\AddRepairOrderLinesResponse.cs" />
     <Compile Include="Responses\AddRepairOrderResponse.cs" />
+    <Compile Include="Responses\AppointmentAddResponse.cs" />
+    <Compile Include="Responses\AppointmentDeleteResponse.cs" />
+    <Compile Include="Responses\AppointmentLookupResponse.cs" />
+    <Compile Include="Responses\AppointmentUpdateReponse.cs" />
     <Compile Include="Responses\ClosedRepairOrders.cs" />
     <Compile Include="Responses\CustomerAddResponse.cs" />
     <Compile Include="Responses\CustomerListResponse.cs" />

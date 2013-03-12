@@ -1,0 +1,55 @@
+<AppointmentLookupResponse>
+  <Appointment>
+    <CompanyNumber>ZE7</CompanyNumber>
+    <AppointmentNumber>701284</AppointmentNumber>
+    <AppointmentDateTime>200810201700</AppointmentDateTime>
+    <OpenTransactionDate>20070730</OpenTransactionDate>
+    <ServiceWriterID>RCM</ServiceWriterID>
+    <FranchiseCode>NS</FranchiseCode>
+    <TotalEstimate>0.00</TotalEstimate>
+    <ROStatus>A</ROStatus>
+    <CustomerKey>3002173</CustomerKey>
+    <CustomerName>DOE, JOHN</CustomerName>
+    <CustomerAddress1>1234 ANYWHERE STREET</CustomerAddress1>
+    <CustomerAddress2/>
+    <CustomerCity>LANSING</CustomerCity>
+    <CustomerState>MI</CustomerState>
+    <CustomerZipCode>48910</CustomerZipCode>
+    <CustomerEmail>JOHNDOE@TEST.COM</CustomerEmail>
+    <CustomerPhoneNumber>9277321695</CustomerPhoneNumber>
+    <VIN>1FTZF1725WNB43914</VIN>
+    <StockNumber/>
+    <Truck/>
+    <OdometerIn>309308</OdometerIn>
+    <Details>
+      <AppointmentDetail>
+        <ServiceLineNumber>1</ServiceLineNumber>
+        <LineType>A</LineType>
+        <SequenceNumber>0</SequenceNumber>
+        <TransDate>20070730</TransDate>
+        <Comments>RAN HOT AND WONT START</Comments>
+        <ServiceType>MR</ServiceType>
+        <LinePaymentMethod>W</LinePaymentMethod>
+        <TechnicianID>BJ1</TechnicianID>
+        <LaborOpCode>*</LaborOpCode>
+        <LaborHours>1.50</LaborHours>
+        <LaborCostHours>0.00</LaborCostHours>
+        <ActualRetailAmount>400.00</ActualRetailAmount>
+      </AppointmentDetail>
+      <AppointmentDetail>
+        <ServiceLineNumber>1</ServiceLineNumber>
+        <LineType>E</LineType>
+        <SequenceNumber>0</SequenceNumber>
+        <TransDate>20070730</TransDate>
+        <Comments/>
+        <ServiceType/>
+        <LinePaymentMethod/>
+        <TechnicianID/>
+        <LaborOpCode/>
+        <LaborHours>1.50</LaborHours>
+        <LaborCostHours>0.00</LaborCostHours>
+        <ActualRetailAmount>0.00</ActualRetailAmount>
+      </AppointmentDetail>
+    </Details>
+  </Appointment>
+</AppointmentLookupResponse>

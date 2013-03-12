@@ -85,5 +85,7 @@ namespace OpenTrack
         /// Find vehicles matching given criteria in the DMS.
         /// </summary>
         IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query);
+
+        IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query);
     }
 }

@@ -188,6 +188,15 @@ namespace OpenTrack
             return response.Items;
         }
 
+        public IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query)
+        {
+            var response = SubmitRequest<AppointmentLookupResponse>(query);
+
+            // TODO Handle errors?
+
+            return response.Items;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
