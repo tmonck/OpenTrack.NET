@@ -78,16 +78,16 @@ namespace OpenTrack
 
         public void AddRepairOrder(AddRepairOrderRequest query)
         {
-            var response = SubmitRequest<AddRepairOrderResponse>(query);
+            // TODO What to check on the response?
 
-            // TODO Handle errors?
+            var response = SubmitRequest<AddRepairOrderResponse>(query);
         }
 
         public void AddRepairOrderLines(AddRepairOrderLinesRequest query)
         {
-            var response = SubmitRequest<AddRepairOrderLinesResponse>(query);
+            // TODO What to check on the response?
 
-            // TODO Handle errors?
+            var response = SubmitRequest<AddRepairOrderLinesResponse>(query);
         }
 
         public CustomerSearchResponse FindCustomers(CustomerSearchRequest query)
@@ -102,20 +102,16 @@ namespace OpenTrack
 
         public void AddCustomer(CustomerAddRequest query)
         {
+            // TODO What to check on the response?
+
             var response = SubmitRequest<CustomerAddResponse>(query);
-
-            // TODO How to check for success?
-
-            // response.Items.Any();
         }
 
         public void UpdateCustomer(CustomerUpdateRequest query)
         {
+            // TODO What to check on the response?
+
             var response = SubmitRequest<CustomerUpdateResponse>(query);
-
-            // TODO How to check for success?
-
-            // response.Items.Any();
         }
 
         public IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query)
@@ -125,8 +121,6 @@ namespace OpenTrack
 
         public VehicleLookupResponseVehicle GetVehicle(VehicleLookupRequest query)
         {
-            // TODO Check for included items.
-
             return SubmitRequest<VehicleLookupResponse>(query).Items.SingleOrDefault();
         }
 
@@ -142,23 +136,23 @@ namespace OpenTrack
 
         public void AddAppointment(AppointmentAddRequest query)
         {
-            var response = SubmitRequest<AppointmentAddResponse>(query);
-
             // TODO What to check on the response?
+
+            var response = SubmitRequest<AppointmentAddResponse>(query);
         }
 
         public void UpdateAppointment(AppointmentUpdateRequest query)
         {
-            var response = SubmitRequest<AppointmentUpdateResponse>(query);
-
             // TODO What to check on the response?
+
+            var response = SubmitRequest<AppointmentUpdateResponse>(query);
         }
 
         public void DeleteAppointment(AppointmentDeleteRequest query)
         {
-            var response = SubmitRequest<AppointmentDeleteResponse>(query);
-
             // TODO What to check on the response?
+
+            var response = SubmitRequest<AppointmentDeleteResponse>(query);
         }
 
         /// <summary>
