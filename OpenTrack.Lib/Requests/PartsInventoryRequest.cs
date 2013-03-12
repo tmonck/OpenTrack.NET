@@ -16,12 +16,24 @@ namespace OpenTrack.Requests
 
         public String PartNumber { get; set; }
 
+        /// <summary>
+        /// YYYY-MM-DDTHH:MM:SS0Z format
+        /// </summary>
         public String DateInInventoryStart { get; set; }
 
+        /// <summary>
+        /// YYYY-MM-DDTHH:MM:SS0Z format
+        /// </summary>
         public String DateInInventoryEnd { get; set; }
 
+        /// <summary>
+        /// YYYY-MM-DDTHH:MM:SS0Z format
+        /// </summary>
         public String LastSoldDateStart { get; set; }
 
+        /// <summary>
+        /// YYYY-MM-DDTHH:MM:SS0Z format
+        /// </summary>
         public String LastSoldDateEnd { get; set; }
 
         internal override XElement Elements
