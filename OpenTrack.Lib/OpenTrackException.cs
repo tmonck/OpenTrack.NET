@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace OpenTrack
 {
@@ -26,16 +27,26 @@ namespace OpenTrack
     // 313 Access validation error: Access to this API is not set up or is turned off.
     // 314 Access validation error: Dealer access start date is a future date.
 
-    public class OpenTrackException : Exception
+    public class OpenTrackException : Exception, ISerializable
     {
+        // http://stackoverflow.com/questions/4791823/what-are-industry-standard-best-practices-for-implementing-custom-exceptions-in
+
+        public String ErrorCode { get; private set; }
+
+        public String ErrorMessage { get; private set; }
+
         public OpenTrackException(String ErrorMessage)
             : base(ErrorMessage)
         {
+            this.ErrorCode = "Unknown";
+            this.ErrorMessage = ErrorMessage;
         }
 
         public OpenTrackException(String ErrorCode, String ErrorMessage)
             : base(String.Format("{0}: {1}", ErrorCode, ErrorMessage))
         {
+            this.ErrorCode = ErrorCode;
+            this.ErrorMessage = ErrorMessage;
         }
     }
 }
