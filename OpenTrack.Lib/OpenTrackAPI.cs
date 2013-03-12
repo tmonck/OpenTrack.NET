@@ -197,6 +197,27 @@ namespace OpenTrack
             return response.Items;
         }
 
+        public void AddAppointment(AppointmentAddRequest query)
+        {
+            var response = SubmitRequest<AppointmentAddResponse>(query);
+
+            // TODO What to check on the response?
+        }
+
+        public void UpdateAppointment(AppointmentUpdateRequest query)
+        {
+            var response = SubmitRequest<AppointmentUpdateResponse>(query);
+
+            // TODO What to check on the response?
+        }
+
+        public void DeleteAppointment(AppointmentDeleteRequest query)
+        {
+            var response = SubmitRequest<AppointmentDeleteResponse>(query);
+
+            // TODO What to check on the response?
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

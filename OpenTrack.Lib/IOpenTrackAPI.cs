@@ -87,5 +87,19 @@ namespace OpenTrack
         IEnumerable<VehicleSearchResponseVehicleSearchResult> FindVehicles(VehicleSearchRequest query);
 
         IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query);
+
+        /// <summary>
+        /// Add a new appointment to the DMS.
+        void AddAppointment(AppointmentAddRequest query);
+
+        /// <summary>
+        /// Update an existing appointment in the DMS.
+        /// </summary>
+        void UpdateAppointment(AppointmentUpdateRequest query);
+
+        /// <summary>
+        /// Delete an existing appointment in the DMS.
+        /// </summary>
+        void DeleteAppointment(AppointmentDeleteRequest query);
     }
 }
