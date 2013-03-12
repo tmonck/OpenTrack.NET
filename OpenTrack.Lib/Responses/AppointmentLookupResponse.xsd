@@ -25,6 +25,9 @@
               <xs:element name="CustomerPhoneNumber" type="xs:string" minOccurs="0" />
               <xs:element name="VIN" type="xs:string" minOccurs="0" />
               <xs:element name="StockNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Make" type="xs:string" minOccurs="0" />
+              <xs:element name="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelYear" type="xs:string" minOccurs="0" />
               <xs:element name="Truck" type="xs:string" minOccurs="0" />
               <xs:element name="OdometerIn" type="xs:string" minOccurs="0" />
               <xs:element name="Details" minOccurs="0" maxOccurs="unbounded">

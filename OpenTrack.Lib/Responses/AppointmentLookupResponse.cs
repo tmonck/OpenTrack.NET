@@ -84,6 +84,12 @@ namespace OpenTrack.Responses {
         
         private string stockNumberField;
         
+        private string makeField;
+        
+        private string modelField;
+        
+        private string modelYearField;
+        
         private string truckField;
         
         private string odometerInField;
@@ -296,6 +302,39 @@ namespace OpenTrack.Responses {
             }
             set {
                 this.stockNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Make {
+            get {
+                return this.makeField;
+            }
+            set {
+                this.makeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Model {
+            get {
+                return this.modelField;
+            }
+            set {
+                this.modelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ModelYear {
+            get {
+                return this.modelYearField;
+            }
+            set {
+                this.modelYearField = value;
             }
         }
         
