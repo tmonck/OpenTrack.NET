@@ -16,7 +16,7 @@ namespace OpenTrack.TestApp
             var dealerCode = "ZE7";
             var serverName = "arkonap.arkona.com";
 
-            var api = new OpenTrackAPI(url, username, password);
+            IOpenTrackAPI api = new OpenTrackAPI(url, username, password);
 
             var response = api.FindAppointments(new Requests.AppointmentLookupRequest(enterpriseCode, dealerCode, serverName)
             {
