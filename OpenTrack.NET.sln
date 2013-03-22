@@ -7,8 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTrack.TestApp", "OpenTr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{7CDC5DD2-6B24-45DE-8CBD-91D8DB58285E}"
 	ProjectSection(SolutionItems) = preProject
+		Build-Package.ps1 = Build-Package.ps1
 		Build.ps1 = Build.ps1
 		LICENSE.md = LICENSE.md
+		OpenTrack.nuspec = OpenTrack.nuspec
 		OpenTrack.Lib\ProcessResponses.ps1 = OpenTrack.Lib\ProcessResponses.ps1
 		README.md = README.md
 	EndProjectSection
