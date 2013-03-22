@@ -305,13 +305,13 @@ namespace OpenTrack
         /// </summary>
         internal virtual Definitions.starTransportClient GetService()
         {
-            var binding = new BasicHttpBinding();
+            var binding = new BasicHttpsBinding();
 
             // We could be getting back a lot of data. Let's just try and get it all!
             binding.MaxReceivedMessageSize = int.MaxValue;
 
             // We need to send the credential along with the message.
-            binding.Security.Mode = BasicHttpSecurityMode.TransportWithMessageCredential;
+            binding.Security.Mode = BasicHttpsSecurityMode.TransportWithMessageCredential;
 
             // Create a client with the given endpoint.
             var client = new starTransportClient(binding, new EndpointAddress(this.Url));
