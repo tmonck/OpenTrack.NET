@@ -10,9 +10,17 @@ using System.Xml;
 
 namespace OpenTrack
 {
-    // Dev URL: https://opentrackqa.arkona.com
-    // Test URL: https://opentrackcert.arkona.com/{serviceapi.asmx}
-    // Production URL: https://aws.arkona.com/OpenTrack/serviceapi.asmx
+    // Staging URLs
+    // https://otstaging.arkona.com/opentrack/ServiceAPI.asmx
+    // https://otstaging.arkona.com/OpenTrack/WebService.asmx
+
+    // Pre-Prod URLs
+    // https://otcert.arkona.com/OpenTrack/WebService.asmx
+    // https://otcert.arkona.com/OpenTrack/ServiceAPI.asmx
+
+    // Production URLs
+    // https://aws.arkona.com/OpenTrack/WebService.asmx
+    // https://aws.arkona.com/OpenTrack/ServiceAPI.asmx
 
     /// <summary>
     /// Basic implementation of the OpenTrack API interface that performs and processes the requests.

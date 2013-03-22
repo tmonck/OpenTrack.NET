@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="opentrack.dealertrack.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="opentrack.dealertrack.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="opentrack.dealertrack.com">
+      <s:element name="GetClosedRepairOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetClosedRepairOrdersRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DealerInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnterpriseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetClosedRepairOrdersRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepairOrderNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CloseDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalCloseDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTimeStart" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDateTimeEnd" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalCloseDateEnd" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinalCloseDateStart" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClosedRepairOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClosedRepairOrdersResult" type="tns:GetClosedRepairOrdersResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetClosedRepairOrdersResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClosedRepairOrders" type="tns:ArrayOfClosedRepairOrder" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClosedRepairOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClosedRepairOrder" nillable="true" type="tns:ClosedRepairOrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClosedRepairOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RepairOrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RepairOrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarrantyRONumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceWriterID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ROTechnicianID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARCustomerKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpenDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CloseDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FinalCloseDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalEstimate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractComp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractComp2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractDeduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractDeduct2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarrantyDeduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FranchiseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OdometerIn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OdometerOut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseOrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartsTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubletTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractDeductPaid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractTotal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialOrderDeposits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPayHazardousMaterials" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPaySaleTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarrantySaleTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalSaleTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractSaleTax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPayShopSup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarrantyShopSup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalShopSup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceContractShopSup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponDiscount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCouponDiscount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalSale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalGross" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalAuthBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeOfAppointment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeLastLineComplete" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimePreInvoiced" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TowedInIndicator" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Details" type="tns:ArrayOfClosedRepairOrderDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClosedRepairOrderDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ClosedRepairOrderDetail" nillable="true" type="tns:ClosedRepairOrderDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClosedRepairOrderDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LineNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborDetails" type="tns:ArrayOfClosedRepairOrderLabor" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parts" type="tns:ArrayOfClosedRepairOrderPart" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="tns:ArrayOfClosedRepairOrderComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClosedRepairOrderLabor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Labor" nillable="true" type="tns:ClosedRepairOrderLabor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClosedRepairOrderLabor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LineType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineSeqNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinePaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyAdjustment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TechnicianID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborOpCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorrLaborOpCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborHours" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActualRetailFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubletVendorNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubletInvoiceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponDiscountBasis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATAmount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClosedRepairOrderPart">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Part" nillable="true" type="tns:ClosedRepairOrderPart" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClosedRepairOrderPart">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LineSeqNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialOrderEmergencyPurchase" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CloseDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CounterPersonID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EPCostDiff" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalSpecialOrder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceOverride" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExcludeFromHistory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailedPart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnToIventory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuantityOnhandAfterTrans" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATAmount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClosedRepairOrderComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="tns:ClosedRepairOrderComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ClosedRepairOrderComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LineSeqNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="tns:Error" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Error">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClosedRepairOrderDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:GetClosedRepairOrderDetailRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetClosedRepairOrderDetailRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RepairOrderNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetClosedRepairOrderDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClosedRepairOrderDetailsResult" type="tns:GetClosedRepairOrderDetailResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetClosedRepairOrderDetailResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClosedRepairOrder" type="tns:ClosedRepairOrder" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfError" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetClosedRepairOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClosedRepairOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetClosedRepairOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClosedRepairOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClosedRepairOrderDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClosedRepairOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetClosedRepairOrderDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClosedRepairOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceAPISoap">
+    <wsdl:operation name="GetClosedRepairOrders">
+      <wsdl:input message="tns:GetClosedRepairOrdersSoapIn" />
+      <wsdl:output message="tns:GetClosedRepairOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedRepairOrderDetails">
+      <wsdl:input message="tns:GetClosedRepairOrderDetailsSoapIn" />
+      <wsdl:output message="tns:GetClosedRepairOrderDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceAPISoap" type="tns:ServiceAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClosedRepairOrders">
+      <soap:operation soapAction="opentrack.dealertrack.com/GetClosedRepairOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedRepairOrderDetails">
+      <soap:operation soapAction="opentrack.dealertrack.com/GetClosedRepairOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceAPISoap12" type="tns:ServiceAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClosedRepairOrders">
+      <soap12:operation soapAction="opentrack.dealertrack.com/GetClosedRepairOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClosedRepairOrderDetails">
+      <soap12:operation soapAction="opentrack.dealertrack.com/GetClosedRepairOrderDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAPI">
+    <wsdl:port name="ServiceAPISoap" binding="tns:ServiceAPISoap">
+      <soap:address location="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceAPISoap12" binding="tns:ServiceAPISoap12">
+      <soap12:address location="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
