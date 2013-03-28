@@ -1,4 +1,4 @@
-<package>
+<package>  
   <metadata>
     <version>0.0.1-rc</version>
 
@@ -12,7 +12,7 @@
   </metadata>
 
   <files>
-    <file src="\OpenTrack.Lib\bin\Debug\OpenTrack.dll" target="lib\net45" />
+    <file src="\OpenTrack.Lib\bin\**\OpenTrack.*" target="lib\net45" />
     <file src="ReadME.md" target="tools" />
     <file src="LICENSE.md" target="tools" />
   </files>
