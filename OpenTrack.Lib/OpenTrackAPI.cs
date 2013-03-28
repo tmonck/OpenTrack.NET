@@ -1,9 +1,9 @@
 ﻿using OpenTrack.Definitions;
 using OpenTrack.Requests;
 using OpenTrack.Responses;
+using OpenTrack.Utilities;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Xml;
@@ -254,14 +254,6 @@ namespace OpenTrack
                 // Check for errors
                 ErrorCheck(response);
 
-                // In debug, let's write out all of the XML to files.
-#if DEBUG
-                using (var w = new StreamWriter(String.Format("{0}.xml", Guid.NewGuid())))
-                {
-                    w.Write(response.OuterXml);
-                }
-#endif
-
                 // Process the request with the appropriate parser/handler.
                 return request.ProcessResponse(response);
             }
@@ -305,19 +297,22 @@ namespace OpenTrack
         /// </summary>
         internal virtual Definitions.starTransportClient GetService()
         {
-            var binding = new BasicHttpsBinding();
-
-            // We could be getting back a lot of data. Let's just try and get it all!
-            binding.MaxReceivedMessageSize = int.MaxValue;
-
             // We need to send the credential along with the message.
-            binding.Security.Mode = BasicHttpsSecurityMode.TransportWithMessageCredential;
+            var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
+            {
+                // We could be getting back a lot of data. Let's just try and get it all!
+                MaxReceivedMessageSize = int.MaxValue
+            };
 
             // Create a client with the given endpoint.
             var client = new starTransportClient(binding, new EndpointAddress(this.Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
+
+#if DEBUG
+            client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+#endif
 
             return client;
         }
