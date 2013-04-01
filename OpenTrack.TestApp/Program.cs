@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Configuration;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace OpenTrack.TestApp
 {
@@ -18,15 +18,26 @@ namespace OpenTrack.TestApp
 
             IOpenTrackAPI api = new OpenTrackAPI(url, username, password);
 
-            var response = api.FindAppointments(new Requests.AppointmentLookupRequest(enterpriseCode, dealerCode, serverName)
-            {
-                
-            });
+            var numbers = new[] { "5HS56EGJAI", "5HS57EDAAJ", "12605566", "1231", "9021", "1234" };
 
-            foreach (var r in response)
-            {
-                Console.WriteLine("{0} {1} {2}", r.AppointmentNumber, r.CustomerName, r.AppointmentDateTime);
-            }
+            var sw = new System.Diagnostics.Stopwatch();
+
+            sw.Start();
+
+            Parallel.ForEach(numbers, n =>
+                {
+                    var response = api.GetPartsInventory(new Requests.PartsInventoryRequest(enterpriseCode, dealerCode, serverName)
+                    {
+                        PartNumber = n
+                    });
+
+                    foreach (var r in response)
+                    {
+                        Console.WriteLine("{0} {1} {2}", r.PartNumber, r.StockCode, r.Status);
+                    }
+                });
+
+            Console.WriteLine("Elapsed: {0}", sw.Elapsed);
 
             Console.ReadKey();
         }
