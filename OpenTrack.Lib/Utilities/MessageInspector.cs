@@ -19,11 +19,9 @@ namespace OpenTrack.Utilities
 
         private class RawMessageInspector : IClientMessageInspector
         {
-            private readonly int ID = new Random().Next();
-
             public void AfterReceiveReply(ref Message reply, object correlationState)
             {
-                using (var w = new StreamWriter(String.Format("Response.{0}.xml", ID)))
+                using (var w = new StreamWriter(String.Format("Response.{0}.xml", Guid.NewGuid())))
                 {
                     w.Write(reply.ToString());
                 }
@@ -31,7 +29,7 @@ namespace OpenTrack.Utilities
 
             public object BeforeSendRequest(ref Message request, IClientChannel channel)
             {
-                using (var w = new StreamWriter(String.Format("Request.{0}.xml", ID)))
+                using (var w = new StreamWriter(String.Format("Request.{0}.xml", Guid.NewGuid())))
                 {
                     w.Write(request.ToString());
                 }
