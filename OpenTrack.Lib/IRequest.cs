@@ -13,7 +13,8 @@ namespace OpenTrack
     /// </summary>
     public abstract class IRequest<T>
     {
-        public const String DateFormat = "yyyyMMddHHmm";
+        public const String DateFormat = "yyyyMMdd";
+        public const String DateTimeFormat = "yyyyMMddHHmm";
 
         public String EnterpriseCode { get; private set; }
 
@@ -59,7 +60,7 @@ namespace OpenTrack
         /// <summary>
         /// Serialize a C# model and convert it into an XElement for use in a request.
         /// </summary>
-        protected XElement SerializeToXml<T>(Object obj)
+        internal XElement SerializeToXml<T>(Object obj)
         {
             using (var stream = new MemoryStream())
             {
@@ -72,7 +73,7 @@ namespace OpenTrack
         /// <summary>
         /// Removes empty elements from the XML (i.e. <Data />)
         /// </summary>
-        private XElement RemoveEmptyElements(XElement xml)
+        internal XElement RemoveEmptyElements(XElement xml)
         {
             var query = xml.Descendants().Where(c => !c.HasAttributes && c.IsEmpty);
 

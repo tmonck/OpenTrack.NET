@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace OpenTrack.Requests
@@ -13,12 +14,44 @@ namespace OpenTrack.Requests
     /// </summary>
     public class AppointmentAddRequest : IRequest<OpenTrack.Responses.AppointmentAddResponse>
     {
+        public String CompanyNumber { get; set; }
+
+        /// <summary>
+        /// YYYYMMDD format.
+        /// </summary>
+        public DateTime OpenTransactionDate { get; set; }
+
+        public String CustomerKey { get; set; }
+
+        public String CustomerName { get; set; }
+
+        public String CustomerPhoneNumber { get; set; }
+
+        public String ServiceWriterID { get; set; }
+
+        public Decimal TotalEstimate { get; set; }
+
+        public String VIN { get; set; }
+
+        public String StockNumber { get; set; }
+
+        public Boolean Truck { get; set; }
+
+        public String FranchiseCode { get; set; }
+
+        public int OdometerIn { get; set; }
+
+        /// <summary>
+        /// YYYYMMDDTTTT format
+        /// </summary>
+        public DateTime AppointmentDateTime { get; set; }
+
+        public List<AppointmentDetail> Details { get; set; }
+
         public AppointmentAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)
         {
         }
-
-        public Appointment Data { get; set; }
 
         internal override XElement Elements
         {
@@ -26,50 +59,40 @@ namespace OpenTrack.Requests
             {
                 return new XElement("AppointmentAdd",
                     this.Dealer,
-                    SerializeToXml<Appointment>(this.Data)
+                    new XElement("Appointment",
+                        new XElement("CompanyNumber", this.CompanyNumber),
+                        new XElement("OpenTransactionDate", this.OpenTransactionDate.ToString("yyyyMMdd")),
+                        new XElement("CustomerKey", this.CustomerKey),
+                        new XElement("CustomerName", this.CustomerName),
+                        new XElement("CustomerPhoneNumber", this.CustomerPhoneNumber),
+                        new XElement("ServiceWriterID", this.ServiceWriterID),
+                        new XElement("TotalEstimate", this.TotalEstimate),
+                        new XElement("VIN", this.VIN),
+                        new XElement("StockNumber", this.StockNumber),
+                        new XElement("Truck", this.Truck ? "Y" : "N"),
+                        new XElement("FranchiseCode", this.FranchiseCode),
+                        new XElement("OdometerIn", this.OdometerIn),
+                        new XElement("AppointmentDateTime", this.AppointmentDateTime.ToString(AppointmentAddRequest.DateTimeFormat)),
+                        new XElement("Details",
+                            this.Details.Select(d =>
+                                new XElement("AppointmentDetail",
+                                    new XElement("ServiceLineNumber", d.ServiceLineNumber),
+                                    new XElement("LineType", d.LineType),
+                                    new XElement("SequenceNumber", d.SequenceNumber),
+                                    new XElement("TransDate", d.TransDate),
+                                    new XElement("Comments", d.Comments),
+                                    new XElement("ServiceType", d.ServiceType),
+                                    new XElement("LinePaymentMethod", d.LinePaymentMethod),
+                                    new XElement("TechnicianID", d.TechnicianID),
+                                    new XElement("LaborOpCode", d.LaborOpCode),
+                                    new XElement("LaborHours", d.LaborHours),
+                                    new XElement("LaborCostHours", d.LaborCostHours),
+                                    new XElement("ActualRetailAmount", d.ActualRetailAmount)
+                                    )
+                                )
+                            )
+                        )
                     );
-            }
-        }
-
-        public class Appointment
-        {
-            public String CompanyNumber { get; set; }
-
-            /// <summary>
-            /// YYYYMMDD format.
-            /// </summary>
-            public String OpenTransactionDate { get; set; }
-
-            public String CustomerKey { get; set; }
-
-            public String CustomerName { get; set; }
-
-            public String CustomerPhoneNumber { get; set; }
-
-            public String ServiceWriterID { get; set; }
-
-            public Decimal TotalEstimate { get; set; }
-
-            public String VIN { get; set; }
-
-            public String StockNumber { get; set; }
-
-            public String Truck { get; set; }
-
-            public String FranchiseCode { get; set; }
-
-            public int OdometerIn { get; set; }
-
-            /// <summary>
-            /// YYYYMMDDTTTT format
-            /// </summary>
-            public String AppointmentDateTime { get; set; }
-
-            public List<AppointmentDetail> Details { get; set; }
-
-            public Appointment()
-            {
-                this.Details = new List<AppointmentDetail>();
             }
         }
 
@@ -132,7 +155,7 @@ namespace OpenTrack.Requests
                         new XElement("CompanyNumber", this.CompanyNumber),
                         new XElement("AppointmentNumber", this.AppointmentNumber),
                         new XElement("ServiceWriterID", this.ServiceWriterID),
-                        new XElement("AppointmentDateTime", this.AppointmentDateTime.ToString(AppointmentUpdateRequest.DateFormat))
+                        new XElement("AppointmentDateTime", this.AppointmentDateTime.ToString(AppointmentUpdateRequest.DateTimeFormat))
                         )
                     );
             }
