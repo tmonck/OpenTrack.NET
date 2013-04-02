@@ -120,10 +120,7 @@ namespace OpenTrack.Requests
 
         public String ServiceWriterID { get; set; }
 
-        /// <summary>
-        /// YYYYMMDDTTTT format.
-        /// </summary>
-        public String AppointmentDateTime { get; set; }
+        public DateTime AppointmentDateTime { get; set; }
 
         internal override XElement Elements
         {
@@ -135,7 +132,7 @@ namespace OpenTrack.Requests
                         new XElement("CompanyNumber", this.CompanyNumber),
                         new XElement("AppointmentNumber", this.AppointmentNumber),
                         new XElement("ServiceWriterID", this.ServiceWriterID),
-                        new XElement("AppointmentDateTime", this.AppointmentDateTime)
+                        new XElement("AppointmentDateTime", this.AppointmentDateTime.ToString(AppointmentUpdateRequest.DateFormat))
                         )
                     );
             }

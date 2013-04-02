@@ -13,6 +13,8 @@ namespace OpenTrack
     /// </summary>
     public abstract class IRequest<T>
     {
+        public const String DateFormat = "yyyyMMddHHmm";
+
         public String EnterpriseCode { get; private set; }
 
         public String DealerCode { get; private set; }
