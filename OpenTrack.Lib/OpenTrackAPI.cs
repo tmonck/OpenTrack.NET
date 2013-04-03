@@ -146,11 +146,11 @@ namespace OpenTrack
             return SubmitRequest<AppointmentLookupResponse>(query).Items;
         }
 
-        public void AddAppointment(AppointmentAddRequest query)
+        public String AddAppointment(AppointmentAddRequest query)
         {
-            // TODO What to check on the response?
-
             var response = SubmitRequest<AppointmentAddResponse>(query);
+
+            return response.Items.SingleOrDefault().AppointmentNumber;
         }
 
         public void UpdateAppointment(AppointmentUpdateRequest query)

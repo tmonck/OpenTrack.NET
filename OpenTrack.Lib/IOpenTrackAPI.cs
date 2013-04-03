@@ -1,5 +1,6 @@
 ﻿using OpenTrack.Requests;
 using OpenTrack.Responses;
+using System;
 using System.Collections.Generic;
 
 namespace OpenTrack
@@ -92,8 +93,9 @@ namespace OpenTrack
         IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query);
 
         /// <summary>
-        /// Add a new appointment to the DMS.
-        void AddAppointment(AppointmentAddRequest query);
+        /// Add a new appointment to the DMS. Returns the created appointment number.
+        /// </summary>
+        String AddAppointment(AppointmentAddRequest query);
 
         /// <summary>
         /// Update an existing appointment in the DMS.
