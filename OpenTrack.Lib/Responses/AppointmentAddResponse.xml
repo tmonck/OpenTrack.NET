@@ -1,5 +1,6 @@
-<AppointmentAddResponse>
-<Success>
-<Message>Appointment successfully deleted.</Message>
-</Success>
+<AppointmentAddResponse xmlns="">
+  <Success>
+    <Message>Appointment successfully added.</Message>
+    <AppointmentNumber>1387</AppointmentNumber>
+  </Success>
 </AppointmentAddResponse>
