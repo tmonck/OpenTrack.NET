@@ -29,7 +29,7 @@ namespace OpenTrack.Requests
 
         public String ServiceWriterID { get; set; }
 
-        public Decimal TotalEstimate { get; set; }
+        public Decimal? TotalEstimate { get; set; }
 
         public String VIN { get; set; }
 
@@ -39,18 +39,19 @@ namespace OpenTrack.Requests
 
         public String FranchiseCode { get; set; }
 
-        public int OdometerIn { get; set; }
+        public int? OdometerIn { get; set; }
 
         /// <summary>
         /// YYYYMMDDTTTT format
         /// </summary>
         public DateTime AppointmentDateTime { get; set; }
 
-        public List<AppointmentDetail> Details { get; set; }
+        public IList<AppointmentDetail> Details { get; set; }
 
         public AppointmentAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
             : base(EnterpriseCode, DealerCode, ServerName)
         {
+            this.Details = new List<AppointmentDetail>();
         }
 
         internal override XElement Elements
@@ -119,11 +120,11 @@ namespace OpenTrack.Requests
 
             public String LaborOpCode { get; set; }
 
-            public Decimal LaborHours { get; set; }
+            public Decimal? LaborHours { get; set; }
 
-            public Decimal LaborCostHours { get; set; }
+            public Decimal? LaborCostHours { get; set; }
 
-            public Decimal ActualRetailAmount { get; set; }
+            public Decimal? ActualRetailAmount { get; set; }
         }
     }
 
