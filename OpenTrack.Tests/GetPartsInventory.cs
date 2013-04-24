@@ -6,7 +6,8 @@ namespace OpenTrack.Tests
 {
     public class GetPartsInventory
     {
-        [Fact]
+        // This takes several minutes to run. 
+        // [Fact]
         public void Test_Get_PartsInfo()
         {
             var api = Credentials.GetAPI();

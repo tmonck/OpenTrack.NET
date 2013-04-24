@@ -9,9 +9,9 @@ namespace OpenTrack.Tests
         public const String DealerCode = "ZE7";
         public const String ServerName = "arkonap.arkona.com";
 
-        public const String Url = ConfigurationManager.AppSettings["Url"];
-        public const String Username = ConfigurationManager.AppSettings["Username"];
-        public const String Password = ConfigurationManager.AppSettings["Password"];
+        public static readonly String Url = ConfigurationManager.AppSettings["Url"];
+        public static readonly String Username = ConfigurationManager.AppSettings["Username"];
+        public static readonly String Password = ConfigurationManager.AppSettings["Password"];
 
         public static IOpenTrackAPI GetAPI()
         {

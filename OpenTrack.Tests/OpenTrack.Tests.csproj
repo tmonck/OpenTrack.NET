@@ -48,7 +48,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetTechnicians.cs" />
+    <Compile Include="GetServiceAdvisors.cs" />
+    <Compile Include="FindOpenRepairOrders.cs" />
     <Compile Include="Credentials.cs" />
+    <Compile Include="GetOpcodes.cs" />
     <Compile Include="GetOpenAppointments.cs" />
     <Compile Include="GetPartsInventory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
