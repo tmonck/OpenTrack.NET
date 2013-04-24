@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OpenTrack.TestApp")]
+[assembly: AssemblyTitle("OpenTrack.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OpenTrack.TestApp")]
+[assembly: AssemblyProduct("OpenTrack.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a3662b6e-e004-4949-9bf0-5b484570aeb7")]
+[assembly: Guid("4c3aa12b-e4dc-405e-aa6c-7fe311c5079d")]
 
 // Version information for an assembly consists of the following four values:
 //
