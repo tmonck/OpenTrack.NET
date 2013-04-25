@@ -22,6 +22,11 @@ namespace OpenTrack
 
         public String ServerName { get; private set; }
 
+        /// <summary>
+        /// CompanyNumber is basically an alias for DealerCode.
+        /// </summary>
+        public String CompanyNumber { get { return this.DealerCode; } set { this.DealerCode = value; } }
+
         public IRequest(String EnterpriseCode, String DealerCode, String ServerName)
         {
             if (String.IsNullOrWhiteSpace(EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");

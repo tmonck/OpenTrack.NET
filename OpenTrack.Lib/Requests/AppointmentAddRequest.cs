@@ -14,8 +14,6 @@ namespace OpenTrack.Requests
     /// </summary>
     public class AppointmentAddRequest : IRequest<OpenTrack.Responses.AppointmentAddResponse>
     {
-        public String CompanyNumber { get; set; }
-
         /// <summary>
         /// YYYYMMDD format.
         /// </summary>
@@ -137,8 +135,6 @@ namespace OpenTrack.Requests
             : base(EnterpriseCode, DealerCode, ServerName)
         {
         }
-
-        public String CompanyNumber { get; set; }
 
         public String AppointmentNumber { get; set; }
 

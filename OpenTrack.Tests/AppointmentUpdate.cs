@@ -14,8 +14,7 @@ namespace OpenTrack.Tests
             {
                 AppointmentNumber = "338",
                 AppointmentDateTime = new DateTime(2013, 5, 5, 12, 0, 0),
-                ServiceWriterID = "DT",
-                CompanyNumber = "ZE7"
+                ServiceWriterID = "DT"
             });
         }
     }
