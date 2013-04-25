@@ -48,6 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRepairOrder.cs" />
+    <Compile Include="AppointmentUpdate.cs" />
     <Compile Include="GetTechnicians.cs" />
     <Compile Include="GetServiceAdvisors.cs" />
     <Compile Include="FindOpenRepairOrders.cs" />
