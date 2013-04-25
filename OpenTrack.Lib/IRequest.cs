@@ -18,23 +18,18 @@ namespace OpenTrack
 
         public String EnterpriseCode { get; private set; }
 
-        public String DealerCode { get; private set; }
+        public String CompanyNumber { get; set; }
 
         public String ServerName { get; private set; }
 
-        /// <summary>
-        /// CompanyNumber is basically an alias for DealerCode.
-        /// </summary>
-        public String CompanyNumber { get { return this.DealerCode; } set { this.DealerCode = value; } }
-
-        public IRequest(String EnterpriseCode, String DealerCode, String ServerName)
+        public IRequest(String EnterpriseCode, String CompanyNumber, String ServerName)
         {
             if (String.IsNullOrWhiteSpace(EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
-            if (String.IsNullOrWhiteSpace(DealerCode)) throw new ArgumentNullException("Invalid DealerCode provided.");
+            if (String.IsNullOrWhiteSpace(CompanyNumber)) throw new ArgumentNullException("Invalid CompanyNumber provided.");
             if (String.IsNullOrWhiteSpace(ServerName)) throw new ArgumentNullException("Invalid ServerName provided.");
 
             this.EnterpriseCode = EnterpriseCode;
-            this.DealerCode = DealerCode;
+            this.CompanyNumber = CompanyNumber;
             this.ServerName = ServerName;
         }
 
@@ -99,7 +94,7 @@ namespace OpenTrack
             {
                 return new XElement("Dealer",
                     new XElement("EnterpriseCode", this.EnterpriseCode),
-                    new XElement("CompanyNumber", this.DealerCode),
+                    new XElement("CompanyNumber", this.CompanyNumber),
                     new XElement("ServerName", this.ServerName)
                     );
             }

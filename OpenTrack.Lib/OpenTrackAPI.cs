@@ -200,7 +200,7 @@ namespace OpenTrack
             //    </soap:Body>
             // </soap:Envelope>
 
-            if (String.IsNullOrWhiteSpace(request.DealerCode)) throw new ArgumentNullException("Invalid DealerCode provided.");
+            if (String.IsNullOrWhiteSpace(request.CompanyNumber)) throw new ArgumentNullException("Invalid CompanyNumber provided.");
 
             if (String.IsNullOrWhiteSpace(request.EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
 
