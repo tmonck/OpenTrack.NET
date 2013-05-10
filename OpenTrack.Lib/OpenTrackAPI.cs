@@ -42,6 +42,8 @@ namespace OpenTrack
         /// </summary>
         public String Password { get; private set; }
 
+        public TimeSpan Timeout { get; set; }
+
         public OpenTrackAPI(String Url, String Username, String Password)
         {
             if (String.IsNullOrWhiteSpace(Url)) throw new ArgumentNullException("Invalid Url provided.");
@@ -51,6 +53,8 @@ namespace OpenTrack
             this.Url = Url;
             this.Username = Username;
             this.Password = Password;
+
+            this.Timeout = TimeSpan.FromMinutes(2);
         }
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
@@ -301,7 +305,8 @@ namespace OpenTrack
             var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
             {
                 // We could be getting back a lot of data. Let's just try and get it all!
-                MaxReceivedMessageSize = int.MaxValue
+                MaxReceivedMessageSize = int.MaxValue,
+                SendTimeout = this.Timeout
             };
 
             // Create a client with the given endpoint.
