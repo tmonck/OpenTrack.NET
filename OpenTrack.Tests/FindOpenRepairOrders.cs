@@ -13,6 +13,8 @@ namespace OpenTrack.Tests
 
             var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
             {
+                CreatedDateTimeStart = DateTime.Today.AddDays(-30),
+                CreatedDateTimeEnd = DateTime.Today
             });
 
             Assert.True(result.Any());

@@ -3,6 +3,9 @@ using System.Xml.Linq;
 
 namespace OpenTrack.Requests
 {
+    /// <summary>
+    /// A request for the open repair orders listed in the DMS.
+    /// </summary>
     public class OpenRepairOrderLookup : IRequest<OpenTrack.Responses.OpenRepairOrderLookupResponse>
     {
         public OpenRepairOrderLookup(String EnterpriseCode, String DealerCode, String ServerName)
@@ -24,6 +27,12 @@ namespace OpenTrack.Requests
 
         public Boolean InternalOnly { get; set; }
 
+        public DateTime? CreatedDateTimeStart { get; set; }
+
+        public DateTime? CreatedDateTimeEnd { get; set; }
+
+        public DateTime? ModifiedAfter { get; set; }
+
         internal override XElement Elements
         {
             get
@@ -37,7 +46,10 @@ namespace OpenTrack.Requests
                         new XElement("CustomerNumber", this.CustomerNumber),
                         new XElement("CustomerName", this.CustomerName),
                         new XElement("TagNumber", this.TagNumber),
-                        new XElement("InternalOnly", this.InternalOnly)
+                        new XElement("InternalOnly", this.InternalOnly),
+                        new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart.HasValue ? this.CreatedDateTimeStart.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd.HasValue ? this.CreatedDateTimeEnd.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("ModifiedAfter", this.ModifiedAfter.HasValue ? this.ModifiedAfter.Value.ToString(DateTimeBracketFormat) : null)
                         )
                     );
             }
