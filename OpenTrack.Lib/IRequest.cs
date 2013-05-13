@@ -15,6 +15,7 @@ namespace OpenTrack
     {
         public const String DateFormat = "yyyyMMdd";
         public const String DateTimeFormat = "yyyyMMddHHmm";
+        public const String DateTimeBracketFormat = "yyyy-MM-ddTHH:mm:ssZ";
 
         public String EnterpriseCode { get; private set; }
 
