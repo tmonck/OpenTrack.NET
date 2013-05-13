@@ -11,7 +11,11 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.FindAppointments(new Requests.AppointmentLookupRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName));
+            var result = api.FindAppointments(new Requests.AppointmentLookupRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            {
+                DateFrom = DateTime.Today.AddDays(-30),
+                DateTo = DateTime.Today
+            });
 
             Assert.True(result.Any());
 

@@ -23,13 +23,13 @@ namespace OpenTrack.Requests
 
         public String CustomerName { get; set; }
 
-        public String DateFrom { get; set; }
+        public DateTime? DateFrom { get; set; }
 
-        public String DateTo { get; set; }
+        public DateTime? DateTo { get; set; }
 
-        public String CreatedDateTimeStart { get; set; }
+        public DateTime? CreatedDateTimeStart { get; set; }
 
-        public String CreatedDateTimeEnd { get; set; }
+        public DateTime? CreatedDateTimeEnd { get; set; }
 
         internal override XElement Elements
         {
@@ -42,10 +42,10 @@ namespace OpenTrack.Requests
                         new XElement("VIN", this.VIN),
                         new XElement("StockNumber", this.StockNumber),
                         new XElement("CustomerName", this.CustomerName),
-                        new XElement("DateFrom", this.DateFrom),
-                        new XElement("DateTo", this.DateTo),
-                        new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart),
-                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd)
+                        new XElement("DateFrom", this.DateFrom.HasValue ? this.DateFrom.Value.ToString(DateFormat) : null),
+                        new XElement("DateTo", this.DateTo.HasValue ? this.DateTo.Value.ToString(DateFormat) : null),
+                        new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart.HasValue ? this.CreatedDateTimeStart.Value.ToString(DateFormat) : null),
+                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd.HasValue ? this.CreatedDateTimeEnd.Value.ToString(DateFormat) : null)
                         )
                     );
             }
