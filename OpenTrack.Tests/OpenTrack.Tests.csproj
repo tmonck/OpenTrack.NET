@@ -50,6 +50,11 @@
   <ItemGroup>
     <Compile Include="AddRepairOrder.cs" />
     <Compile Include="AppointmentUpdate.cs" />
+    <Compile Include="FindClosedRepairOrders.cs" />
+    <Compile Include="VehicleLookup.cs" />
+    <Compile Include="VehicleSearch.cs" />
+    <Compile Include="CustomerLookup.cs" />
+    <Compile Include="CustomerSearch.cs" />
     <Compile Include="GetTechnicians.cs" />
     <Compile Include="GetServiceAdvisors.cs" />
     <Compile Include="FindOpenRepairOrders.cs" />
