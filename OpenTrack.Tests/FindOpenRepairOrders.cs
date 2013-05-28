@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using Xunit;
 
@@ -13,7 +14,7 @@ namespace OpenTrack.Tests
 
             var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
             {
-                CreatedDateTimeStart = DateTime.Today.AddDays(-30),
+                CreatedDateTimeStart = DateTime.Today.AddDays(-3),
                 CreatedDateTimeEnd = DateTime.Today
             });
 
