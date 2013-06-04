@@ -15,7 +15,7 @@ namespace OpenTrack.Tests
 
         public static IOpenTrackAPI GetAPI()
         {
-            return new OpenTrackAPI(Url, Username, Password);
+            return new OpenTrackAPI(Url, Username, Password) { DebugMode = true };
         }
     }
 }

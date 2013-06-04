@@ -42,7 +42,15 @@ namespace OpenTrack
         /// </summary>
         public String Password { get; private set; }
 
+        /// <summary>
+        /// The amount of time to wait before timing out the request
+        /// </summary>
         public TimeSpan Timeout { get; set; }
+
+        /// <summary>
+        /// Flag to true if you want to spit out all request and response XML's
+        /// </summary>
+        public Boolean DebugMode { get; set; }
 
         public OpenTrackAPI(String Url, String Username, String Password)
         {
@@ -55,6 +63,8 @@ namespace OpenTrack
             this.Password = Password;
 
             this.Timeout = TimeSpan.FromMinutes(2);
+
+            this.DebugMode = false;
         }
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
@@ -315,9 +325,10 @@ namespace OpenTrack
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
 
-#if DEBUG
-            client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
-#endif
+            if (this.DebugMode)
+            {
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+            }
 
             return client;
         }
