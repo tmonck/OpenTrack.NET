@@ -19,22 +19,22 @@ namespace OpenTrack.Requests
         /// <summary>
         /// YYYY-MM-DDTHH:MM:SS0Z format
         /// </summary>
-        public String DateInInventoryStart { get; set; }
+        public DateTime? DateInInventoryStart { get; set; }
 
         /// <summary>
         /// YYYY-MM-DDTHH:MM:SS0Z format
         /// </summary>
-        public String DateInInventoryEnd { get; set; }
+        public DateTime? DateInInventoryEnd { get; set; }
 
         /// <summary>
         /// YYYY-MM-DDTHH:MM:SS0Z format
         /// </summary>
-        public String LastSoldDateStart { get; set; }
+        public DateTime? LastSoldDateStart { get; set; }
 
         /// <summary>
         /// YYYY-MM-DDTHH:MM:SS0Z format
         /// </summary>
-        public String LastSoldDateEnd { get; set; }
+        public DateTime? LastSoldDateEnd { get; set; }
 
         internal override XElement Elements
         {
@@ -46,10 +46,10 @@ namespace OpenTrack.Requests
                         new XElement("StockingGroup", this.StockingGroup),
                         new XElement("Manufacturer", this.Manufacturer),
                         new XElement("PartNumber", this.PartNumber),
-                        new XElement("DateInInventoryStart", this.DateInInventoryStart),
-                        new XElement("DateInInventoryEnd", this.DateInInventoryEnd),
-                        new XElement("LastSoldDateStart", this.LastSoldDateStart),
-                        new XElement("LastSoldDateEnd", this.LastSoldDateEnd)
+                        new XElement("DateInInventoryStart", this.DateInInventoryStart.HasValue ? this.DateInInventoryStart.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("DateInInventoryEnd", this.DateInInventoryEnd.HasValue ? this.DateInInventoryEnd.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("LastSoldDateStart", this.LastSoldDateStart.HasValue ? this.LastSoldDateStart.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("LastSoldDateEnd", this.LastSoldDateEnd.HasValue ? this.LastSoldDateEnd.Value.ToString(DateTimeBracketFormat) : null)
                         )
                     );
             }
