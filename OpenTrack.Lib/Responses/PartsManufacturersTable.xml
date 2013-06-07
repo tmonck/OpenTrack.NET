@@ -1,0 +1,12 @@
+          <PartsManufacturersTable xmlns="">
+            <PartsManufacturer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <CompanyNumber>PT1</CompanyNumber>
+              <Manufacturer>HN</Manufacturer>
+              <Description>HONDA</Description>
+            </PartsManufacturer>
+            <PartsManufacturer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <CompanyNumber>PT1</CompanyNumber>
+              <Manufacturer>OT</Manufacturer>
+              <Description>OTHER</Description>
+            </PartsManufacturer>
+          </PartsManufacturersTable>

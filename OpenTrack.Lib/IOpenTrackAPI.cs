@@ -106,5 +106,10 @@ namespace OpenTrack
         /// Delete an existing appointment in the DMS.
         /// </summary>
         void DeleteAppointment(AppointmentDeleteRequest query);
+
+        /// <summary>
+        /// Retrieves the list of parts manufacturers configured for a dealership
+        /// </summary>
+        IEnumerable<PartsManufacturersTablePartsManufacturer> GetPartManufacturers(PartsManufacturersTableRequest query);
     }
 }

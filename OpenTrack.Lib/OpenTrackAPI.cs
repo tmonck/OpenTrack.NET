@@ -160,6 +160,11 @@ namespace OpenTrack
             return SubmitRequest<AppointmentLookupResponse>(query).Items;
         }
 
+        public IEnumerable<PartsManufacturersTablePartsManufacturer> GetPartManufacturers(PartsManufacturersTableRequest query)
+        {
+            return SubmitRequest<PartsManufacturersTable>(query).Items;
+        }
+
         public String AddAppointment(AppointmentAddRequest query)
         {
             var response = SubmitRequest<AppointmentAddResponse>(query);
