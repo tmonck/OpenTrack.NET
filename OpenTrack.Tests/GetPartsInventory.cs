@@ -1,27 +1,21 @@
 ﻿using System;
-using System.Linq;
 using Xunit;
 
 namespace OpenTrack.Tests
 {
     public class GetPartsInventory
     {
-        // This takes several minutes to run. 
         [Fact]
-        public void Test_Get_PartsInfo()
+        public void Parts_Inventory_Per_Manufacturer()
         {
             var api = Credentials.GetAPI();
 
-            var result = api.GetPartsInventory(new Requests.PartsInventoryRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            foreach (var manufacturer in api.GetPartManufacturers(new Requests.PartsManufacturersTableRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)))
             {
-                Manufacturer = "OT"
-            });
-
-            Assert.True(result.Any());
-
-            foreach (var part in result)
-            {
-                Assert.False(String.IsNullOrWhiteSpace(part.PartNumber));
+                foreach (var part in api.GetPartsInventory(new Requests.PartsInventoryRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName) { Manufacturer = manufacturer.Manufacturer }))
+                {
+                    Assert.False(String.IsNullOrWhiteSpace(part.PartNumber));
+                }
             }
         }
     }
