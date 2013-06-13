@@ -296,7 +296,7 @@ namespace OpenTrack
 
                     foreach (XmlNode n in child.ChildNodes)
                     {
-                        if (n.Name == "ErrorCode")
+                        if (n.Name == "Code")
                         {
                             errorCode = n.InnerText;
                         }
