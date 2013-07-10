@@ -5,9 +5,8 @@ namespace OpenTrack.Tests
 {
     public class Credentials
     {
-        public const String EnterpriseCode = "ZE";
-        public const String DealerCode = "ZE7";
-        public const String ServerName = "arkonap.arkona.com";
+        public const String EnterpriseCode = "POMO";
+        public const String DealerNumber = "PO3";
 
         public static readonly String Url = ConfigurationManager.AppSettings["Url"];
         public static readonly String Username = ConfigurationManager.AppSettings["Username"];
