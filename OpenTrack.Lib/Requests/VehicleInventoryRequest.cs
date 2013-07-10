@@ -5,8 +5,8 @@ namespace OpenTrack.Requests
 {
     public class VehicleInventoryRequest : IRequest<OpenTrack.Responses.VehicleInventoryResponse>
     {
-        public VehicleInventoryRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public VehicleInventoryRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

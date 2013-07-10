@@ -10,8 +10,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class AppointmentLookupRequest : IRequest<OpenTrack.Responses.AppointmentLookupResponse>
     {
-        public AppointmentLookupRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AppointmentLookupRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

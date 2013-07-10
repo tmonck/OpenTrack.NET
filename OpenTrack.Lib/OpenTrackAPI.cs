@@ -219,12 +219,6 @@ namespace OpenTrack
             //    </soap:Body>
             // </soap:Envelope>
 
-            if (String.IsNullOrWhiteSpace(request.CompanyNumber)) throw new ArgumentNullException("Invalid CompanyNumber provided.");
-
-            if (String.IsNullOrWhiteSpace(request.EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
-
-            if (String.IsNullOrEmpty(request.ServerName)) throw new ArgumentNullException("Invalid ServerName provided.");
-
             using (var svc = GetService())
             {
                 var xml = new XmlDocument();

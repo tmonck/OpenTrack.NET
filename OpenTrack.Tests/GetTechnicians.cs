@@ -11,7 +11,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.GetTechnicians(new Requests.ServiceTechsTableRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.GetTechnicians(new Requests.ServiceTechsTableRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
             });
 

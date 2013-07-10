@@ -12,7 +12,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.FindOpenRepairOrders(new Requests.OpenRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 CreatedDateTimeStart = DateTime.Today.AddDays(-3),
                 CreatedDateTimeEnd = DateTime.Today

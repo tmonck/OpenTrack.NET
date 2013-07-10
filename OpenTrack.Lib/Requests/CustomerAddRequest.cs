@@ -5,8 +5,8 @@ namespace OpenTrack.Requests
 {
     public class CustomerAddRequest : IRequest<OpenTrack.Responses.CustomerAddResponse>
     {
-        public CustomerAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public CustomerAddRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 
@@ -26,8 +26,8 @@ namespace OpenTrack.Requests
 
     public class CustomerUpdateRequest : IRequest<OpenTrack.Responses.CustomerUpdateResponse>
     {
-        public CustomerUpdateRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public CustomerUpdateRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

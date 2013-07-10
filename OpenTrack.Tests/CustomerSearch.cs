@@ -12,7 +12,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.FindCustomers(new CustomerSearchRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.FindCustomers(new CustomerSearchRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 LastName = "Smith"
             });

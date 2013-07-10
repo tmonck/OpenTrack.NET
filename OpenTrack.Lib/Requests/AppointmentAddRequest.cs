@@ -46,8 +46,8 @@ namespace OpenTrack.Requests
 
         public IList<AppointmentDetail> Details { get; set; }
 
-        public AppointmentAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AppointmentAddRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
             this.Details = new List<AppointmentDetail>();
         }
@@ -131,8 +131,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class AppointmentUpdateRequest : IRequest<OpenTrack.Responses.AppointmentUpdateResponse>
     {
-        public AppointmentUpdateRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AppointmentUpdateRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 
@@ -166,8 +166,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class AppointmentDeleteRequest : IRequest<OpenTrack.Responses.AppointmentDeleteResponse>
     {
-        public AppointmentDeleteRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AppointmentDeleteRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

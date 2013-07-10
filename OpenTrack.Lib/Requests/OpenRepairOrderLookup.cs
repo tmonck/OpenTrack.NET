@@ -8,8 +8,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class OpenRepairOrderLookup : IRequest<OpenTrack.Responses.OpenRepairOrderLookupResponse>
     {
-        public OpenRepairOrderLookup(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public OpenRepairOrderLookup(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

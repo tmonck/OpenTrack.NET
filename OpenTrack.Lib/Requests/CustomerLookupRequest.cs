@@ -9,8 +9,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class CustomerLookupRequest : IRequest<OpenTrack.Responses.CustomerLookupResponse>
     {
-        public CustomerLookupRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public CustomerLookupRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

@@ -5,8 +5,8 @@ namespace OpenTrack.Requests
 {
     public class PartsManufacturersTableRequest : IRequest<OpenTrack.Responses.PartsManufacturersTable>
     {
-        public PartsManufacturersTableRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public PartsManufacturersTableRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

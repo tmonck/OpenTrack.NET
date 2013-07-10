@@ -10,7 +10,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            api.UpdateAppointment(new Requests.AppointmentUpdateRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            api.UpdateAppointment(new Requests.AppointmentUpdateRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 AppointmentNumber = "338",
                 AppointmentDateTime = new DateTime(2013, 5, 5, 12, 0, 0),

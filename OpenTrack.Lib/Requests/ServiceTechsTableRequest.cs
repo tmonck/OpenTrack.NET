@@ -5,8 +5,8 @@ namespace OpenTrack.Requests
 {
     public class ServiceTechsTableRequest : IRequest<OpenTrack.Responses.ServiceTechsTable>
     {
-        public ServiceTechsTableRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public ServiceTechsTableRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

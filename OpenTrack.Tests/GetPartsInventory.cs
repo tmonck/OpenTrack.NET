@@ -10,9 +10,9 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            foreach (var manufacturer in api.GetPartManufacturers(new Requests.PartsManufacturersTableRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)))
+            foreach (var manufacturer in api.GetPartManufacturers(new Requests.PartsManufacturersTableRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)))
             {
-                foreach (var part in api.GetPartsInventory(new Requests.PartsInventoryRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName) { Manufacturer = manufacturer.Manufacturer }))
+                foreach (var part in api.GetPartsInventory(new Requests.PartsInventoryRequest(Credentials.EnterpriseCode, Credentials.DealerNumber) { Manufacturer = manufacturer.Manufacturer }))
                 {
                     Assert.False(String.IsNullOrWhiteSpace(part.PartNumber));
                 }

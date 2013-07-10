@@ -9,7 +9,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.GetCustomer(new Requests.CustomerLookupRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.GetCustomer(new Requests.CustomerLookupRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 CustomerNumber = "1000135"
             });

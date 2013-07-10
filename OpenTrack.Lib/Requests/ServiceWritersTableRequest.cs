@@ -5,8 +5,8 @@ namespace OpenTrack.Requests
 {
     public class ServiceWritersTableRequest : IRequest<OpenTrack.Responses.ServiceWritersTable>
     {
-        public ServiceWritersTableRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public ServiceWritersTableRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

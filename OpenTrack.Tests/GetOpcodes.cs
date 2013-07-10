@@ -11,7 +11,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.GetOpcodes(new Requests.ServiceLaborOpcodesTableRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName));
+            var result = api.GetOpcodes(new Requests.ServiceLaborOpcodesTableRequest(Credentials.EnterpriseCode, Credentials.DealerNumber));
 
             Assert.True(result.Any());
 

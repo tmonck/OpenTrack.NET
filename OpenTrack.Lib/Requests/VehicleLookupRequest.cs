@@ -10,8 +10,8 @@ namespace OpenTrack.Requests
     /// </summary>
     public class VehicleLookupRequest : IRequest<OpenTrack.Responses.VehicleLookupResponse>
     {
-        public VehicleLookupRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public VehicleLookupRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 

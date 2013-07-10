@@ -7,8 +7,8 @@ namespace OpenTrack.Requests
 {
     public class AddRepairOrderRequest : IRequest<OpenTrack.Responses.AddRepairOrderResponse>
     {
-        public AddRepairOrderRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AddRepairOrderRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
         }
 
@@ -28,8 +28,8 @@ namespace OpenTrack.Requests
 
     public class AddRepairOrderLinesRequest : IRequest<OpenTrack.Responses.AddRepairOrderLinesResponse>
     {
-        public AddRepairOrderLinesRequest(String EnterpriseCode, String DealerCode, String ServerName)
-            : base(EnterpriseCode, DealerCode, ServerName)
+        public AddRepairOrderLinesRequest(String EnterpriseCode, String DealerCode)
+            : base(EnterpriseCode, DealerCode)
         {
             this.LineItems = new List<LineItem>();
         }

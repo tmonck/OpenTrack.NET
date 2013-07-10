@@ -12,7 +12,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            api.AddRepairOrder(new Requests.AddRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            api.AddRepairOrder(new Requests.AddRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 RO = new Requests.RepairOrder()
                 {

@@ -10,7 +10,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.GetVehicle(new VehicleLookupRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.GetVehicle(new VehicleLookupRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 VIN = "SALSF2D48CA739995"
             });

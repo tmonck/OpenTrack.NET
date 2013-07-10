@@ -11,7 +11,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerCode, Credentials.ServerName)
+            var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 VIN = "SALSF2D48CA739995"
             });

@@ -21,17 +21,13 @@ namespace OpenTrack
 
         public String CompanyNumber { get; set; }
 
-        public String ServerName { get; private set; }
-
-        public IRequest(String EnterpriseCode, String CompanyNumber, String ServerName)
+        public IRequest(String EnterpriseCode, String CompanyNumber)
         {
             if (String.IsNullOrWhiteSpace(EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
             if (String.IsNullOrWhiteSpace(CompanyNumber)) throw new ArgumentNullException("Invalid CompanyNumber provided.");
-            if (String.IsNullOrWhiteSpace(ServerName)) throw new ArgumentNullException("Invalid ServerName provided.");
 
             this.EnterpriseCode = EnterpriseCode;
             this.CompanyNumber = CompanyNumber;
-            this.ServerName = ServerName;
         }
 
         /// <summary>
@@ -95,8 +91,7 @@ namespace OpenTrack
             {
                 return new XElement("Dealer",
                     new XElement("EnterpriseCode", this.EnterpriseCode),
-                    new XElement("CompanyNumber", this.CompanyNumber),
-                    new XElement("ServerName", this.ServerName)
+                    new XElement("CompanyNumber", this.CompanyNumber)
                     );
             }
         }
