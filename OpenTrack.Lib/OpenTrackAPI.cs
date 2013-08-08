@@ -72,9 +72,9 @@ namespace OpenTrack
             return SubmitRequest<OpenRepairOrderLookupResponse>(query).Items;
         }
 
-        public IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
+        public IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
         {
-            return SubmitRequest<ClosedRepairOrders>(query).Items;
+            return SubmitRequest<ClosedRepairOrderLookupResponse>(query).Items;
         }
 
         public IEnumerable<ServiceWritersTableServiceWriterRecord> GetServiceAdvisors(ServiceWritersTableRequest query)

@@ -20,7 +20,7 @@ namespace OpenTrack
         /// <summary>
         /// Returns a list of closed repair orders matching the given query criteria.
         /// </summary>
-        IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query);
+        IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query);
 
         /// <summary>
         /// Returns a list of service advisors for the dealership.

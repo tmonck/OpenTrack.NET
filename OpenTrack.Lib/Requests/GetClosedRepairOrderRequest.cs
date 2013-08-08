@@ -7,7 +7,7 @@ namespace OpenTrack.Requests
     /// The ClosedRepairOrderLookup request is used to get a single repair order or a set of repair orders by VIN number or customer number.
     /// </summary>
     [Obsolete("This method is being phased out")]
-    public class GetClosedRepairOrderRequest : IRequest<OpenTrack.Responses.ClosedRepairOrderLookupResponseClosedRepairOrder>
+    public class GetClosedRepairOrderRequest : IRequest<OpenTrack.Responses.ClosedRepairOrderLookupResponse>
     {
         public GetClosedRepairOrderRequest(String EnterpriseCode, String DealerCode)
             : base(EnterpriseCode, DealerCode)
