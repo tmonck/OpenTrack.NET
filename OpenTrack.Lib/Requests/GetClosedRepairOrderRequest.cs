@@ -3,6 +3,10 @@ using System.Xml.Linq;
 
 namespace OpenTrack.Requests
 {
+    /// <summary>
+    /// The ClosedRepairOrderLookup request is used to get a single repair order or a set of repair orders by VIN number or customer number.
+    /// </summary>
+    [Obsolete("This method is being phased out")]
     public class GetClosedRepairOrderRequest : IRequest<OpenTrack.Responses.ClosedRepairOrders>
     {
         public GetClosedRepairOrderRequest(String EnterpriseCode, String DealerCode)
@@ -23,41 +27,29 @@ namespace OpenTrack.Requests
         /// </summary>
         public String DailyRequest { get; set; }
 
-        /// <summary>
-        /// YYYY-MM-DDTHH:MM:SSZ
-        /// </summary>
-        public String CreatedDateTimeStart { get; set; }
+        public DateTime? CreatedDateTimeStart { get; set; }
 
-        /// <summary>
-        /// YYYY-MM-DDTHH:MM:SSZ
-        /// </summary>
-        public String CreatedDateTimeEnd { get; set; }
+        public DateTime? CreatedDateTimeEnd { get; set; }
 
-        /// <summary>
-        /// YYYY-MM-DDTHH:MM:SSZ
-        /// </summary>
-        public String FinalCloseDateStart { get; set; }
+        public DateTime? FinalCloseDateStart { get; set; }
 
-        /// <summary>
-        /// YYYY-MM-DDTHH:MM:SSZ
-        /// </summary>
-        public String FinalCloseDateEnd { get; set; }
+        public DateTime? FinalCloseDateEnd { get; set; }
 
         internal override XElement Elements
         {
             get
             {
-                return new XElement("GetClosedRepairOrder",
+                return new XElement("ClosedRepairOrderLookup",
                     this.Dealer,
                     new XElement("LookupParms",
                         new XElement("RepairOrderNumber", this.RepairOrderNumber),
                         new XElement("VIN", this.VIN),
                         new XElement("CustomerNumber", this.CustomerNumber),
                         new XElement("DailyRequest", this.DailyRequest),
-                        new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart),
-                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd),
-                        new XElement("FinalCloseDateStart", this.FinalCloseDateStart),
-                        new XElement("FinalCloseDateEnd", this.FinalCloseDateEnd)
+                        new XElement("CreatedDateTimeStart", this.CreatedDateTimeStart.HasValue ? this.CreatedDateTimeStart.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("CreatedDateTimeEnd", this.CreatedDateTimeEnd.HasValue ? this.CreatedDateTimeEnd.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("FinalCloseDateStart", this.FinalCloseDateStart.HasValue ? this.FinalCloseDateStart.Value.ToString(DateTimeBracketFormat) : null),
+                        new XElement("FinalCloseDateEnd", this.FinalCloseDateEnd.HasValue ? this.FinalCloseDateEnd.Value.ToString(DateTimeBracketFormat) : null)
                         )
                     );
             }
