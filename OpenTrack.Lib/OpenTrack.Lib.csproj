@@ -75,7 +75,6 @@
     <Compile Include="Responses\AppointmentLookupResponse.cs" />
     <Compile Include="Responses\AppointmentUpdateReponse.cs" />
     <Compile Include="Responses\ClosedRepairOrderLookupResponse.cs" />
-    <Compile Include="Responses\ClosedRepairOrders.cs" />
     <Compile Include="Responses\CustomerAddResponse.cs" />
     <Compile Include="Responses\CustomerListResponse.cs" />
     <Compile Include="Responses\CustomerLookupResponse.cs" />

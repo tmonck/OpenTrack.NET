@@ -7,7 +7,7 @@ namespace OpenTrack.Tests
 {
     public class FindClosedRepairOrders
     {
-        private readonly TimeSpan RangeToPull = TimeSpan.FromDays(1);
+        private readonly TimeSpan RangeToPull = TimeSpan.FromHours(-2);
 
         [Fact]
         public void Test_Find_Closed_ROs()
@@ -16,7 +16,7 @@ namespace OpenTrack.Tests
 
             var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
-                FinalCloseDateStart = DateTime.UtcNow.Add(-RangeToPull),
+                FinalCloseDateStart = DateTime.UtcNow.Add(RangeToPull),
                 FinalCloseDateEnd = DateTime.UtcNow
             });
 
