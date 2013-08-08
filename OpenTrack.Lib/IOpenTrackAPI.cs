@@ -20,6 +20,7 @@ namespace OpenTrack
         /// <summary>
         /// Returns a list of closed repair orders matching the given query criteria.
         /// </summary>
+        [Obsolete("This method is being phased out by DealerTrack")]
         IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query);
 
         /// <summary>
