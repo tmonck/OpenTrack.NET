@@ -92,11 +92,6 @@ namespace OpenTrack
             return SubmitRequest<ServiceLaborOpcodesTable>(query).Items;
         }
 
-        public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query)
-        {
-            return SubmitRequest<GetClosedRepairOrderDetailResponse>(query).Items.First().RepairOrder.First();
-        }
-
         public IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query)
         {
             return SubmitRequest<PartsInventoryResponse>(query).Items;

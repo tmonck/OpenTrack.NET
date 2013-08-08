@@ -60,7 +60,6 @@
     <Compile Include="Requests\CustomerLookupRequest.cs" />
     <Compile Include="Requests\CustomerSearchRequest.cs" />
     <Compile Include="Requests\PartsInventoryRequest.cs" />
-    <Compile Include="Requests\GetRepairOrderDetail.cs" />
     <Compile Include="Requests\GetClosedRepairOrderRequest.cs" />
     <Compile Include="Requests\ServiceLaborOpcodesTableRequest.cs" />
     <Compile Include="Requests\ServiceTechsTableRequest.cs" />
@@ -75,13 +74,13 @@
     <Compile Include="Responses\AppointmentDeleteResponse.cs" />
     <Compile Include="Responses\AppointmentLookupResponse.cs" />
     <Compile Include="Responses\AppointmentUpdateReponse.cs" />
+    <Compile Include="Responses\ClosedRepairOrderLookupResponse.cs" />
     <Compile Include="Responses\ClosedRepairOrders.cs" />
     <Compile Include="Responses\CustomerAddResponse.cs" />
     <Compile Include="Responses\CustomerListResponse.cs" />
     <Compile Include="Responses\CustomerLookupResponse.cs" />
     <Compile Include="Responses\CustomerSearchResponse.cs" />
     <Compile Include="Responses\CustomerUpdateResponse.cs" />
-    <Compile Include="Responses\GetClosedRepairOrderDetailResponse.cs" />
     <Compile Include="Responses\OpenRepairOrderLookupResponse.cs" />
     <Compile Include="Responses\PartsInventoryResponse.cs" />
     <Compile Include="Responses\PartsManufacturersTable.cs" />
