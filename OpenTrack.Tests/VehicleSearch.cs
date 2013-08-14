@@ -6,18 +6,20 @@ namespace OpenTrack.Tests
     public class VehicleSearch
     {
         [Fact]
-        public void Test_Search_For_Vehicle()
+        public void Vehicle_Search()
         {
             var api = Credentials.GetAPI();
 
             var result = api.FindVehicles(new VehicleSearchRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
-                VIN = "SALSF2D48CA739995"
+                Make = "FORD",
+                ModelYear = "2013"
             });
 
             foreach (var vehicle in result)
             {
-                Assert.Equal("SALSF2D48CA739995", vehicle.VIN);
+                Assert.Equal("FORD", vehicle.Make);
+                Assert.Equal("2013", vehicle.ModelYear);
             }
         }
     }
