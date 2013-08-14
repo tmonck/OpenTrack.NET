@@ -42,7 +42,7 @@ namespace OpenTrack.Requests
 
         public String ServiceWriterID { get; set; }
 
-        public List<LineItem> LineItems { get; set; }
+        public IEnumerable<LineItem> LineItems { get; set; }
 
         internal override XElement Elements
         {
