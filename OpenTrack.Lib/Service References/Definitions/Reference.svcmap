@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://otstaging.arkona.com/OpenTrack/WebService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://ot.dms.dealertrack.com/webservice.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebService1.wsdl" MetadataType="Wsdl" ID="1faf11d3-03b4-42a1-9c43-600fbf2f3804" SourceId="1" SourceUrl="https://otstaging.arkona.com/OpenTrack/WebService.asmx?wsdl" />
-    <MetadataFile FileName="WebService1.disco" MetadataType="Disco" ID="bc8e58ab-2b26-487f-a432-d9c7793347be" SourceId="1" SourceUrl="https://otstaging.arkona.com/OpenTrack/WebService.asmx?disco" />
+    <MetadataFile FileName="webservice.wsdl" MetadataType="Wsdl" ID="86c99ef6-bbb4-49f8-a89c-185fcd792ccc" SourceId="1" SourceUrl="https://ot.dms.dealertrack.com/webservice.asmx?wsdl" />
+    <MetadataFile FileName="webservice.disco" MetadataType="Disco" ID="a96fcb09-cd96-44a5-aac0-8c020d4eefb0" SourceId="1" SourceUrl="https://ot.dms.dealertrack.com/webservice.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
