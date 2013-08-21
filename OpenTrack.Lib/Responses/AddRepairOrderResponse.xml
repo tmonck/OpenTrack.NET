@@ -3,4 +3,13 @@
   <Success>
     <Message>Repair Order successfully created.</Message>
   </Success>
+    <Failure>
+    <Message>Repair Order failed to add new line items.</Message>
+    <Errors>
+      <Error>
+        <Code>RO27</Code>
+        <Message>Incorrect ServiceWriterID for RepairOrder</Message>
+      </Error>
+    </Errors>
+  </Failure>
 </AddRepairOrderResponse>
