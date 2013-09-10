@@ -11,16 +11,19 @@ using System.Xml;
 namespace OpenTrack
 {
     // Staging URLs
-    // https://otstaging.arkona.com/opentrack/ServiceAPI.asmx
     // https://otstaging.arkona.com/OpenTrack/WebService.asmx
+    // https://otstaging.arkona.com/opentrack/ServiceAPI.asmx
+    // https://otstaging.arkona.com/OpenTrack/PartsAPI.asmx
 
     // Pre-Prod URLs
     // https://otcert.arkona.com/OpenTrack/WebService.asmx
     // https://otcert.arkona.com/OpenTrack/ServiceAPI.asmx
+    // https://otcert.arkona.com/OpenTrack/PartsAPI.asmx
 
     // Production URLs
-    // https://aws.arkona.com/OpenTrack/WebService.asmx
-    // https://aws.arkona.com/OpenTrack/ServiceAPI.asmx
+    // https://ot.dms.dealertrack.com/WebService.asmx
+    // https://ot.dms.dealertrack.com/ServiceAPI.asmx
+    // https://ot.dms.dealertrack.com/PartsAPI.asmx
 
     /// <summary>
     /// Basic implementation of the OpenTrack API interface that performs and processes the requests.
