@@ -203,7 +203,7 @@ namespace OpenTrack
             //    </soap:Body>
             // </soap:Envelope>
 
-            using (var svc = GetService())
+            using (var svc = GetStarService())
             {
                 var xml = new XmlDocument();
 
@@ -292,7 +292,7 @@ namespace OpenTrack
         /// <summary>
         /// Return a configured proxy reference to the web service.
         /// </summary>
-        internal virtual Definitions.starTransportClient GetService()
+        internal virtual Definitions.starTransportClient GetStarService()
         {
             // We need to send the credential along with the message.
             var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
