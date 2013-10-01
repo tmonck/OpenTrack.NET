@@ -20,7 +20,8 @@ namespace OpenTrack
         /// <summary>
         /// Returns a list of closed repair orders matching the given query criteria.
         /// </summary>
-        IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query);
+        [Obsolete("This method is being phased out by DealerTrack")]
+        IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query);
 
         /// <summary>
         /// Returns a list of service advisors for the dealership.
@@ -33,11 +34,6 @@ namespace OpenTrack
         IEnumerable<ServiceTechsTableServiceTechRecord> GetTechnicians(ServiceTechsTableRequest query);
 
         /// <summary>
-        /// Get detailed information about an individual repair order.
-        /// </summary>
-        GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query);
-
-        /// <summary>
         ///  Get the parts inventory or a specific part in inventory from the DMS Parts Inventory database.
         /// </summary>
         IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query);
@@ -45,12 +41,12 @@ namespace OpenTrack
         /// <summary>
         /// Add a new repair order to the DMS.
         /// </summary>
-        void AddRepairOrder(AddRepairOrderRequest query);
+        AddRepairOrderResponse AddRepairOrder(AddRepairOrderRequest query);
 
         /// <summary>
         /// Add repair order lines to an existing repair order.
         /// </summary>
-        void AddRepairOrderLines(AddRepairOrderLinesRequest query);
+        AddRepairOrderLinesResponse AddRepairOrderLines(AddRepairOrderLinesRequest query);
 
         /// <summary>
         /// Find a list of customers matching the given criteria.
@@ -65,12 +61,12 @@ namespace OpenTrack
         /// <summary>
         /// Add a new customer to the DMS. Must have DataToken property filled in from the customer search or lookup methods.
         /// </summary>
-        void AddCustomer(CustomerAddRequest query);
+        CustomerAddResponse AddCustomer(CustomerAddRequest query);
 
         /// <summary>
         /// Update an existing customer in the DMS.
         /// </summary>
-        void UpdateCustomer(CustomerUpdateRequest query);
+        CustomerUpdateResponse UpdateCustomer(CustomerUpdateRequest query);
 
         /// <summary>
         /// Return a list of vehicles in the DMS inventory.
@@ -95,17 +91,17 @@ namespace OpenTrack
         /// <summary>
         /// Add a new appointment to the DMS. Returns the created appointment number.
         /// </summary>
-        String AddAppointment(AppointmentAddRequest query);
+        AppointmentAddResponse AddAppointment(AppointmentAddRequest query);
 
         /// <summary>
         /// Update an existing appointment in the DMS.
         /// </summary>
-        void UpdateAppointment(AppointmentUpdateRequest query);
+        AppointmentUpdateResponse UpdateAppointment(AppointmentUpdateRequest query);
 
         /// <summary>
         /// Delete an existing appointment in the DMS.
         /// </summary>
-        void DeleteAppointment(AppointmentDeleteRequest query);
+        AppointmentDeleteResponse DeleteAppointment(AppointmentDeleteRequest query);
 
         /// <summary>
         /// Retrieves the list of parts manufacturers configured for a dealership

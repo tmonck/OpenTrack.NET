@@ -72,9 +72,9 @@ namespace OpenTrack
             return SubmitRequest<OpenRepairOrderLookupResponse>(query).Items;
         }
 
-        public IEnumerable<ClosedRepairOrdersClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
+        public IEnumerable<ClosedRepairOrderLookupResponseClosedRepairOrder> FindClosedRepairOrders(GetClosedRepairOrderRequest query)
         {
-            return SubmitRequest<ClosedRepairOrders>(query).Items;
+            return SubmitRequest<ClosedRepairOrderLookupResponse>(query).Items;
         }
 
         public IEnumerable<ServiceWritersTableServiceWriterRecord> GetServiceAdvisors(ServiceWritersTableRequest query)
@@ -92,28 +92,19 @@ namespace OpenTrack
             return SubmitRequest<ServiceLaborOpcodesTable>(query).Items;
         }
 
-        public GetClosedRepairOrderDetailResponseRepairOrdersRepairOrder GetRepairOrder(GetRepairOrderDetail query)
-        {
-            return SubmitRequest<GetClosedRepairOrderDetailResponse>(query).Items.First().RepairOrder.First();
-        }
-
         public IEnumerable<PartsInventoryResponsePart> GetPartsInventory(PartsInventoryRequest query)
         {
             return SubmitRequest<PartsInventoryResponse>(query).Items;
         }
 
-        public void AddRepairOrder(AddRepairOrderRequest query)
+        public AddRepairOrderResponse AddRepairOrder(AddRepairOrderRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<AddRepairOrderResponse>(query);
+            return SubmitRequest<AddRepairOrderResponse>(query);
         }
 
-        public void AddRepairOrderLines(AddRepairOrderLinesRequest query)
+        public AddRepairOrderLinesResponse AddRepairOrderLines(AddRepairOrderLinesRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<AddRepairOrderLinesResponse>(query);
+            return SubmitRequest<AddRepairOrderLinesResponse>(query);
         }
 
         public CustomerSearchResponse FindCustomers(CustomerSearchRequest query)
@@ -126,18 +117,14 @@ namespace OpenTrack
             return SubmitRequest<CustomerLookupResponse>(query).Items.Single();
         }
 
-        public void AddCustomer(CustomerAddRequest query)
+        public CustomerAddResponse AddCustomer(CustomerAddRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<CustomerAddResponse>(query);
+            return SubmitRequest<CustomerAddResponse>(query);
         }
 
-        public void UpdateCustomer(CustomerUpdateRequest query)
+        public CustomerUpdateResponse UpdateCustomer(CustomerUpdateRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<CustomerUpdateResponse>(query);
+            return SubmitRequest<CustomerUpdateResponse>(query);
         }
 
         public IEnumerable<VehicleInventoryResponseVehicle> GetVehicleInventory(VehicleInventoryRequest query)
@@ -165,25 +152,19 @@ namespace OpenTrack
             return SubmitRequest<PartsManufacturersTable>(query).Items;
         }
 
-        public String AddAppointment(AppointmentAddRequest query)
+        public AppointmentAddResponse AddAppointment(AppointmentAddRequest query)
         {
-            var response = SubmitRequest<AppointmentAddResponse>(query);
-
-            return response.Items.SingleOrDefault().AppointmentNumber;
+            return SubmitRequest<AppointmentAddResponse>(query);
         }
 
-        public void UpdateAppointment(AppointmentUpdateRequest query)
+        public AppointmentUpdateResponse UpdateAppointment(AppointmentUpdateRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<AppointmentUpdateResponse>(query);
+            return SubmitRequest<AppointmentUpdateResponse>(query);
         }
 
-        public void DeleteAppointment(AppointmentDeleteRequest query)
+        public AppointmentDeleteResponse DeleteAppointment(AppointmentDeleteRequest query)
         {
-            // TODO What to check on the response?
-
-            var response = SubmitRequest<AppointmentDeleteResponse>(query);
+            return SubmitRequest<AppointmentDeleteResponse>(query);
         }
 
         /// <summary>
