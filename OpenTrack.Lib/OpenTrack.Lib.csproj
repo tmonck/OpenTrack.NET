@@ -51,6 +51,7 @@
     <Compile Include="Requests\AddRepairOrderRequest.cs" />
     <Compile Include="Requests\AppointmentLookupRequest.cs" />
     <Compile Include="Requests\AppointmentAddRequest.cs" />
+    <Compile Include="Requests\PartsTransactionRequest.cs" />
     <Compile Include="Requests\PartsManufacturersTableRequest.cs" />
     <Compile Include="Requests\VehicleSearchRequest.cs" />
     <Compile Include="Requests\VehicleLookupRequest.cs" />
