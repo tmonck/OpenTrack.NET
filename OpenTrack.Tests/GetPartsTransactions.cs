@@ -14,7 +14,10 @@ namespace OpenTrack.Tests
             {
                 foreach (var part in api.GetPartsTransactions(new Requests.PartsTransactionsRequest(Credentials.EnterpriseCode, Credentials.DealerNumber) { Manufacturer = manufacturer.Manufacturer }))
                 {
-                    Assert.False(String.IsNullOrWhiteSpace(part.PartNumber));
+                    foreach (var transaction in part.PartTransaction)
+                    {
+                        Assert.False(String.IsNullOrWhiteSpace(transaction.DocumentNumber));
+                    }
                 }
             }
         }

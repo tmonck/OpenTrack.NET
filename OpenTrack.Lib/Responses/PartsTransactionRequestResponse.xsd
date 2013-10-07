@@ -1,28 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-  <xs:element name="PartTransaction">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="PartNumber" type="xs:string" minOccurs="0" />
-        <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
-        <xs:element name="CurrentOnHand" type="xs:string" minOccurs="0" />
-        <xs:element name="DocumentNumber" type="xs:string" minOccurs="0" />
-        <xs:element name="Type" type="xs:string" minOccurs="0" />
-        <xs:element name="TypeName" type="xs:string" minOccurs="0" />
-        <xs:element name="Date" type="xs:string" minOccurs="0" />
-        <xs:element name="CounterPerson" type="xs:string" minOccurs="0" />
-        <xs:element name="CustomerNumber" type="xs:string" minOccurs="0" />
-        <xs:element name="Customer" type="xs:string" minOccurs="0" />
-        <xs:element name="QuantityOnHand" type="xs:string" minOccurs="0" />
-        <xs:element name="Quantity" type="xs:string" minOccurs="0" />
-        <xs:element name="Cost" type="xs:string" minOccurs="0" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+<xs:schema id="PartsTransactionsResponse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="PartsTransactionsResponse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="PartTransaction" />
+        <xs:element name="Transactions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartTransaction" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PartNumber" type="xs:string" minOccurs="0" />
+                    <xs:element name="Manufacturer" type="xs:string" minOccurs="0" />
+                    <xs:element name="CurrentOnHand" type="xs:string" minOccurs="0" />
+                    <xs:element name="DocumentNumber" type="xs:string" minOccurs="0" />
+                    <xs:element name="Type" type="xs:string" minOccurs="0" />
+                    <xs:element name="TypeName" type="xs:string" minOccurs="0" />
+                    <xs:element name="Date" type="xs:string" minOccurs="0" />
+                    <xs:element name="CounterPerson" type="xs:string" minOccurs="0" />
+                    <xs:element name="CustomerNumber" type="xs:string" minOccurs="0" />
+                    <xs:element name="Customer" type="xs:string" minOccurs="0" />
+                    <xs:element name="QuantityOnHand" type="xs:string" minOccurs="0" />
+                    <xs:element name="Quantity" type="xs:string" minOccurs="0" />
+                    <xs:element name="Cost" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>
