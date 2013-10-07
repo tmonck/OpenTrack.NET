@@ -1,0 +1,15 @@
+<PartTransaction>
+<PartNumber>9655                     </PartNumber>
+<Manufacturer>OT </Manufacturer>
+<CurrentOnHand>34</CurrentOnHand>
+<DocumentNumber>  6007778</DocumentNumber>
+<Type>DP</Type>
+<TypeName>DeletePart</TypeName>
+<Date>2013-10-04T00:00:00</Date>
+<CounterPerson>411</CounterPerson>
+<CustomerNumber>1070078</CustomerNumber>
+<Customer>U S COAST GUARD CAPE HATTERAS                     </Customer>
+<QuantityOnHand>0</QuantityOnHand>
+<Quantity>1</Quantity>
+<Cost>8.65</Cost>
+</PartTransaction>
