@@ -14,7 +14,7 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var result = api.FindClosedRepairOrders(new Requests.GetClosedRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
+            var result = api.FindClosedRepairOrders(new Requests.ClosedRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 FinalCloseDateStart = DateTime.UtcNow.Add(RangeToPull),
                 FinalCloseDateEnd = DateTime.UtcNow
