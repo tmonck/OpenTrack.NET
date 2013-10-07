@@ -97,6 +97,11 @@ namespace OpenTrack
             return SubmitRequest<PartsInventoryResponse>(query).Items;
         }
 
+        public IEnumerable<PartsInventoryResponsePart> GetPartsTransactions(PartsTransactionsRequest query)
+        {
+            return SubmitRequest<PartsInventoryResponse>(query).Items;
+        }
+
         public AddRepairOrderResponse AddRepairOrder(AddRepairOrderRequest query)
         {
             return SubmitRequest<AddRepairOrderResponse>(query);
