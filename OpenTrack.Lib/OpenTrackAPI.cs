@@ -181,6 +181,11 @@ namespace OpenTrack
             return SubmitRequest<AppointmentDeleteResponse>(query);
         }
 
+        public IEnumerable<References.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request)
+        {
+            return GetROService().GetClosedRepairOrders(request.Dealer, request.Request).ClosedRepairOrders;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>

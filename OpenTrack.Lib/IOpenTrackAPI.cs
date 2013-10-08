@@ -112,5 +112,10 @@ namespace OpenTrack
         /// Retrieves the list of parts manufacturers configured for a dealership
         /// </summary>
         IEnumerable<PartsManufacturersTablePartsManufacturer> GetPartManufacturers(PartsManufacturersTableRequest query);
+
+        /// <summary>
+        /// Retrieves a list of closed repair order headers for a given dealership and timeframe
+        /// </summary>
+        IEnumerable<References.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request);
     }
 }

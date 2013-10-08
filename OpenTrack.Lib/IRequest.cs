@@ -8,18 +8,15 @@ using System.Xml.Serialization;
 
 namespace OpenTrack
 {
-    /// <summary>
-    /// A base class to use for requests to the OpenTrack API and handles deserializing the result to type T.
-    /// </summary>
-    public abstract class IRequest<T>
+    public abstract class IRequest
     {
         public const String DateFormat = "yyyyMMdd";
         public const String DateTimeFormat = "yyyyMMddHHmm";
         public const String DateTimeBracketFormat = "yyyy-MM-ddTHH:mm:ssZ";
 
-        public String EnterpriseCode { get; private set; }
+        public String EnterpriseCode { get; protected set; }
 
-        public String CompanyNumber { get; set; }
+        public String CompanyNumber { get; protected set; }
 
         public IRequest(String EnterpriseCode, String CompanyNumber)
         {
@@ -28,6 +25,29 @@ namespace OpenTrack
 
             this.EnterpriseCode = EnterpriseCode;
             this.CompanyNumber = CompanyNumber;
+        }
+
+        internal virtual References.DealerInfo Dealer
+        {
+            get
+            {
+                return new References.DealerInfo
+                {
+                    EnterpriseCode = this.EnterpriseCode,
+                    CompanyNumber = this.CompanyNumber
+                };
+            }
+        }
+    }
+
+    /// <summary>
+    /// A base class to use for requests to the OpenTrack API and handles deserializing the result to type T.
+    /// </summary>
+    public abstract class IRequest<T> : IRequest
+    {
+        public IRequest(String EnterpriseCode, String CompanyNumber)
+            : base(EnterpriseCode, CompanyNumber)
+        {
         }
 
         /// <summary>
