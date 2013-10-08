@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Xml;
 
 namespace OpenTrack
@@ -314,15 +315,7 @@ namespace OpenTrack
         {
             String Url = String.Format("{0}\\{1}", this.BaseUrl, "ServiceAPI.asmx");
 
-            // We need to send the credential along with the message.
-            var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
-            {
-                // We could be getting back a lot of data. Let's just try and get it all!
-                MaxReceivedMessageSize = int.MaxValue,
-                SendTimeout = this.Timeout
-            };
-
-            var client = new References.ServiceAPISoapClient(binding, new EndpointAddress(Url));
+            var client = new References.ServiceAPISoapClient(GetBinding(), new EndpointAddress(Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
@@ -342,16 +335,8 @@ namespace OpenTrack
         {
             String Url = String.Format("{0}\\{1}", this.BaseUrl, "WebService.asmx");
 
-            // We need to send the credential along with the message.
-            var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
-            {
-                // We could be getting back a lot of data. Let's just try and get it all!
-                MaxReceivedMessageSize = int.MaxValue,
-                SendTimeout = this.Timeout
-            };
-
             // Create a client with the given endpoint.
-            var client = new starTransportClient(binding, new EndpointAddress(Url));
+            var client = new starTransportClient(GetBinding(), new EndpointAddress(Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
@@ -362,6 +347,17 @@ namespace OpenTrack
             }
 
             return client;
+        }
+
+        internal virtual Binding GetBinding()
+        {
+            // We need to send the credential along with the message.
+            return new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
+            {
+                // We could be getting back a lot of data. Let's just try and get it all!
+                MaxReceivedMessageSize = int.MaxValue,
+                SendTimeout = this.Timeout
+            };
         }
     }
 }
