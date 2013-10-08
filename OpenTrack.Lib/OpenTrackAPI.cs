@@ -186,6 +186,11 @@ namespace OpenTrack
             return GetROService().GetClosedRepairOrders(request.Dealer, request.Request).ClosedRepairOrders;
         }
 
+        public References.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request)
+        {
+            return GetROService().GetClosedRepairOrderDetails(request.Dealer, request.Request).ClosedRepairOrder;
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
