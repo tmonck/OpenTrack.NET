@@ -300,6 +300,31 @@ namespace OpenTrack
             }
         }
 
+        internal virtual References.ServiceAPISoapClient GetROService()
+        {
+            String Url = String.Format("{0}\\{1}", this.BaseUrl, "ServiceAPI.asmx");
+
+            // We need to send the credential along with the message.
+            var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
+            {
+                // We could be getting back a lot of data. Let's just try and get it all!
+                MaxReceivedMessageSize = int.MaxValue,
+                SendTimeout = this.Timeout
+            };
+
+            var client = new References.ServiceAPISoapClient(binding, new EndpointAddress(Url));
+
+            client.ClientCredentials.UserName.UserName = this.Username;
+            client.ClientCredentials.UserName.Password = this.Password;
+
+            if (this.DebugMode)
+            {
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+            }
+
+            return client;
+        }
+
         /// <summary>
         /// Return a configured proxy reference to the web service.
         /// </summary>
