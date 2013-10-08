@@ -31,17 +31,17 @@ namespace OpenTrack
     public class OpenTrackAPI : IOpenTrackAPI
     {
         /// <summary>
-        /// The Url of the web service end point
+        /// The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com
         /// </summary>
-        public String Url { get; private set; }
+        public String BaseUrl { get; private set; }
 
         /// <summary>
-        /// The username to authenticate with the web service.
+        /// The username to authenticate with the web services
         /// </summary>
         public String Username { get; private set; }
 
         /// <summary>
-        /// The password to authenticate with the web service.
+        /// The password to authenticate with the web services
         /// </summary>
         public String Password { get; private set; }
 
@@ -55,13 +55,19 @@ namespace OpenTrack
         /// </summary>
         public Boolean DebugMode { get; set; }
 
-        public OpenTrackAPI(String Url, String Username, String Password)
+        /// <summary>
+        /// Create a new instance of the interface to the OpenTrack web services
+        /// </summary>
+        /// <param name="BaseUrl">The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com</param>
+        /// <param name="Username">The username to authenticate with the web services</param>
+        /// <param name="Password">The password to authenticate with the web services</param>
+        public OpenTrackAPI(String BaseUrl, String Username, String Password)
         {
-            if (String.IsNullOrWhiteSpace(Url)) throw new ArgumentNullException("Invalid Url provided.");
+            if (String.IsNullOrWhiteSpace(BaseUrl)) throw new ArgumentNullException("Invalid Url provided.");
             if (String.IsNullOrWhiteSpace(Username)) throw new ArgumentNullException("Invalid Username provided.");
             if (String.IsNullOrWhiteSpace(Password)) throw new ArgumentNullException("Invalid Password provided.");
 
-            this.Url = Url;
+            this.BaseUrl = BaseUrl;
             this.Username = Username;
             this.Password = Password;
 
@@ -299,6 +305,8 @@ namespace OpenTrack
         /// </summary>
         internal virtual Definitions.starTransportClient GetStarService()
         {
+            String Url = String.Format("{0}\\{1}", this.BaseUrl, "WebService.asmx");
+
             // We need to send the credential along with the message.
             var binding = new BasicHttpsBinding(BasicHttpsSecurityMode.TransportWithMessageCredential)
             {
@@ -308,7 +316,7 @@ namespace OpenTrack
             };
 
             // Create a client with the given endpoint.
-            var client = new starTransportClient(binding, new EndpointAddress(this.Url));
+            var client = new starTransportClient(binding, new EndpointAddress(Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
