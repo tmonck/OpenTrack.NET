@@ -313,7 +313,7 @@ namespace OpenTrack
 
         internal virtual References.ServiceAPISoapClient GetROService()
         {
-            String Url = String.Format("{0}\\{1}", this.BaseUrl, "ServiceAPI.asmx");
+            String Url = String.Format("{0}/{1}", this.BaseUrl, "ServiceAPI.asmx");
 
             var client = new References.ServiceAPISoapClient(GetBinding(), new EndpointAddress(Url));
 
@@ -333,7 +333,7 @@ namespace OpenTrack
         /// </summary>
         internal virtual Definitions.starTransportClient GetStarService()
         {
-            String Url = String.Format("{0}\\{1}", this.BaseUrl, "WebService.asmx");
+            String Url = String.Format("{0}/{1}", this.BaseUrl, "WebService.asmx");
 
             // Create a client with the given endpoint.
             var client = new starTransportClient(GetBinding(), new EndpointAddress(Url));
