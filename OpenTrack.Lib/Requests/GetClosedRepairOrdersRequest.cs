@@ -26,7 +26,7 @@ namespace OpenTrack.Requests
 
         public DateTime? FinalCloseDateStart { get; set; }
 
-        // public DateTime? FinalCloseDateEnd { get; set; }
+        public DateTime FinalCloseDateEnd { get; set; }
 
         internal virtual References.GetClosedRepairOrdersRequest Request
         {
@@ -41,7 +41,7 @@ namespace OpenTrack.Requests
                     CreatedDateTimeStart = this.CreatedDateTimeStart,
                     CreatedDateTimeEnd = this.CreatedDateTimeEnd,
                     FinalCloseDateStart = this.FinalCloseDateStart,
-                    // FinalCloseDateEnd = this.FinalCloseDateEnd,
+                    FinalCloseDateEnd = this.FinalCloseDateEnd
                 };
             }
         }
