@@ -7,13 +7,9 @@ namespace OpenTrack.Tests
 {
     public class AddRepairOrder
     {
-        private readonly Boolean Run = false;
-
-        [Fact]
+        [Fact(Skip = "Integration Test, Be Careful")]
         public void Add_Repair_Order_Line()
         {
-            if (!Run) return;
-
             var api = Credentials.GetAPI();
 
             // Grab RO's from the past two hours
@@ -27,7 +23,7 @@ namespace OpenTrack.Tests
             var RO = ROs.First();
 
             // Add a line
-            api.AddRepairOrderLines(new AddRepairOrderLinesRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
+            var result = api.AddRepairOrderLines(new AddRepairOrderLinesRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
             {
                 RepairOrderNumber = RO.RepairOrderNumber,
                 ServiceWriterID = "485", // One selected randomly, not test-friendly!
@@ -48,6 +44,10 @@ namespace OpenTrack.Tests
                 }
             });
 
+            // Lame, just check to make sure there are some success codes and no failure codes
+            Assert.True(result.Success.Any());
+            Assert.False(result.Failure.Any());
+
             // Pull the RO again and verify additional line
 
             var RO_Check = api.FindOpenRepairOrders(new OpenRepairOrderLookup(Credentials.EnterpriseCode, Credentials.DealerNumber)
@@ -57,7 +57,6 @@ namespace OpenTrack.Tests
             .First();
 
             // Assert.True(RO_Check.Details.Any(line => line.LaborOpCode == OpCode));
-
         }
     }
 }
