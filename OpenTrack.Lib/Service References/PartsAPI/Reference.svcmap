@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5be766dc-4eaf-4c79-8810-461c82e345bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5fd2c0b1-9edc-41c5-857a-b8e27ae97d2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
-    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings />
@@ -18,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://otstaging.arkona.com/opentrack/webservice.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://otstaging.arkona.com/opentrack/partsapi.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="webservice1.wsdl" MetadataType="Wsdl" ID="7e231197-6091-4f8e-98fc-001e58adfe9a" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?wsdl" />
-    <MetadataFile FileName="webservice1.disco" MetadataType="Disco" ID="73ecebd3-07f9-4774-a3e5-50a455d0addb" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?disco" />
+    <MetadataFile FileName="partsapi.wsdl" MetadataType="Wsdl" ID="51d623c8-26de-4628-95c3-719699df7cb2" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/partsapi.asmx?wsdl" />
+    <MetadataFile FileName="partsapi.disco" MetadataType="Disco" ID="64aa5796-59d4-4f55-84c5-d3c2f5db4cce" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/partsapi.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -14,11 +14,11 @@ namespace OpenTrack.Requests
 
         public int RepairOrderNumber { get; set; }
 
-        internal virtual References.GetClosedRepairOrderDetailRequest Request
+        internal virtual ServiceAPI.GetClosedRepairOrderDetailRequest Request
         {
             get
             {
-                return new References.GetClosedRepairOrderDetailRequest { RepairOrderNumber = this.RepairOrderNumber };
+                return new ServiceAPI.GetClosedRepairOrderDetailRequest { RepairOrderNumber = this.RepairOrderNumber };
             }
         }
     }

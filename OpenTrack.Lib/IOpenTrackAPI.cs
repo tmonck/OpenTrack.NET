@@ -116,11 +116,11 @@ namespace OpenTrack
         /// <summary>
         /// Retrieves a list of closed repair order headers for a given dealership and timeframe
         /// </summary>
-        IEnumerable<References.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request);
+        IEnumerable<ServiceAPI.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request);
 
         /// <summary>
         /// Retrieve the details of a single clsoed repair order by number
         /// </summary>
-        References.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request);
+        ServiceAPI.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request);
     }
 }

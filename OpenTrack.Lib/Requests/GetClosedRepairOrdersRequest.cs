@@ -28,11 +28,11 @@ namespace OpenTrack.Requests
 
         public DateTime? FinalCloseDateEnd { get; set; }
 
-        internal virtual References.GetClosedRepairOrdersRequest Request
+        internal virtual ServiceAPI.GetClosedRepairOrdersRequest Request
         {
             get
             {
-                return new References.GetClosedRepairOrdersRequest
+                return new ServiceAPI.GetClosedRepairOrdersRequest
                 {
                     CloseDate = this.CloseDate,
                     RepairOrderNumber = this.RepairOrderNumber,

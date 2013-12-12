@@ -27,11 +27,11 @@ namespace OpenTrack
             this.CompanyNumber = CompanyNumber;
         }
 
-        internal virtual References.DealerInfo Dealer
+        internal virtual ServiceAPI.DealerInfo Dealer
         {
             get
             {
-                return new References.DealerInfo
+                return new ServiceAPI.DealerInfo
                 {
                     EnterpriseCode = this.EnterpriseCode,
                     CompanyNumber = this.CompanyNumber

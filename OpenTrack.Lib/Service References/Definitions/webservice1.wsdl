@@ -90,10 +90,10 @@
   </wsdl:binding>
   <wsdl:service name="WebService">
     <wsdl:port name="starTransport" binding="tns:starTransport">
-      <soap:address location="https://ot.dms.dealertrack.com/webservice.asmx" />
+      <soap:address location="https://otstaging.arkona.com/opentrack/webservice.asmx" />
     </wsdl:port>
     <wsdl:port name="starTransport1" binding="tns:starTransport1">
-      <soap12:address location="https://ot.dms.dealertrack.com/webservice.asmx" />
+      <soap12:address location="https://otstaging.arkona.com/opentrack/webservice.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

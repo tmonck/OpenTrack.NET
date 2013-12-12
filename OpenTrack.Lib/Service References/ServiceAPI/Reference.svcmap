@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e718926c-23b9-4286-ad98-9ff277472574" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b4fcf10-9759-45c0-abe7-7bea2e9d4ce3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -18,10 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceAPI.wsdl" MetadataType="Wsdl" ID="b183d824-d04d-47e1-8e9b-48cb6580eba4" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx?WSDL" />
+    <MetadataFile FileName="ServiceAPI.disco" MetadataType="Disco" ID="93d5abb6-dbfd-4227-aff7-03b2840956a2" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx?disco" />
+    <MetadataFile FileName="ServiceAPI.wsdl" MetadataType="Wsdl" ID="deea6efe-1803-4e99-830b-88ac6ef48070" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/ServiceAPI.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

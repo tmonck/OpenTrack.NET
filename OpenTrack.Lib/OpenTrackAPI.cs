@@ -182,12 +182,12 @@ namespace OpenTrack
             return SubmitRequest<AppointmentDeleteResponse>(query);
         }
 
-        public IEnumerable<References.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request)
+        public IEnumerable<ServiceAPI.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request)
         {
             return GetROService().GetClosedRepairOrders(request.Dealer, request.Request).ClosedRepairOrders;
         }
 
-        public References.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request)
+        public ServiceAPI.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request)
         {
             return GetROService().GetClosedRepairOrderDetails(request.Dealer, request.Request).ClosedRepairOrder;
         }
@@ -311,11 +311,28 @@ namespace OpenTrack
             }
         }
 
-        internal virtual References.ServiceAPISoapClient GetROService()
+        internal virtual ServiceAPI.ServiceAPISoapClient GetROService()
         {
             String Url = String.Format("{0}/{1}", this.BaseUrl, "ServiceAPI.asmx");
 
-            var client = new References.ServiceAPISoapClient(GetBinding(), new EndpointAddress(Url));
+            var client = new ServiceAPI.ServiceAPISoapClient(GetBinding(), new EndpointAddress(Url));
+
+            client.ClientCredentials.UserName.UserName = this.Username;
+            client.ClientCredentials.UserName.Password = this.Password;
+
+            if (this.DebugMode)
+            {
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+            }
+
+            return client;
+        }
+
+        internal virtual PartsAPI.PartsAPISoapClient GetPartsService()
+        {
+            String Url = String.Format("{0}/{1}", this.BaseUrl, "PartsAPI.asmx");
+
+            var client = new PartsAPI.PartsAPISoapClient(GetBinding(), new EndpointAddress(Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
