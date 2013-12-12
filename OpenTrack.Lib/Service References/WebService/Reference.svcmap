@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5be766dc-4eaf-4c79-8810-461c82e345bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e01a854-01e1-4fe4-a468-2864789aa6f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
-    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings />
@@ -21,8 +22,8 @@
     <MetadataSource Address="https://otstaging.arkona.com/opentrack/webservice.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="webservice1.wsdl" MetadataType="Wsdl" ID="7e231197-6091-4f8e-98fc-001e58adfe9a" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?wsdl" />
-    <MetadataFile FileName="webservice1.disco" MetadataType="Disco" ID="73ecebd3-07f9-4774-a3e5-50a455d0addb" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?disco" />
+    <MetadataFile FileName="webservice.wsdl" MetadataType="Wsdl" ID="e26a030f-40bf-4cbf-a18c-d6091cc691a6" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?wsdl" />
+    <MetadataFile FileName="webservice.disco" MetadataType="Disco" ID="7495a7f2-3688-4e29-8b6b-1f24a24347e1" SourceId="1" SourceUrl="https://otstaging.arkona.com/opentrack/webservice.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

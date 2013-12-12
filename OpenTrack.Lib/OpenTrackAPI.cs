@@ -1,5 +1,4 @@
-﻿using OpenTrack.Definitions;
-using OpenTrack.Requests;
+﻿using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
 using System;
@@ -238,11 +237,11 @@ namespace OpenTrack
                 var element = xml.DocumentElement;
 
                 // Create the message payload that will be processed.
-                var payload = new Payload()
+                var payload = new OpenTrack.WebService.Payload()
                 {
-                    content = new Content[]
+                    content = new OpenTrack.WebService.Content[]
                     {
-                        new Content()
+                        new OpenTrack.WebService.Content()
                         {
                             id = requestId,
                             Any = element
@@ -251,11 +250,11 @@ namespace OpenTrack
                 };
 
                 // Tell the web service how to interpret the XML we're sending along.
-                var manifest = new PayloadManifest()
+                var manifest = new OpenTrack.WebService.PayloadManifest()
                 {
                     manifest = new[]
                     {
-                        new Manifest()
+                        new OpenTrack.WebService.Manifest()
                         {
                             element = element.LocalName,
                             namespaceURI = element.NamespaceURI,
@@ -348,12 +347,12 @@ namespace OpenTrack
         /// <summary>
         /// Return a configured proxy reference to the web service.
         /// </summary>
-        internal virtual Definitions.starTransportClient GetStarService()
+        internal virtual WebService.starTransportClient GetStarService()
         {
             String Url = String.Format("{0}/{1}", this.BaseUrl, "WebService.asmx");
 
             // Create a client with the given endpoint.
-            var client = new starTransportClient(GetBinding(), new EndpointAddress(Url));
+            var client = new WebService.starTransportClient(GetBinding(), new EndpointAddress(Url));
 
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;

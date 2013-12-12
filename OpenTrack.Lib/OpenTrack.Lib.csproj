@@ -93,11 +93,6 @@
     <Compile Include="Responses\VehicleInventoryResponse.cs" />
     <Compile Include="Responses\VehicleLookupResponse.cs" />
     <Compile Include="Responses\VehicleSearchResponse.cs" />
-    <Compile Include="Service References\Definitions\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\PartsAPI\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,19 +103,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\WebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\MessageInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Definitions\OpenTrack.Definitions.Payload.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Definitions\OpenTrack.Definitions.PayloadManifest.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Definitions\webservice1.wsdl" />
     <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.AddPartsOrderResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -132,26 +125,21 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceAPI\ServiceAPI.wsdl" />
+    <None Include="Service References\WebService\OpenTrack.WebService.Payload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\OpenTrack.WebService.PayloadManifest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\OpenTrack.WebService.ProcessMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WebService\webservice.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Definitions\" />
     <WCFMetadataStorage Include="Service References\PartsAPI\" />
     <WCFMetadataStorage Include="Service References\ServiceAPI\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Definitions\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Definitions\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Definitions\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Definitions\webservice1.disco" />
+    <WCFMetadataStorage Include="Service References\WebService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\PartsAPI\partsapi.disco" />
@@ -179,6 +167,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceAPI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\webservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WebService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

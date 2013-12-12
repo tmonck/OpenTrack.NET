@@ -8,18 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OpenTrack.Definitions {
+namespace OpenTrack.WebService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport/bindings", ConfigurationName="Definitions.starTransport")]
-    internal interface starTransport {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport/bindings", ConfigurationName="WebService.starTransport")]
+    public interface starTransport {
         
-        // CODEGEN: Generating message contract since the wrapper namespace (http://www.starstandards.org/webservices/2005/10/transport) of message ProcessMessageRequest does not match the default value (http://www.starstandards.org/webservices/2005/10/transport/bindings)
         [System.ServiceModel.OperationContractAttribute(Action="http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMess" +
             "age", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        OpenTrack.Definitions.ProcessMessageResponse ProcessMessage(OpenTrack.Definitions.ProcessMessageRequest request);
+        OpenTrack.WebService.ProcessMessageResponse ProcessMessage(OpenTrack.WebService.ProcessMessageRequest request);
+        
+        // CODEGEN: Generating message contract since the operation has multiple return values.
+        [System.ServiceModel.OperationContractAttribute(Action="http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMess" +
+            "age", ReplyAction="*")]
+        System.Threading.Tasks.Task<OpenTrack.WebService.ProcessMessageResponse> ProcessMessageAsync(OpenTrack.WebService.ProcessMessageRequest request);
     }
     
     /// <remarks/>
@@ -264,20 +268,19 @@ namespace OpenTrack.Definitions {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessage", WrapperNamespace="http://www.starstandards.org/webservices/2005/10/transport", IsWrapped=true)]
-    internal partial class ProcessMessageRequest {
+    public partial class ProcessMessageRequest {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport")]
-        public OpenTrack.Definitions.PayloadManifest PayloadManifest;
+        public OpenTrack.WebService.PayloadManifest PayloadManifest;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport", Order=0)]
-        public OpenTrack.Definitions.Payload payload;
+        public OpenTrack.WebService.Payload payload;
         
         public ProcessMessageRequest() {
         }
         
-        public ProcessMessageRequest(OpenTrack.Definitions.PayloadManifest PayloadManifest, OpenTrack.Definitions.Payload payload) {
+        public ProcessMessageRequest(OpenTrack.WebService.PayloadManifest PayloadManifest, OpenTrack.WebService.Payload payload) {
             this.PayloadManifest = PayloadManifest;
             this.payload = payload;
         }
@@ -285,32 +288,31 @@ namespace OpenTrack.Definitions {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ProcessMessageResponse", WrapperNamespace="http://www.starstandards.org/webservices/2005/10/transport", IsWrapped=true)]
-    internal partial class ProcessMessageResponse {
+    public partial class ProcessMessageResponse {
         
         [System.ServiceModel.MessageHeaderAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport")]
-        public OpenTrack.Definitions.PayloadManifest PayloadManifest;
+        public OpenTrack.WebService.PayloadManifest PayloadManifest;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.starstandards.org/webservices/2005/10/transport", Order=0)]
-        public OpenTrack.Definitions.Payload payload;
+        public OpenTrack.WebService.Payload payload;
         
         public ProcessMessageResponse() {
         }
         
-        public ProcessMessageResponse(OpenTrack.Definitions.PayloadManifest PayloadManifest, OpenTrack.Definitions.Payload payload) {
+        public ProcessMessageResponse(OpenTrack.WebService.PayloadManifest PayloadManifest, OpenTrack.WebService.Payload payload) {
             this.PayloadManifest = PayloadManifest;
             this.payload = payload;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    internal interface starTransportChannel : OpenTrack.Definitions.starTransport, System.ServiceModel.IClientChannel {
+    public interface starTransportChannel : OpenTrack.WebService.starTransport, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    internal partial class starTransportClient : System.ServiceModel.ClientBase<OpenTrack.Definitions.starTransport>, OpenTrack.Definitions.starTransport {
+    public partial class starTransportClient : System.ServiceModel.ClientBase<OpenTrack.WebService.starTransport>, OpenTrack.WebService.starTransport {
         
         public starTransportClient() {
         }
@@ -332,17 +334,21 @@ namespace OpenTrack.Definitions {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        OpenTrack.Definitions.ProcessMessageResponse OpenTrack.Definitions.starTransport.ProcessMessage(OpenTrack.Definitions.ProcessMessageRequest request) {
+        OpenTrack.WebService.ProcessMessageResponse OpenTrack.WebService.starTransport.ProcessMessage(OpenTrack.WebService.ProcessMessageRequest request) {
             return base.Channel.ProcessMessage(request);
         }
         
-        public void ProcessMessage(ref OpenTrack.Definitions.PayloadManifest PayloadManifest, ref OpenTrack.Definitions.Payload payload) {
-            OpenTrack.Definitions.ProcessMessageRequest inValue = new OpenTrack.Definitions.ProcessMessageRequest();
+        public void ProcessMessage(ref OpenTrack.WebService.PayloadManifest PayloadManifest, ref OpenTrack.WebService.Payload payload) {
+            OpenTrack.WebService.ProcessMessageRequest inValue = new OpenTrack.WebService.ProcessMessageRequest();
             inValue.PayloadManifest = PayloadManifest;
             inValue.payload = payload;
-            OpenTrack.Definitions.ProcessMessageResponse retVal = ((OpenTrack.Definitions.starTransport)(this)).ProcessMessage(inValue);
+            OpenTrack.WebService.ProcessMessageResponse retVal = ((OpenTrack.WebService.starTransport)(this)).ProcessMessage(inValue);
             PayloadManifest = retVal.PayloadManifest;
             payload = retVal.payload;
+        }
+        
+        public System.Threading.Tasks.Task<OpenTrack.WebService.ProcessMessageResponse> ProcessMessageAsync(OpenTrack.WebService.ProcessMessageRequest request) {
+            return base.Channel.ProcessMessageAsync(request);
         }
     }
 }

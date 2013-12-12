@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="aGqAHy9ijwnDVIqoyuj+E6Efrv8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="QAxdUVFd8rSdmEIBVekV2HBHBzE=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="starTransport">
       <properties>
@@ -221,7 +221,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="starTransport" contract="Definitions.starTransport" bindingType="basicHttpBinding" address="https://otstaging.arkona.com/opentrack/webservice.asmx" bindingConfiguration="starTransport">
+    <endpoint name="starTransport" contract="WebService.starTransport" bindingType="basicHttpBinding" address="https://otstaging.arkona.com/opentrack/webservice.asmx" bindingConfiguration="starTransport">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>https://otstaging.arkona.com/opentrack/webservice.asmx</serializedValue>
@@ -236,7 +236,7 @@
           <serializedValue>starTransport</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Definitions.starTransport</serializedValue>
+          <serializedValue>WebService.starTransport</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
