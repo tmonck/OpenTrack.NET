@@ -18,6 +18,8 @@ namespace OpenTrack
 
         public String CompanyNumber { get; protected set; }
 
+        public string ServerName { get; protected set; }
+
         public IRequest(String EnterpriseCode, String CompanyNumber)
         {
             if (String.IsNullOrWhiteSpace(EnterpriseCode)) throw new ArgumentNullException("Invalid EnterpriseCode provided.");
@@ -27,6 +29,16 @@ namespace OpenTrack
             this.CompanyNumber = CompanyNumber;
         }
 
+        public IRequest(string EnterpriseCode, string CompanyNumber, string ServerName)
+            : this(EnterpriseCode, CompanyNumber)
+        {
+            if (string.IsNullOrWhiteSpace(ServerName))
+            {
+                throw new ArgumentNullException("ServerName");
+            }
+            this.ServerName = ServerName;
+        }
+
         internal virtual ServiceAPI.DealerInfo Dealer
         {
             get
@@ -34,7 +46,8 @@ namespace OpenTrack
                 return new ServiceAPI.DealerInfo
                 {
                     EnterpriseCode = this.EnterpriseCode,
-                    CompanyNumber = this.CompanyNumber
+                    CompanyNumber = this.CompanyNumber,
+                    ServerName = this.ServerName
                 };
             }
         }
@@ -47,6 +60,11 @@ namespace OpenTrack
     {
         public IRequest(String EnterpriseCode, String CompanyNumber)
             : base(EnterpriseCode, CompanyNumber)
+        {
+        }
+
+        public IRequest(String EnterpriseCode, String CompanyNumber, string ServerName)
+            : base(EnterpriseCode, CompanyNumber, ServerName)
         {
         }
 
@@ -109,10 +127,16 @@ namespace OpenTrack
         {
             get
             {
-                return new XElement("Dealer",
+                var dealerElement = new XElement("Dealer",
                     new XElement("EnterpriseCode", this.EnterpriseCode),
                     new XElement("CompanyNumber", this.CompanyNumber)
                     );
+                var serverNameHasValue = !string.IsNullOrWhiteSpace(ServerName);
+                if (serverNameHasValue)
+                {
+                    dealerElement.Add(new XElement("ServerName", ServerName));
+                }
+                return dealerElement;
             }
         }
     }
