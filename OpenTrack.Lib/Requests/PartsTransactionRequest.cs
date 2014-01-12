@@ -10,6 +10,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public PartsTransactionsRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String TransactionType { get; set; }
 
         public String Manufacturer { get; set; }

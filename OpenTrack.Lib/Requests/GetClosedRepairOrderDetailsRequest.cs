@@ -12,6 +12,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public GetClosedRepairOrderDetailsRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public int RepairOrderNumber { get; set; }
 
         internal virtual ServiceAPI.GetClosedRepairOrderDetailRequest Request

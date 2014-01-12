@@ -14,6 +14,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public CustomerListRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         /// <summary>
         /// Y/N
         /// </summary>

@@ -15,6 +15,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public VehicleLookupRequest(String EnterpriseCode, String DealerCode, string ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String VIN { get; set; }
 
         public String StockNumber { get; set; }

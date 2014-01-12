@@ -12,6 +12,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public AddRepairOrderRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public RepairOrder RO { get; set; }
 
         internal override XElement Elements
@@ -30,6 +35,12 @@ namespace OpenTrack.Requests
     {
         public AddRepairOrderLinesRequest(String EnterpriseCode, String DealerCode)
             : base(EnterpriseCode, DealerCode)
+        {
+            this.LineItems = new List<LineItem>();
+        }
+
+        public AddRepairOrderLinesRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
         {
             this.LineItems = new List<LineItem>();
         }

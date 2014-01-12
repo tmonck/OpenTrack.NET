@@ -14,6 +14,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public CustomerLookupRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String CustomerNumber { get; set; }
 
         internal override XElement Elements

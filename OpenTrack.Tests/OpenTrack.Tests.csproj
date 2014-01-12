@@ -54,6 +54,7 @@
     <Compile Include="GetPartsTransactions.cs" />
     <Compile Include="PartsManufacturersTable.cs" />
     <Compile Include="FindClosedRepairOrders.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="VehicleLookup.cs" />
     <Compile Include="VehicleSearch.cs" />
     <Compile Include="CustomerLookup.cs" />
