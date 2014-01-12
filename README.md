@@ -9,4 +9,23 @@ All rights to OpenTrack and DealerTrack remain property of DealerTrack. Please s
 
 ## Contact Info
 
-If you find this library useful or have any questions, send an email to MattGWagner@Gmail.com
+If you find this library useful or have any questions, send an email to MattGWagner@Gmail.com or developers@asrpro.com.
+
+
+## API URLs
+OpenTrack API no longer requires `ServerName` field to be sent with the requests.  To send requests to different environments, simply change the service URL.
+
+### Staging URLs
+- https://otstaging.arkona.com/OpenTrack/WebService.asmx
+- https://otstaging.arkona.com/opentrack/ServiceAPI.asmx
+- https://otstaging.arkona.com/OpenTrack/PartsAPI.asmx
+
+### Pre-Prod URLs
+- https://otcert.arkona.com/OpenTrack/WebService.asmx
+- https://otcert.arkona.com/OpenTrack/ServiceAPI.asmx
+- https://otcert.arkona.com/OpenTrack/PartsAPI.asmx
+
+### Production URLs
+- https://ot.dms.dealertrack.com/WebService.asmx
+- https://ot.dms.dealertrack.com/ServiceAPI.asmx
+- https://ot.dms.dealertrack.com/PartsAPI.asmx
