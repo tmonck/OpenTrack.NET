@@ -305,7 +305,7 @@ namespace OpenTrack
                         }
                     }
 
-                    throw new OpenTrackException(errorCode, message);
+                    throw new OpenTrackException(errorCode, message, xml);
                 }
             }
         }
