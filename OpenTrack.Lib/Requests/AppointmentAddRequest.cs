@@ -52,6 +52,12 @@ namespace OpenTrack.Requests
             this.Details = new List<AppointmentDetail>();
         }
 
+        public AppointmentAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+            this.Details = new List<AppointmentDetail>();
+        }
+
         internal override XElement Elements
         {
             get
@@ -136,6 +142,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public AppointmentUpdateRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String AppointmentNumber { get; set; }
 
         public String ServiceWriterID { get; set; }
@@ -168,6 +179,11 @@ namespace OpenTrack.Requests
     {
         public AppointmentDeleteRequest(String EnterpriseCode, String DealerCode)
             : base(EnterpriseCode, DealerCode)
+        {
+        }
+
+        public AppointmentDeleteRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
         {
         }
 

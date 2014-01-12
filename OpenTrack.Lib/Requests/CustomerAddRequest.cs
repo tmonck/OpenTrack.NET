@@ -10,6 +10,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public CustomerAddRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public Customer Customer { get; set; }
 
         internal override XElement Elements
@@ -28,6 +33,11 @@ namespace OpenTrack.Requests
     {
         public CustomerUpdateRequest(String EnterpriseCode, String DealerCode)
             : base(EnterpriseCode, DealerCode)
+        {
+        }
+
+        public CustomerUpdateRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
         {
         }
 

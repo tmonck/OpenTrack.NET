@@ -10,6 +10,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public VehicleInventoryRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String Type { get; set; }
 
         public String FromDateInInventory { get; set; }

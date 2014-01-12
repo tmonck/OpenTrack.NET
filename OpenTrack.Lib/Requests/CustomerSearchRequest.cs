@@ -14,6 +14,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public CustomerSearchRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public String LastName { get; set; }
 
         public String FirstName { get; set; }

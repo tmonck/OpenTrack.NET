@@ -10,6 +10,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public PartsManufacturersTableRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         internal override XElement Elements
         {
             get

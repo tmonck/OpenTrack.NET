@@ -12,6 +12,11 @@ namespace OpenTrack.Requests
         {
         }
 
+        public GetClosedRepairOrdersRequest(String EnterpriseCode, String DealerCode, String ServerName)
+            : base(EnterpriseCode, DealerCode, ServerName)
+        {
+        }
+
         public int RepairOrderNumber { get; set; }
 
         public String VIN { get; set; }
