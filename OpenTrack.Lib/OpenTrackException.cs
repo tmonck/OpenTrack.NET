@@ -33,11 +33,20 @@ namespace OpenTrack
     {
         // http://stackoverflow.com/questions/4791823/what-are-industry-standard-best-practices-for-implementing-custom-exceptions-in
 
+        /// <summary>
+        /// The DealerTrack error code from the response.
+        /// </summary>
         public String ErrorCode { get; private set; }
 
+        /// <summary>
+        /// The DealerTrack error message from the response.
+        /// </summary>
         public String ErrorMessage { get; private set; }
 
-        public XmlElement Response { get; set; }
+        /// <summary>
+        /// The response soap message containing the error message.
+        /// </summary>
+        public XmlElement Response { get; private set; }
 
         public OpenTrackException(String ErrorMessage, XmlElement Response)
             : base(ErrorMessage)
