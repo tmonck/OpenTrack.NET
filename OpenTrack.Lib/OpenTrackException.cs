@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace OpenTrack
 {
@@ -31,22 +33,35 @@ namespace OpenTrack
     {
         // http://stackoverflow.com/questions/4791823/what-are-industry-standard-best-practices-for-implementing-custom-exceptions-in
 
+        /// <summary>
+        /// The DealerTrack error code from the response.
+        /// </summary>
         public String ErrorCode { get; private set; }
 
+        /// <summary>
+        /// The DealerTrack error message from the response.
+        /// </summary>
         public String ErrorMessage { get; private set; }
 
-        public OpenTrackException(String ErrorMessage)
+        /// <summary>
+        /// The response soap message containing the error message.
+        /// </summary>
+        public XmlElement Response { get; private set; }
+
+        public OpenTrackException(String ErrorMessage, XmlElement Response)
             : base(ErrorMessage)
         {
             this.ErrorCode = "Unknown";
             this.ErrorMessage = ErrorMessage;
+            this.Response = Response;
         }
 
-        public OpenTrackException(String ErrorCode, String ErrorMessage)
+        public OpenTrackException(String ErrorCode, String ErrorMessage, XmlElement Response)
             : base(String.Format("{0}: {1}", ErrorCode, ErrorMessage))
         {
             this.ErrorCode = ErrorCode;
             this.ErrorMessage = ErrorMessage;
+            this.Response = Response;
         }
     }
 }
