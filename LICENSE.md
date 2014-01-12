@@ -1,5 +1,7 @@
-Copyright 2013 Matt Wagner and other contributors
+Copyright 2014 ASR Pro, Matt Wagner, Brian French, and other contributors
+http://www.asrpro.com
 http://mattgwagner.com
+https://github.com/ASRPro/OpenTrack.NET
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
