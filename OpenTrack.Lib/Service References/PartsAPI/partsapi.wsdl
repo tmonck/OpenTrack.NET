@@ -55,8 +55,16 @@
         </s:complexType>
       </s:element>
       <s:complexType name="AddPartsOrderResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ApiBaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ApiBaseResponse" abstract="true">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Failure" type="tns:Failure" />
           <s:element minOccurs="0" maxOccurs="1" name="Success" type="tns:Success" />
         </s:sequence>
@@ -83,6 +91,211 @@
           <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="PhysicalInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="inventoryRequest" type="tns:PhysicalInventoryRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PhysicalInventoryRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecordKey" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="YellowPad" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sheets" type="tns:ArrayOfPhysicalInventorySheet" />
+          <s:element minOccurs="0" maxOccurs="1" name="YPDetail" type="tns:PhysicalInventoryYellowPadDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPhysicalInventorySheet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhysicalInventorySheet" nillable="true" type="tns:PhysicalInventorySheet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhysicalInventorySheet">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SheetNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lines" type="tns:ArrayOfPhysicalInventoryLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPhysicalInventoryLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhysicalInventoryLine" nillable="true" type="tns:PhysicalInventoryLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhysicalInventoryLine">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LineNum" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewBinLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewShelfLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhysicalInventoryYellowPadDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockingGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinDetail" type="tns:YellowPadBinDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="YellowPadBinDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssignBin" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLoc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLoc2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLoc3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLoc4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLoc5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Count5" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLoc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLoc2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLoc3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLoc4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLoc5" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PhysicalInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalInventoryResult" type="tns:PhysicalInventoryResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PhysicalInventoryResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ApiBaseResponse" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PhysicalInventorySearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchRequest" type="tns:PhysicalInventorySearchRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PhysicalInventorySearchRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecordKey" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDateStart" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDateEnd" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PhysicalInventorySearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalInventorySearchResult" type="tns:PhysicalInventorySearchResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PhysicalInventorySearchResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ApiBaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="InventorySheets" type="tns:ArrayOfInventorySheet" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfInventorySheet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InventorySheet" nillable="true" type="tns:InventorySheet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InventorySheet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordKey" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartingBin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndingBin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartingShelf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndingShelf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromPercent" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToPercent" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartsList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SelectedManufacter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignNewBin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageBreakPos7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManufSequence" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupSequence" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartSequence" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QtyOnHandFlag" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastSheetNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue1" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue1" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO1" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue2" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue2" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO2" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue3" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue3" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO3" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue4" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue4" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO4" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts5" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue5" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue5" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO5" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts6" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue6" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue6" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValuePartsOnRO6" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts7" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue7" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue7" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Parts8" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysCountValue8" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnHandValue8" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="OutSheetArray1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SheetNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartsDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayPartNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockingGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShelfLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyOnHand" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cost" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhysicalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="YellowPadCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenROCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenROValue" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldPartExists" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewBinLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewShelfLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SelectCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="AddPartsOrderSoapIn">
@@ -91,10 +304,30 @@
   <wsdl:message name="AddPartsOrderSoapOut">
     <wsdl:part name="parameters" element="tns:AddPartsOrderResponse" />
   </wsdl:message>
+  <wsdl:message name="PhysicalInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:PhysicalInventory" />
+  </wsdl:message>
+  <wsdl:message name="PhysicalInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:PhysicalInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PhysicalInventorySearchSoapIn">
+    <wsdl:part name="parameters" element="tns:PhysicalInventorySearch" />
+  </wsdl:message>
+  <wsdl:message name="PhysicalInventorySearchSoapOut">
+    <wsdl:part name="parameters" element="tns:PhysicalInventorySearchResponse" />
+  </wsdl:message>
   <wsdl:portType name="PartsAPISoap">
     <wsdl:operation name="AddPartsOrder">
       <wsdl:input message="tns:AddPartsOrderSoapIn" />
       <wsdl:output message="tns:AddPartsOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PhysicalInventory">
+      <wsdl:input message="tns:PhysicalInventorySoapIn" />
+      <wsdl:output message="tns:PhysicalInventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PhysicalInventorySearch">
+      <wsdl:input message="tns:PhysicalInventorySearchSoapIn" />
+      <wsdl:output message="tns:PhysicalInventorySearchSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PartsAPISoap" type="tns:PartsAPISoap">
@@ -108,11 +341,47 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="PhysicalInventory">
+      <soap:operation soapAction="opentrack.dealertrack.com/PhysicalInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysicalInventorySearch">
+      <soap:operation soapAction="opentrack.dealertrack.com/PhysicalInventorySearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="PartsAPISoap12" type="tns:PartsAPISoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddPartsOrder">
       <soap12:operation soapAction="opentrack.dealertrack.com/AddPartsOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysicalInventory">
+      <soap12:operation soapAction="opentrack.dealertrack.com/PhysicalInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhysicalInventorySearch">
+      <soap12:operation soapAction="opentrack.dealertrack.com/PhysicalInventorySearch" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

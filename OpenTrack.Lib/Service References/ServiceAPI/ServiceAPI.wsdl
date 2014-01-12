@@ -239,6 +239,110 @@
           <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfError" />
         </s:sequence>
       </s:complexType>
+      <s:element name="UpdateRepairOrderLines">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:UpdateRepairOrderLinesRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateRepairOrderLinesRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RepairOrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineItems" type="tns:ArrayOfUpdateLineItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUpdateLineItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LineItem" nillable="true" type="tns:UpdateLineItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UpdateLineItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LaborOpCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceLineNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TechnicianID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaborRateLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CauseStatement" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorrectionStatement" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinePaymentMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComplaintLaborOpCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorrLaborOpCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LaborHours" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualRetailAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailureLaborOpCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualTimeDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualTimeStart" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualTimeEnd" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EstimatePrice" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CounterPersonID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Part" type="tns:PartBase" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PartBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BinLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockGroup" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateRepairOrderLinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRepairOrderLinesResult" type="tns:UpdateRepairOrderLinesResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateRepairOrderLinesResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Success" type="tns:Success" />
+          <s:element minOccurs="0" maxOccurs="1" name="Failure" type="tns:Failure" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Success">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Failure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfError" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteRepairOrderLines">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dealer" type="tns:DealerInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:DeleteRepairOrderLinesRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeleteRepairOrderLinesRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RepairOrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineItems" type="tns:ArrayOfUpdateLineItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteRepairOrderLinesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRepairOrderLinesResult" type="tns:DeleteRepairOrderLinesResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeleteRepairOrderLinesResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Success" type="tns:Success" />
+          <s:element minOccurs="0" maxOccurs="1" name="Failure" type="tns:Failure" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetClosedRepairOrdersSoapIn">
@@ -253,6 +357,18 @@
   <wsdl:message name="GetClosedRepairOrderDetailsSoapOut">
     <wsdl:part name="parameters" element="tns:GetClosedRepairOrderDetailsResponse" />
   </wsdl:message>
+  <wsdl:message name="UpdateRepairOrderLinesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRepairOrderLines" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRepairOrderLinesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRepairOrderLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRepairOrderLinesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRepairOrderLines" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRepairOrderLinesSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRepairOrderLinesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServiceAPISoap">
     <wsdl:operation name="GetClosedRepairOrders">
       <wsdl:input message="tns:GetClosedRepairOrdersSoapIn" />
@@ -261,6 +377,14 @@
     <wsdl:operation name="GetClosedRepairOrderDetails">
       <wsdl:input message="tns:GetClosedRepairOrderDetailsSoapIn" />
       <wsdl:output message="tns:GetClosedRepairOrderDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRepairOrderLines">
+      <wsdl:input message="tns:UpdateRepairOrderLinesSoapIn" />
+      <wsdl:output message="tns:UpdateRepairOrderLinesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRepairOrderLines">
+      <wsdl:input message="tns:DeleteRepairOrderLinesSoapIn" />
+      <wsdl:output message="tns:DeleteRepairOrderLinesSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServiceAPISoap" type="tns:ServiceAPISoap">
@@ -283,6 +407,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateRepairOrderLines">
+      <soap:operation soapAction="opentrack.dealertrack.com/UpdateRepairOrderLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRepairOrderLines">
+      <soap:operation soapAction="opentrack.dealertrack.com/DeleteRepairOrderLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServiceAPISoap12" type="tns:ServiceAPISoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -297,6 +439,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetClosedRepairOrderDetails">
       <soap12:operation soapAction="opentrack.dealertrack.com/GetClosedRepairOrderDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRepairOrderLines">
+      <soap12:operation soapAction="opentrack.dealertrack.com/UpdateRepairOrderLines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRepairOrderLines">
+      <soap12:operation soapAction="opentrack.dealertrack.com/DeleteRepairOrderLines" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

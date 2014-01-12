@@ -117,11 +117,23 @@
     <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.AddPartsOrderResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.PhysicalInventoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.PhysicalInventorySearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PartsAPI\partsapi.wsdl" />
+    <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.DeleteRepairOrderLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.GetClosedRepairOrderDetailResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.GetClosedRepairOrdersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.UpdateRepairOrderLinesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceAPI\ServiceAPI.wsdl" />
