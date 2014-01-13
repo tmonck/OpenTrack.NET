@@ -6,7 +6,7 @@ namespace OpenTrack.Tests
 {
     public class VehicleAdd
     {
-        [Fact]
+        //[Fact]
         public void Vehicle_Add()
         {
             var api = Credentials.GetAPI();
