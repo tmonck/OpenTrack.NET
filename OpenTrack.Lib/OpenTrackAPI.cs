@@ -156,6 +156,11 @@ namespace OpenTrack
             return SubmitRequest<VehicleSearchResponse>(query).Items;
         }
 
+        public VehicleAddResponse AddVehicle(VehicleAddRequest query)
+        {
+            return this.SubmitRequest<VehicleAddResponse>(query);
+        }
+
         public IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query)
         {
             return SubmitRequest<AppointmentLookupResponse>(query).Items;

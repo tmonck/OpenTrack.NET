@@ -16,7 +16,13 @@ namespace OpenTrack.Requests
 
         internal override XElement Elements
         {
-            get { return SerializeToXml<Vehicle>(this.Vehicle); }
+            get
+            {
+                return new XElement("VehicleAdd",
+                    this.Dealer,
+                    SerializeToXml<Vehicle>(this.Vehicle)
+                );
+            }
         }
 
         public Vehicle Vehicle { get; set; }
