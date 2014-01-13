@@ -11,14 +11,14 @@ namespace OpenTrack.Tests
         {
             var api = Credentials.GetAPI();
 
-            var request = new VehicleAddRequest(Credentials.EnterpriseCode, Credentials.DealerNumber);
+            var request = new VehicleAddRequest(Credentials.EnterpriseCode, Credentials.DealerNumber, Settings.ServerName);
             request.Vehicle = new Vehicle
             {
                 DealerCode = Credentials.DealerNumber,
                 VIN = "2FMDK4KC8DBA52504",
                 Status = "I",
                 TypeNU = "U",
-                BusinessOfficeFranchiseCode = "XXX",
+                BusinessOfficeFranchiseCode = "NC",
                 ModelYear = "2014",
                 Make = "FORD",
                 Model = "MUSTANG",
