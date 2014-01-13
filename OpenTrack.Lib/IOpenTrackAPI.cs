@@ -91,8 +91,6 @@ namespace OpenTrack
         /// <summary>
         /// Add a new vehicle to the DMS.
         /// </summary>
-        /// <param name="query"></param>
-        /// <returns></returns>
         VehicleAddResponse AddVehicle(VehicleAddRequest query);
 
         /// <summary>
