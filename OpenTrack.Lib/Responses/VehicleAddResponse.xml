@@ -1,0 +1,5 @@
+<VehicleAddResponse>
+	<Success>
+		<Message>Vehicle successfully added.</Message>
+	</Success>
+</VehicleAddResponse>
