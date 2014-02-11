@@ -94,6 +94,11 @@ namespace OpenTrack
         VehicleAddResponse AddVehicle(VehicleAddRequest query);
 
         /// <summary>
+        /// Update a vehicle in the DMS.
+        /// </summary>
+        VehicleUpdateResponse UpdateVehicle(VehicleUpdateRequest query);
+
+        /// <summary>
         /// Returns a list of appointments which match the given criteria in the DMS.
         /// </summary>
         IEnumerable<AppointmentLookupResponseAppointment> FindAppointments(AppointmentLookupRequest query);
