@@ -72,6 +72,7 @@
     <Compile Include="Requests\OpenRepairOrderLookup.cs" />
     <Compile Include="OpenTrackAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\VehicleUpdateRequest.cs" />
     <Compile Include="Responses\AddRepairOrderLinesResponse.cs" />
     <Compile Include="Responses\AddRepairOrderResponse.cs" />
     <Compile Include="Responses\AppointmentAddResponse.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Responses\VehicleInventoryResponse.cs" />
     <Compile Include="Responses\VehicleLookupResponse.cs" />
     <Compile Include="Responses\VehicleSearchResponse.cs" />
+    <Compile Include="Responses\VehicleUpdateResponse.cs" />
     <Compile Include="Service References\PartsAPI\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
