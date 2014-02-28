@@ -337,7 +337,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = DebugModeOutputPath });
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
@@ -354,7 +354,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = DebugModeOutputPath });
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
@@ -375,7 +375,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = DebugModeOutputPath });
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
