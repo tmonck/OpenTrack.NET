@@ -56,6 +56,12 @@ namespace OpenTrack
         public Boolean DebugMode { get; set; }
 
         /// <summary>
+        /// The file path to write the xml files to.  If left null or white space the files will write
+        /// where the program is executing.
+        /// </summary>
+        public string DebugModeOutputPath { get; set; }
+
+        /// <summary>
         /// Create a new instance of the interface to the OpenTrack web services
         /// </summary>
         /// <param name="BaseUrl">The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com</param>
@@ -331,7 +337,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
@@ -348,7 +354,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
@@ -369,7 +375,7 @@ namespace OpenTrack
 
             if (this.DebugMode)
             {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior());
+                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
             }
 
             return client;
