@@ -12,16 +12,23 @@ namespace OpenTrack.Utilities
     /// </summary>
     internal class MessageInspectorBehavior : IEndpointBehavior
     {
+        public string Path { get; set; }
+
         public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            clientRuntime.ClientMessageInspectors.Add(new RawMessageInspector());
+            clientRuntime.ClientMessageInspectors.Add(new RawMessageInspector { Path = this.Path });
         }
 
         private class RawMessageInspector : IClientMessageInspector
         {
+            public string Path { get; set; }
+
             public void AfterReceiveReply(ref Message reply, object correlationState)
             {
-                using (var w = new StreamWriter(String.Format("Response.{0}.xml", Guid.NewGuid())))
+                var fileName = string.Format("Response.{0}.xml", Guid.NewGuid());
+                var filePath = string.IsNullOrWhiteSpace(this.Path) ? fileName : System.IO.Path.Combine(this.Path, fileName);
+
+                using (var w = new StreamWriter(filePath))
                 {
                     w.Write(reply.ToString());
                 }
@@ -29,7 +36,10 @@ namespace OpenTrack.Utilities
 
             public object BeforeSendRequest(ref Message request, IClientChannel channel)
             {
-                using (var w = new StreamWriter(String.Format("Request.{0}.xml", Guid.NewGuid())))
+                var fileName = string.Format("Request.{0}.xml", Guid.NewGuid());
+                var filePath = string.IsNullOrWhiteSpace(this.Path) ? fileName : System.IO.Path.Combine(this.Path, fileName);
+
+                using (var w = new StreamWriter(filePath))
                 {
                     w.Write(request.ToString());
                 }
