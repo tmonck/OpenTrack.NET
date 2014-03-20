@@ -97,6 +97,7 @@
     <Compile Include="Responses\VehicleLookupResponse.cs" />
     <Compile Include="Responses\VehicleSearchResponse.cs" />
     <Compile Include="Responses\VehicleUpdateResponse.cs" />
+    <Compile Include="Service References\Partials.cs" />
     <Compile Include="Service References\PartsAPI\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
