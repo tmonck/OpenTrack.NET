@@ -9,7 +9,7 @@ namespace OpenTrack.Tests
 {
     public class AppointmentTests
     {
-        // [Fact]
+        [Fact(Skip = "This should not be automated since it will actually update an appointment.")]
         public void Test_Update_Appointment()
         {
             var api = Credentials.GetAPI();
