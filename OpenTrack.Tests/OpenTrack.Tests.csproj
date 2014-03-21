@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddRepairOrder.cs" />
-    <Compile Include="AppointmentUpdate.cs" />
+    <Compile Include="AppointmentTests.cs" />
     <Compile Include="GetClosedRepairOrders.cs" />
     <Compile Include="GetPartsTransactions.cs" />
     <Compile Include="PartsManufacturersTable.cs" />

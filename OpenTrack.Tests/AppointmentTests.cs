@@ -7,7 +7,7 @@ using OpenTrack.Responses;
 
 namespace OpenTrack.Tests
 {
-    public class AppointmentUpdate
+    public class AppointmentTests
     {
         // [Fact]
         public void Test_Update_Appointment()
@@ -22,7 +22,7 @@ namespace OpenTrack.Tests
             });
         }
 
-        [Fact]
+        //[Fact]
         public void Test_Add_Appointment()
         {
             var api = Credentials.GetAPI();
