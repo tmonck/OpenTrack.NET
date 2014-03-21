@@ -35,7 +35,7 @@ namespace OpenTrack.Tests
             var getVehicleResponse =
                 api.GetVehicle(new VehicleLookupRequest(Credentials.EnterpriseCode,
                    Credentials.DealerNumber) { VIN = vin });
-            var vehicle = DealerTrackMapper.MapVehicle(getVehicleResponse);
+            var vehicle = Mapper.MapVehicle(getVehicleResponse);
 
             // if the customer isn't the owner on the vehicle, update it.
             if (vehicle.CustomerKey != customerKey)

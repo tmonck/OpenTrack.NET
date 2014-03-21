@@ -5,7 +5,7 @@ using OpenTrack.Responses;
 
 namespace OpenTrack
 {
-    public static class DealerTrackMapper
+    public static class Mapper
     {
         public static Vehicle MapVehicle(VehicleLookupResponseVehicle response)
         {
