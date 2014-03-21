@@ -5,8 +5,8 @@ namespace OpenTrack.Tests
 {
     public class Credentials
     {
-        public const String EnterpriseCode = "LEWE";
-        public const String DealerNumber = "LE1";
+        public const String EnterpriseCode = "ZE";
+        public const String DealerNumber = "ZE7";
 
         public static readonly String Url = ConfigurationManager.AppSettings["Url"];
         public static readonly String Username = ConfigurationManager.AppSettings["Username"];
