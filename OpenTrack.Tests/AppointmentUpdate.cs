@@ -29,7 +29,7 @@ namespace OpenTrack.Tests
 
             DateTime appointmentDate = DateTime.Today;
             var vin = "4S4BRBJC2C3210598";
-            var customerKey = "1";
+            var customerKey = "1036420";
 
             // get the vehicle so we can update it if need be.
             var getVehicleResponse =
