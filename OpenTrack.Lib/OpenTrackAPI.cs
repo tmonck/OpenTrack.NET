@@ -1,4 +1,6 @@
-﻿using OpenTrack.Requests;
+﻿using System.Xml.Linq;
+using OpenTrack.PartsAPI;
+using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
 using System;
@@ -295,35 +297,23 @@ namespace OpenTrack
 
         internal virtual void ErrorCheck(XmlElement xml)
         {
-            // TODO This could probably be done more efficiently?
-
-            foreach (XmlNode child in xml.ChildNodes)
+            // now using linq to xml so we can find the Error element no matter how deep it is.
+            var linqElement = XElement.Parse(xml.OuterXml);
+            var errorElement = linqElement.Descendants().FirstOrDefault(x => x.Name == "Error");
+            if (errorElement == null)
             {
-                if ("Error" == child.Name)
-                {
-                    // <Error>
-                    //      <Code>311</Code>  {{optional}}
-                    //      <Message>Access validation error: Dealer has not granted access to Vendor.</Message>
-                    // </Error>
-
-                    String errorCode = "Unknown";
-                    String message = child.InnerText;
-
-                    foreach (XmlNode n in child.ChildNodes)
-                    {
-                        if (n.Name == "Code")
-                        {
-                            errorCode = n.InnerText;
-                        }
-                        else if (n.Name == "Message")
-                        {
-                            message = n.InnerText;
-                        }
-                    }
-
-                    throw new OpenTrackException(errorCode, message, xml);
-                }
+                // no Error element present so we do not throw.
+                return;
             }
+
+            // there is an Error element so we should throw.
+            // try and get the specific error code if possible, throw Unknown if none provided.
+            var errorCodeElement = errorElement.Descendants().FirstOrDefault(x => x.Name == "Code");
+            var messageElement = errorElement.Descendants().FirstOrDefault(x => x.Name == "Message");
+            var errorCode = errorCodeElement == null ? "Unknown" : errorCodeElement.Value;
+            var message = messageElement == null ? errorElement.Value : messageElement.Value;
+
+            throw new OpenTrackException(errorCode, message, xml);
         }
 
         internal virtual ServiceAPI.ServiceAPISoapClient GetROService()
