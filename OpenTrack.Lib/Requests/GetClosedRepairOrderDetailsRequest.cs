@@ -23,7 +23,7 @@ namespace OpenTrack.Requests
         {
             get
             {
-                return new ServiceAPI.GetClosedRepairOrderDetailRequest {RepairOrderNumber = this.RepairOrderNumber};
+                return new ServiceAPI.GetClosedRepairOrderDetailRequest { RepairOrderNumber = this.RepairOrderNumber };
             }
         }
     }
