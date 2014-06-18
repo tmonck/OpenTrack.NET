@@ -132,5 +132,10 @@ namespace OpenTrack
         /// Retrieve the details of a single clsoed repair order by number
         /// </summary>
         ServiceAPI.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request);
+
+        /// <summary>
+        /// Updates a list of lines on a repair order.
+        /// </summary>
+        ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System.Xml.Linq;
-using OpenTrack.PartsAPI;
 using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
+using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
 
 namespace OpenTrack
 {
@@ -207,6 +207,11 @@ namespace OpenTrack
         public ServiceAPI.ClosedRepairOrder GetClosedRepairOrderDetails(GetClosedRepairOrderDetailsRequest request)
         {
             return GetROService().GetClosedRepairOrderDetails(request.Dealer, request.Request).ClosedRepairOrder;
+        }
+
+        public ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request)
+        {
+            return GetROService().UpdateRepairOrderLines(request.Dealer, request.Request);
         }
 
         /// <summary>
