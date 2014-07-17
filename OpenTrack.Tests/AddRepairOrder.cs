@@ -1,6 +1,7 @@
 ﻿using OpenTrack.Requests;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using Xunit;
 
 namespace OpenTrack.Tests
@@ -57,6 +58,41 @@ namespace OpenTrack.Tests
             .First();
 
             // Assert.True(RO_Check.Details.Any(line => line.LaborOpCode == OpCode));
+        }
+
+        [Fact(Skip = "Integration Test, Be Careful")]
+        public void AddRepairOrderRO()
+        {
+            var vin = "2G1WF52E539387937";
+            var custNum = "1037156";
+
+            var api = Credentials.GetAPI();
+
+            var result = api.AddRepairOrder(new Requests.AddRepairOrderRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
+            {
+                RO = new RepairOrder()
+                {
+                    VIN = vin,
+                    CustomerNumber = custNum,
+                    ServiceWriterID = "DT",
+                    TagNumber = "Test",
+                    PromisedDateTime = Convert.ToString(DateTime.Today.AddHours(1)),
+                    OdometerIn = "",
+                    LineItems = new List<LineItem>
+                    {
+                        new LineItem()
+                        {
+                            LaborOpCode = "*", // See ServiceLaborOpcodesTable, * for undefined
+                            ServiceLineNumber = "1", // The line # this detail refers to, grouped together by this
+                            LineType = "A", // A = Labor Op Code Line Desc
+                            TransCode = "CP", // CP IS WS
+                            Comments = "This is a test line!", // Optional
+                            LineStatus = "", // Optional I = Unassigned C = Complete
+                            ServiceType = "MR"
+                        }
+                    }
+                }
+            });
         }
     }
 }
