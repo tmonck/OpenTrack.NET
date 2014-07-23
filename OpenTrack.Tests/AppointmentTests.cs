@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xunit;
 using OpenTrack;
 using OpenTrack.Requests;
@@ -22,14 +23,14 @@ namespace OpenTrack.Tests
             });
         }
 
-        [Fact(Skip="This should not be automated since it will actually add an appointment.")]
+        [Fact]//(Skip="This should not be automated since it will actually add an appointment.")]
         public void Test_Add_Appointment()
         {
             var api = Credentials.GetAPI();
 
             DateTime appointmentDate = DateTime.Today;
-            var vin = "4S4BRBJC2C3210598";
-            var customerKey = "1036420";
+            var vin = "3GSCL53788S535015";
+            var customerKey = "1037156";
 
             // get the vehicle so we can update it if need be.
             var getVehicleResponse =
@@ -61,6 +62,20 @@ namespace OpenTrack.Tests
                 CustomerPhoneNumber = "555-123-4567",// need customer phone number:  appointment.Customer.HomePhone,
                 OdometerIn = (new Random()).Next(100, 500000),
                 VIN = vin,// need a VIN: Appointment.Vehicle.VIN,
+                Details = new List<AppointmentAddRequest.AppointmentDetail>
+                {
+                    new AppointmentAddRequest.AppointmentDetail()
+                    {
+                    LaborOpCode = "*", // See ServiceLaborOpcodesTable, * for undefined
+                    ServiceLineNumber = "1", // The line # this detail refers to, grouped together by this
+                    SequenceNumber = "0",
+                    LinePaymentMethod = "C",
+                    LineType = "A", // A = Labor Op Code Line Desc
+                    Comments = "This is a test line!", // Optional
+                    ServiceType = "MR",
+                    LaborHours = Convert.ToDecimal(".5")
+                    }
+                },
                 
                 ServiceWriterID = "999"
             });
