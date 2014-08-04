@@ -23,7 +23,7 @@ namespace OpenTrack.Tests
             });
         }
 
-        [Fact]//(Skip="This should not be automated since it will actually add an appointment.")]
+        [Fact(Skip="This should not be automated since it will actually add an appointment.")]
         public void Test_Add_Appointment()
         {
             var api = Credentials.GetAPI();
