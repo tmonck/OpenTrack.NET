@@ -17,7 +17,7 @@ namespace OpenTrack.Requests
         {
         }
 
-        public int RepairOrderNumber { get; set; }
+        public string RepairOrderNumber { get; set; }
 
         public String VIN { get; set; }
 

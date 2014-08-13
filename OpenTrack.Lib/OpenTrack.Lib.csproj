@@ -99,7 +99,6 @@
     <Compile Include="Responses\VehicleLookupResponse.cs" />
     <Compile Include="Responses\VehicleSearchResponse.cs" />
     <Compile Include="Responses\VehicleUpdateResponse.cs" />
-    <Compile Include="Service References\Partials.cs" />
     <Compile Include="Service References\PartsAPI\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,6 +123,12 @@
     <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.AddPartsOrderResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.PartPricingLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.PartsPricingLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\PartsAPI\OpenTrack.PartsAPI.PhysicalInventoryResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -138,6 +143,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.GetClosedRepairOrdersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.ServicePricingLookupResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceAPI\OpenTrack.ServiceAPI.UpdateRepairOrderLinesResponse.datasource">

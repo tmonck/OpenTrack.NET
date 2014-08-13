@@ -57,7 +57,7 @@ namespace OpenTrack.Tests
             var updateLineItem = new UpdateLineItem
             {
                 ServiceLineNumber = Convert.ToInt32(detail.ServiceLineNumber),
-                CauseStatement = "Test Cause"
+                Technicians = new Technician[] { new Technician {  CauseStatement = "Test Cause"} }
             };
             updateLineItemsRequest.LineItems.Add(updateLineItem);
             var updateLineItemsResponse = api.UpdateRepairOrderLines(updateLineItemsRequest);

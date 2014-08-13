@@ -17,7 +17,7 @@ namespace OpenTrack.Requests
         {
         }
 
-        public int RepairOrderNumber { get; set; }
+        public string RepairOrderNumber { get; set; }
 
         internal virtual ServiceAPI.GetClosedRepairOrderDetailRequest Request
         {

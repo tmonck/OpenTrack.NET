@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using OpenTrack.Requests;
 using Xunit;
 
 namespace OpenTrack.Tests
@@ -17,6 +18,13 @@ namespace OpenTrack.Tests
             });
 
             Assert.True(result.Any());
+
+            var firstRoNumber = result.First().RepairOrderNumber;
+            var details =
+                api.GetClosedRepairOrderDetails(new GetClosedRepairOrderDetailsRequest(Credentials.EnterpriseCode,
+                    Credentials.DealerNumber) { RepairOrderNumber = firstRoNumber });
+
+            Assert.True(details.Details != null);
 
             foreach (var ro in result)
             {
