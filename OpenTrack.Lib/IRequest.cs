@@ -14,11 +14,11 @@ namespace OpenTrack
         public const String DateTimeFormat = "yyyyMMddHHmm";
         public const String DateTimeBracketFormat = "yyyy-MM-ddTHH:mm:ssZ";
 
-        public String EnterpriseCode { get; protected set; }
+        public String EnterpriseCode { get; set; }
 
-        public String CompanyNumber { get; protected set; }
+        public String CompanyNumber { get; set; }
 
-        public string ServerName { get; protected set; }
+        public String ServerName { get; set; }
 
         public IRequest(String EnterpriseCode, String CompanyNumber)
         {
@@ -29,13 +29,10 @@ namespace OpenTrack
             this.CompanyNumber = CompanyNumber;
         }
 
-        public IRequest(string EnterpriseCode, string CompanyNumber, string ServerName)
-            : this(EnterpriseCode, CompanyNumber)
+        public IRequest(String EnterpriseCode, String CompanyNumber, String ServerName) : this(EnterpriseCode, CompanyNumber)
         {
-            if (string.IsNullOrWhiteSpace(ServerName))
-            {
-                throw new ArgumentNullException("ServerName");
-            }
+            if (String.IsNullOrWhiteSpace(ServerName)) throw new ArgumentNullException("ServerName");
+
             this.ServerName = ServerName;
         }
 
@@ -63,7 +60,7 @@ namespace OpenTrack
         {
         }
 
-        public IRequest(String EnterpriseCode, String CompanyNumber, string ServerName)
+        public IRequest(String EnterpriseCode, String CompanyNumber, String ServerName)
             : base(EnterpriseCode, CompanyNumber, ServerName)
         {
         }
@@ -131,11 +128,12 @@ namespace OpenTrack
                     new XElement("EnterpriseCode", this.EnterpriseCode),
                     new XElement("CompanyNumber", this.CompanyNumber)
                     );
-                var serverNameHasValue = !string.IsNullOrWhiteSpace(ServerName);
-                if (serverNameHasValue)
+
+                if (!String.IsNullOrWhiteSpace(ServerName))
                 {
                     dealerElement.Add(new XElement("ServerName", ServerName));
                 }
+
                 return dealerElement;
             }
         }
