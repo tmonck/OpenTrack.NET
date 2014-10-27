@@ -53,15 +53,14 @@ namespace OpenTrack
         public TimeSpan Timeout { get; set; }
 
         /// <summary>
-        /// Flag to true if you want to spit out all request and response XML's
+        /// A hook to get the raw WCF message for the request before sending
         /// </summary>
-        public Boolean DebugMode { get; set; }
+        public Action<Message> OnSend { get; set; }
 
         /// <summary>
-        /// The file path to write the xml files to.  If left null or white space the files will write
-        /// where the program is executing.
+        /// A hook to get the raw WCF message for the response before parsing
         /// </summary>
-        public string DebugModeOutputPath { get; set; }
+        public Action<Message> OnReceive { get; set; }
 
         /// <summary>
         /// Create a new instance of the interface to the OpenTrack web services
@@ -80,8 +79,6 @@ namespace OpenTrack
             this.Password = Password;
 
             this.Timeout = TimeSpan.FromMinutes(2);
-
-            this.DebugMode = false;
         }
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
@@ -330,10 +327,7 @@ namespace OpenTrack
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
 
-            if (this.DebugMode)
-            {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
-            }
+            client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior(this.OnSend, this.OnReceive));
 
             return client;
         }
@@ -347,10 +341,7 @@ namespace OpenTrack
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
 
-            if (this.DebugMode)
-            {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
-            }
+            client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior(this.OnSend, this.OnReceive));
 
             return client;
         }
@@ -368,10 +359,7 @@ namespace OpenTrack
             client.ClientCredentials.UserName.UserName = this.Username;
             client.ClientCredentials.UserName.Password = this.Password;
 
-            if (this.DebugMode)
-            {
-                client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior { Path = this.DebugModeOutputPath });
-            }
+            client.Endpoint.EndpointBehaviors.Add(new MessageInspectorBehavior(this.OnSend, this.OnReceive));
 
             return client;
         }

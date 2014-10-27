@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
@@ -12,38 +11,32 @@ namespace OpenTrack.Utilities
     /// </summary>
     internal class MessageInspectorBehavior : IEndpointBehavior
     {
-        public string Path { get; set; }
+        private IClientMessageInspector _inspector;
+
+        public MessageInspectorBehavior(Action<Message> OnSend, Action<Message> OnReceive)
+        {
+            this._inspector = new RawMessageInspector { OnSend = OnSend, OnReceive = OnReceive };
+        }
 
         public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            clientRuntime.ClientMessageInspectors.Add(new RawMessageInspector { Path = this.Path });
+            clientRuntime.ClientMessageInspectors.Add(_inspector);
         }
 
         private class RawMessageInspector : IClientMessageInspector
         {
-            public string Path { get; set; }
+            public Action<Message> OnSend;
+
+            public Action<Message> OnReceive;
 
             public void AfterReceiveReply(ref Message reply, object correlationState)
             {
-                var fileName = string.Format("Response.{0}.xml", Guid.NewGuid());
-                var filePath = string.IsNullOrWhiteSpace(this.Path) ? fileName : System.IO.Path.Combine(this.Path, fileName);
-
-                using (var w = new StreamWriter(filePath))
-                {
-                    w.Write(reply.ToString());
-                }
+                if (OnReceive != null) OnReceive(reply);
             }
 
             public object BeforeSendRequest(ref Message request, IClientChannel channel)
             {
-                var fileName = string.Format("Request.{0}.xml", Guid.NewGuid());
-                var filePath = string.IsNullOrWhiteSpace(this.Path) ? fileName : System.IO.Path.Combine(this.Path, fileName);
-
-                using (var w = new StreamWriter(filePath))
-                {
-                    w.Write(request.ToString());
-                }
-
+                if (OnSend != null) OnSend(request);
                 return null;
             }
         }
