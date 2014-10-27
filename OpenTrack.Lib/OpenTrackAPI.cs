@@ -1,5 +1,4 @@
-﻿using System.Xml.Linq;
-using OpenTrack.Requests;
+﻿using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
 using System;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Xml;
+using System.Xml.Linq;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
 
 namespace OpenTrack
@@ -63,6 +63,11 @@ namespace OpenTrack
         public Action<Message> OnReceive { get; set; }
 
         /// <summary>
+        /// Whether or not to buffer to stream responses from the web services. Defaults to buffered.
+        /// </summary>
+        public TransferMode TransferMode { get; set; }
+
+        /// <summary>
         /// Create a new instance of the interface to the OpenTrack web services
         /// </summary>
         /// <param name="BaseUrl">The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com</param>
@@ -79,6 +84,8 @@ namespace OpenTrack
             this.Password = Password;
 
             this.Timeout = TimeSpan.FromMinutes(2);
+
+            this.TransferMode = System.ServiceModel.TransferMode.Buffered;
         }
 
         public IEnumerable<OpenRepairOrderLookupResponseOpenRepairOrder> FindOpenRepairOrders(OpenRepairOrderLookup query)
@@ -371,7 +378,8 @@ namespace OpenTrack
             {
                 // We could be getting back a lot of data. Let's just try and get it all!
                 MaxReceivedMessageSize = int.MaxValue,
-                SendTimeout = this.Timeout
+                SendTimeout = this.Timeout,
+                TransferMode = this.TransferMode
             };
         }
     }
