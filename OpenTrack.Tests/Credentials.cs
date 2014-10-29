@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.IO;
 
 namespace OpenTrack.Tests
 {
@@ -14,7 +15,29 @@ namespace OpenTrack.Tests
 
         public static IOpenTrackAPI GetAPI()
         {
-            return new OpenTrackAPI(Url, Username, Password) { DebugMode = true };
+            var request_id = Guid.NewGuid();
+
+            return new OpenTrackAPI(Url, Username, Password)
+            {
+                OnSend = (msg) =>
+                    {
+                        var filename = String.Format("Request.{0}.xml", request_id);
+
+                        using (var writer = new StreamWriter(filename))
+                        {
+                            writer.Write(msg.ToString());
+                        }
+                    },
+                OnReceive = (msg) =>
+                    {
+                        var filename = String.Format("Response.{0}.xml", request_id);
+
+                        using (var writer = new StreamWriter(filename))
+                        {
+                            writer.Write(msg.ToString());
+                        }
+                    }
+            };
         }
     }
 }
