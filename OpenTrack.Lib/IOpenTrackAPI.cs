@@ -44,6 +44,11 @@ namespace OpenTrack
         IEnumerable<PartsTransactionsResponseTransactions> GetPartsTransactions(PartsTransactionsRequest query);
 
         /// <summary>
+        /// Retrieve parts pricing for a specific customer, pricing level, or VIN
+        /// </summary>
+        PartsAPI.PartsPricingLookupResponse GetPartsPricing(PartsPricingLookupRequest request);
+
+        /// <summary>
         /// Add a new repair order to the DMS.
         /// </summary>
         AddRepairOrderResponse AddRepairOrder(AddRepairOrderRequest query);

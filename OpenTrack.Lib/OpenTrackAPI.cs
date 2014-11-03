@@ -218,6 +218,17 @@ namespace OpenTrack
             return GetROService().UpdateRepairOrderLines(request.Dealer, request.Request);
         }
 
+        public PartsAPI.PartsPricingLookupResponse GetPartsPricing(PartsPricingLookupRequest request)
+        {
+            return GetPartsService().PartPricingLookup(new PartsAPI.DealerInfo
+                    {
+                        EnterpriseCode = request.EnterpriseCode,
+                        CompanyNumber = request.CompanyNumber,
+                        ServerName = request.ServerName
+                    },
+                    request.Request);
+        }
+
         /// <summary>
         /// Submit the prepared request to the OpenTrack API and get the response back for processing.
         /// </summary>
