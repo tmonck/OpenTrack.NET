@@ -8,8 +8,8 @@
     <description>This library works as an interface between the OpenTrack API from DealerTrack's DMS and a utilizing system.</description>
     <projectUrl>http://github.com/ASRPro/OpenTrack.NET</projectUrl>
 	<licenseUrl>https://github.com/ASRPro/OpenTrack.NET/blob/master/LICENSE.md</licenseUrl>
-    <authors>ASR Pro LLC, Matt Wagner, Brian French</authors>
-    <owners>ASR Pro LLC, Matt Wagner</owners>
+    <authors>Dealertrack Technologies, Brian French, Troy Gizzi, Matt Wagner</authors>
+    <owners>Dealertrack Technologies</owners>
   </metadata>
   <files>
     <file src="\OpenTrack.Lib\bin\**\OpenTrack.*" target="lib\net45" />
