@@ -104,4 +104,6 @@ UpgradeLog*.XML
 # #2596 remove NuGet packages from solution
 packages/*
 
+*.nupkg
+
 *.userprefs
