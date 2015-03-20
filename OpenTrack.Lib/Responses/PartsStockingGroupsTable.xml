@@ -1,0 +1,14 @@
+<PartsStockingGroupsTable>
+	<PartsStockingGroup>
+		<CompanyNumber>DT1</CompanyNumber>
+		<StockGroup>D12</StockGroup>
+		<Description>Shocks and Struts</Description>
+		<Manufacturer>FC</Manufacturer>
+	</PartsStockingGroup>
+	<PartsStockingGroup>
+		<CompanyNumber>DT1</CompanyNumber>
+		<StockGroup>D12</StockGroup>
+		<Description>Shocks and Struts</Description>
+		<Manufacturer>FC</Manufacturer>
+	</PartsStockingGroup>
+</PartsStockingGroupsTable>

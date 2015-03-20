@@ -188,6 +188,11 @@ namespace OpenTrack
             return SubmitRequest<PartsManufacturersTable>(query).Items;
         }
 
+        public IEnumerable<PartsStockingGroupsTablePartsStockingGroup> GetPartsStockingGroups(PartsStockingGroupsTableRequest query)
+        {
+            return SubmitRequest(query).Items;
+        }
+
         public AppointmentAddResponse AddAppointment(AppointmentAddRequest query)
         {
             return SubmitRequest<AppointmentAddResponse>(query);

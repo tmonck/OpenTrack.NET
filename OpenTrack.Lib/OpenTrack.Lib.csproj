@@ -55,6 +55,7 @@
     <Compile Include="Requests\GetClosedRepairOrderDetailsRequest.cs" />
     <Compile Include="Requests\GetClosedRepairOrdersRequest.cs" />
     <Compile Include="Requests\PartsPricingLookupRequest.cs" />
+    <Compile Include="Requests\PartsStockingGroupsTableRequest.cs" />
     <Compile Include="Requests\PartsTransactionRequest.cs" />
     <Compile Include="Requests\PartsManufacturersTableRequest.cs" />
     <Compile Include="Requests\UpdateRepairOrderLinesRequest.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Responses\OpenRepairOrderLookupResponse.cs" />
     <Compile Include="Responses\PartsInventoryResponse.cs" />
     <Compile Include="Responses\PartsManufacturersTable.cs" />
+    <Compile Include="Responses\PartsStockingGroupsTable.cs" />
     <Compile Include="Responses\PartsTransactionRequestResponse.cs" />
     <Compile Include="Responses\ServiceLaborOpcodesTable.cs" />
     <Compile Include="Responses\ServiceTechsTable.cs" />

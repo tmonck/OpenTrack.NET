@@ -129,6 +129,11 @@ namespace OpenTrack
         IEnumerable<PartsManufacturersTablePartsManufacturer> GetPartManufacturers(PartsManufacturersTableRequest query);
 
         /// <summary>
+        /// Retreives the list of parts stocking groups configured for a dealership.
+        /// </summary>
+        IEnumerable<PartsStockingGroupsTablePartsStockingGroup> GetPartsStockingGroups(PartsStockingGroupsTableRequest query);
+        
+        /// <summary>
         /// Retrieves a list of closed repair order headers for a given dealership and timeframe
         /// </summary>
         IEnumerable<ServiceAPI.ClosedRepairOrder> GetClosedRepairOrders(GetClosedRepairOrdersRequest request);
