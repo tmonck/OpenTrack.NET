@@ -117,6 +117,11 @@ namespace OpenTrack.Requests
         public String TagNumber { get; set; }
 
         /// <summary>
+        /// The printer ID to use.
+        /// </summary>
+        public string PrinterID { get; set; }
+
+        /// <summary>
         /// The individual line item details (can be multiple)
         /// </summary>
         public List<LineItem> LineItems { get; set; }
