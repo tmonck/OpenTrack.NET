@@ -73,7 +73,9 @@ namespace OpenTrack.Requests
                             new XElement("TransCode", i.TransCode),
                             new XElement("Comments", i.Comments),
                             new XElement("LineStatus", i.LineStatus),
-                            new XElement("ServiceType", i.ServiceType)
+                            new XElement("ServiceType", i.ServiceType),
+                            new XElement("OverrideLaborRate", i.OverrideLaborRate),
+                            new XElement("EstimateLaborHours", i.EstimateLaborHours)
                             )
                             )
                         )
@@ -186,6 +188,11 @@ namespace OpenTrack.Requests
         /// Only used for LineType Part(P). NOTE: Use the PartsCounterPersonTableRequest to determine the list of active counter persons.
         /// </summary>
         public String CounterPersonID { get; set; }
+
+        /// <summary>
+        ///  Labor Hours Estimate
+        /// </summary>
+        public String EstimateLaborHours { get; set; }
     }
 
     public class Part
