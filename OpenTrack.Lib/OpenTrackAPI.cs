@@ -69,6 +69,16 @@ namespace OpenTrack
         public Action<Message> OnReceive { get; set; }
 
         /// <summary>
+        /// A hook to get the raw SOAP message being sent using the new custom SOAP client.
+        /// </summary>
+        public Action<string> OnManualSoapSend { get; set; }
+
+        /// <summary>
+        /// A hook to get the raw SOAP message being received using the new custom SOAP client.
+        /// </summary>
+        public Action<string> OnManualSoapReceive { get; set; }
+
+        /// <summary>
         /// Whether or not to buffer to stream responses from the web services. Defaults to buffered.
         /// </summary>
         public TransferMode TransferMode { get; set; }
@@ -282,7 +292,7 @@ namespace OpenTrack
                 }
             };
 
-            var manualSoapClient = new ManualSoapClient();
+            var manualSoapClient = new ManualSoapClient(OnManualSoapSend, OnManualSoapReceive);
             var response = manualSoapClient
                 .ExecuteRequest<StarResponseBody<PartAddResponseContent>, StarRequestBody<PartAddContent>>
                 (string.Format("{0}/{1}", this.BaseUrl, "WebService.asmx"),

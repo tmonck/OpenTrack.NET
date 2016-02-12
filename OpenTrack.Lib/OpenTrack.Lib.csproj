@@ -58,6 +58,7 @@
     <Compile Include="ManualSoap\Common\Timestamp.cs" />
     <Compile Include="ManualSoap\Common\UserNameToken.cs" />
     <Compile Include="ManualSoap\IManualSoapClient.cs" />
+    <Compile Include="ManualSoap\ManualSoapClient.cs" />
     <Compile Include="ManualSoap\Requests\Dealer.cs" />
     <Compile Include="ManualSoap\Requests\Header.cs" />
     <Compile Include="ManualSoap\Requests\PartAdd.cs" />

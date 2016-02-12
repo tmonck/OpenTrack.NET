@@ -22,7 +22,7 @@ namespace OpenTrack.Tests
                     Manufacturer = "GM",
                     PartNumber = "9M905061",
                     PartDescription = "SAMPLERPK (08800-BOPCKT)",
-                    StockingGroup = "200",
+                    StockingGroup = "GM",
                     Status = "A",
                     BinLocation = "4",
                     Cost = 600,

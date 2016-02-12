@@ -36,7 +36,9 @@ namespace OpenTrack.Tests
                         {
                             writer.Write(msg.ToString());
                         }
-                    }
+                    },
+                OnManualSoapSend = (msg) => Console.WriteLine(msg),
+                OnManualSoapReceive = (msg) => Console.WriteLine(msg)
             };
         }
     }
