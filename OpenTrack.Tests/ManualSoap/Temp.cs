@@ -76,5 +76,88 @@ namespace OpenTrack.Tests.ManualSoap
             Assert.NotNull(response);
             
         }
+
+        [Fact]
+        public void PartAdd()
+        {
+            var createTime = DateTime.UtcNow;
+            var contentId = Guid.NewGuid().ToString();
+            var env = new Envelope<StarRequestBody<PartAddContent>>
+            {
+                Header = new Header
+                {
+                    PayloadManifest = new PayloadManifest
+                    {
+                        Manifest = new Manifest
+                        {
+                            ContentId = contentId,
+                            NamespaceUri = "",
+                            Element = "PartAdd"
+                        }
+                    },
+                    Security = new SecurityHeader
+                    {
+                        Timestamp = new Timestamp
+                        {
+                            Created = createTime.ToString("o"),
+                            Expires = createTime.AddMinutes(5).ToString("o"),
+                            Id = Guid.NewGuid().ToString()
+                        },
+                        UserNameToken = new UserNameToken
+                        {
+                            Id = Guid.NewGuid().ToString(),
+                            UserName = Credentials.Username,
+                            Password =
+                                new Password
+                                {
+                                    Value = Credentials.Password,
+                                    Type =
+                                        "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"
+                                }
+                        }
+                    }
+                },
+                Body = new StarRequestBody<PartAddContent>
+                {
+                    ProcessMessage = new ProcessMessage<PartAddContent>
+                    {
+                        Payload = new Payload<PartAddContent>
+                        {
+                            Content = new PartAddContent
+                            {
+                                Id = contentId,
+                                PartAdd = new PartAdd
+                                {
+                                    Dealer = new Dealer
+                                    {
+                                        EnterpriseCode = Credentials.EnterpriseCode,
+                                        CompanyNumber = Credentials.DealerNumber
+                                    },
+                                    Part = new PartAddPart
+                                    {
+                                        Manufacturer = "GM",
+                                        PartNumber = "9M905061",
+                                        PartDescription = "SAMPLERPK (08800-BOPCKT)",
+                                        StockingGroup = "200",
+                                        Status = "A",
+                                        BinLocation = "4",
+                                        Cost = 600,
+                                        Cps = "OTV"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            var manualSoapClient = new ManualSoapClient();
+
+            var response = manualSoapClient.ExecuteRequest<StarResponseBody<PartAddResponseContent>, StarRequestBody<PartAddContent>>(
+                "https://otstaging.arkona.com/opentrack/WebService.asmx",
+                "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"", env);
+
+            Assert.NotNull(response);
+        }
     }
 }

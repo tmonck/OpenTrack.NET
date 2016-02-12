@@ -6,12 +6,12 @@ using OpenTrack.ManualSoap.Common;
 namespace OpenTrack.ManualSoap.Responses
 {
     [Serializable]
-    public class VehicleLookupResponse
+    public class PartAddResponse
     {
         [XmlElement(ElementName = "Error")]
         public List<Error> Errors { get; set; }
 
         [XmlElement]
-        public VehicleLookupResponseVehicle Vehicle { get; set; }
+        public Success Success { get; set; }
     }
 }

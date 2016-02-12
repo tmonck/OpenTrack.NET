@@ -1,7 +1,7 @@
 using System;
 using System.Xml.Serialization;
 
-namespace OpenTrack.ManualSoap.Requests
+namespace OpenTrack.ManualSoap.Common
 {
     [Serializable]
     public class Error
