@@ -1,4 +1,8 @@
-﻿using OpenTrack.Requests;
+﻿using OpenTrack.ManualSoap;
+using OpenTrack.ManualSoap.Common;
+using OpenTrack.ManualSoap.Requests;
+using OpenTrack.ManualSoap.Responses;
+using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
 using System;
@@ -9,6 +13,8 @@ using System.ServiceModel.Channels;
 using System.Xml;
 using System.Xml.Linq;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
+using VehicleLookupResponse = OpenTrack.Responses.VehicleLookupResponse;
+using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
 namespace OpenTrack
 {
@@ -32,6 +38,8 @@ namespace OpenTrack
     /// </summary>
     public class OpenTrackAPI : IOpenTrackAPI
     {
+        private const string STAR_STANDARD_PROCESS_MESSAGE_ACTION = "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"";
+
         /// <summary>
         /// The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com
         /// </summary>
@@ -61,6 +69,16 @@ namespace OpenTrack
         /// A hook to get the raw WCF message for the response before parsing
         /// </summary>
         public Action<Message> OnReceive { get; set; }
+
+        /// <summary>
+        /// A hook to get the raw SOAP message being sent using the new custom SOAP client.
+        /// </summary>
+        public Action<string> OnManualSoapSend { get; set; }
+
+        /// <summary>
+        /// A hook to get the raw SOAP message being received using the new custom SOAP client.
+        /// </summary>
+        public Action<string> OnManualSoapReceive { get; set; }
 
         /// <summary>
         /// Whether or not to buffer to stream responses from the web services. Defaults to buffered.
@@ -221,6 +239,40 @@ namespace OpenTrack
         public ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request)
         {
             return GetROService().UpdateRepairOrderLines(request.Dealer, request.Request);
+        }
+
+        public PartAddResponse AddPart(PartAdd partAdd)
+        {
+            var contentId = Guid.NewGuid().ToString();
+
+            var envelope = new Envelope<StarRequestBody<PartAddContent>>
+            {
+                Header = new Header(),
+                Body = new StarRequestBody<PartAddContent>
+                {
+                    ProcessMessage = new ProcessMessage<PartAddContent>
+                    {
+                        Payload = new Payload<PartAddContent>
+                        {
+                            Content = new PartAddContent
+                            {
+                                Id = contentId,
+                                PartAdd = partAdd
+                            }
+                        }
+                    }
+                }
+            };
+            AddSecurityHeaderToEnvelope(envelope);
+            AddPayloadManifestToHeader(envelope, contentId, "PartAdd");
+
+            var manualSoapClient = new ManualSoapClient(OnManualSoapSend, OnManualSoapReceive);
+            var response = manualSoapClient
+                .ExecuteRequest<StarResponseBody<PartAddResponseContent>, StarRequestBody<PartAddContent>>
+                (string.Format("{0}/{1}", this.BaseUrl, "WebService.asmx"),
+                    STAR_STANDARD_PROCESS_MESSAGE_ACTION, envelope);
+
+            return response.Body.ProcessMessageResponse.Payload.Content.PartAddResponse;
         }
 
         public PartsAPI.PartsPricingLookupResponse GetPartsPricing(PartsPricingLookupRequest request)
@@ -396,6 +448,44 @@ namespace OpenTrack
                 MaxReceivedMessageSize = int.MaxValue,
                 SendTimeout = this.Timeout,
                 TransferMode = this.TransferMode
+            };
+        }
+
+        private void AddSecurityHeaderToEnvelope<TBody>(Envelope<TBody> envelope)
+        {
+            var createTimeUtc = DateTime.UtcNow;
+            envelope.Header.Security = new SecurityHeader
+            {
+                Timestamp = new Timestamp
+                {
+                    Created = createTimeUtc.ToString("o"),
+                    Expires = createTimeUtc.AddMinutes(5).ToString("o"),
+                    Id = Guid.NewGuid().ToString()
+                },
+                UserNameToken = new UserNameToken
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    UserName = Username,
+                    Password = new Password
+                    {
+                        Value = Password,
+                        Type =
+                            "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"
+                    }
+                }
+            };
+        }
+
+        private void AddPayloadManifestToHeader<TBody>(Envelope<TBody> envelope, string contentId, string element)
+        {
+            envelope.Header.PayloadManifest = new PayloadManifest
+            {
+                Manifest = new Manifest
+                {
+                    ContentId = contentId,
+                    Element = element,
+                    NamespaceUri = ""
+                }
             };
         }
     }
