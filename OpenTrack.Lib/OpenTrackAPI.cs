@@ -38,6 +38,8 @@ namespace OpenTrack
     /// </summary>
     public class OpenTrackAPI : IOpenTrackAPI
     {
+        private const string STAR_STANDARD_PROCESS_MESSAGE_ACTION = "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"";
+
         /// <summary>
         /// The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com
         /// </summary>
@@ -241,42 +243,11 @@ namespace OpenTrack
 
         public PartAddResponse AddPart(PartAdd partAdd)
         {
-            var createTimeUtc = DateTime.UtcNow;
             var contentId = Guid.NewGuid().ToString();
 
             var envelope = new Envelope<StarRequestBody<PartAddContent>>
             {
-                Header = new Header
-                {
-                    Security = new SecurityHeader
-                    {
-                        Timestamp = new Timestamp
-                        {
-                            Created = createTimeUtc.ToString("o"),
-                            Expires = createTimeUtc.AddMinutes(5).ToString("o"),
-                            Id = Guid.NewGuid().ToString()
-                        },
-                        UserNameToken = new UserNameToken
-                        {
-                            Id = Guid.NewGuid().ToString(),
-                            UserName = Username,
-                            Password = new Password
-                            {
-                                Value = Password,
-                                Type = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"
-                            }
-                        }
-                    },
-                    PayloadManifest = new PayloadManifest
-                    {
-                        Manifest = new Manifest
-                        {
-                            ContentId = contentId,
-                            Element = "AddPart",
-                            NamespaceUri = ""
-                        }
-                    }
-                },
+                Header = new Header(),
                 Body = new StarRequestBody<PartAddContent>
                 {
                     ProcessMessage = new ProcessMessage<PartAddContent>
@@ -285,18 +256,21 @@ namespace OpenTrack
                         {
                             Content = new PartAddContent
                             {
+                                Id = contentId,
                                 PartAdd = partAdd
                             }
                         }
                     }
                 }
             };
+            AddSecurityHeaderToEnvelope(envelope);
+            AddPayloadManifestToHeader(envelope, contentId, "PartAdd");
 
             var manualSoapClient = new ManualSoapClient(OnManualSoapSend, OnManualSoapReceive);
             var response = manualSoapClient
                 .ExecuteRequest<StarResponseBody<PartAddResponseContent>, StarRequestBody<PartAddContent>>
                 (string.Format("{0}/{1}", this.BaseUrl, "WebService.asmx"),
-                    "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"", envelope);
+                    STAR_STANDARD_PROCESS_MESSAGE_ACTION, envelope);
 
             return response.Body.ProcessMessageResponse.Payload.Content.PartAddResponse;
         }
@@ -474,6 +448,44 @@ namespace OpenTrack
                 MaxReceivedMessageSize = int.MaxValue,
                 SendTimeout = this.Timeout,
                 TransferMode = this.TransferMode
+            };
+        }
+
+        private void AddSecurityHeaderToEnvelope<TBody>(Envelope<TBody> envelope)
+        {
+            var createTimeUtc = DateTime.UtcNow;
+            envelope.Header.Security = new SecurityHeader
+            {
+                Timestamp = new Timestamp
+                {
+                    Created = createTimeUtc.ToString("o"),
+                    Expires = createTimeUtc.AddMinutes(5).ToString("o"),
+                    Id = Guid.NewGuid().ToString()
+                },
+                UserNameToken = new UserNameToken
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    UserName = Username,
+                    Password = new Password
+                    {
+                        Value = Password,
+                        Type =
+                            "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"
+                    }
+                }
+            };
+        }
+
+        private void AddPayloadManifestToHeader<TBody>(Envelope<TBody> envelope, string contentId, string element)
+        {
+            envelope.Header.PayloadManifest = new PayloadManifest
+            {
+                Manifest = new Manifest
+                {
+                    ContentId = contentId,
+                    Element = element,
+                    NamespaceUri = ""
+                }
             };
         }
     }

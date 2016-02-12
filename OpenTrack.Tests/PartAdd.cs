@@ -20,8 +20,8 @@ namespace OpenTrack.Tests
                 Part = new PartAddPart
                 {
                     Manufacturer = "GM",
-                    PartNumber = "9M905061",
-                    PartDescription = "SAMPLERPK (08800-BOPCKT)",
+                    PartNumber = "10000569",
+                    PartDescription = "Test Description",
                     StockingGroup = "GM",
                     Status = "A",
                     BinLocation = "4",
