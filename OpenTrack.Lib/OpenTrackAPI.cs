@@ -1,4 +1,8 @@
-﻿using OpenTrack.Requests;
+﻿using OpenTrack.ManualSoap;
+using OpenTrack.ManualSoap.Common;
+using OpenTrack.ManualSoap.Requests;
+using OpenTrack.ManualSoap.Responses;
+using OpenTrack.Requests;
 using OpenTrack.Responses;
 using OpenTrack.Utilities;
 using System;
@@ -9,6 +13,8 @@ using System.ServiceModel.Channels;
 using System.Xml;
 using System.Xml.Linq;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
+using VehicleLookupResponse = OpenTrack.Responses.VehicleLookupResponse;
+using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
 namespace OpenTrack
 {
@@ -221,6 +227,68 @@ namespace OpenTrack
         public ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request)
         {
             return GetROService().UpdateRepairOrderLines(request.Dealer, request.Request);
+        }
+
+        public PartAddResponse AddPart(PartAdd partAdd)
+        {
+            var createTimeUtc = DateTime.UtcNow;
+            var contentId = Guid.NewGuid().ToString();
+
+            var envelope = new Envelope<StarRequestBody<PartAddContent>>
+            {
+                Header = new Header
+                {
+                    Security = new SecurityHeader
+                    {
+                        Timestamp = new Timestamp
+                        {
+                            Created = createTimeUtc.ToString("o"),
+                            Expires = createTimeUtc.AddMinutes(5).ToString("o"),
+                            Id = Guid.NewGuid().ToString()
+                        },
+                        UserNameToken = new UserNameToken
+                        {
+                            Id = Guid.NewGuid().ToString(),
+                            UserName = Username,
+                            Password = new Password
+                            {
+                                Value = Password,
+                                Type = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"
+                            }
+                        }
+                    },
+                    PayloadManifest = new PayloadManifest
+                    {
+                        Manifest = new Manifest
+                        {
+                            ContentId = contentId,
+                            Element = "AddPart",
+                            NamespaceUri = ""
+                        }
+                    }
+                },
+                Body = new StarRequestBody<PartAddContent>
+                {
+                    ProcessMessage = new ProcessMessage<PartAddContent>
+                    {
+                        Payload = new Payload<PartAddContent>
+                        {
+                            Content = new PartAddContent
+                            {
+                                PartAdd = partAdd
+                            }
+                        }
+                    }
+                }
+            };
+
+            var manualSoapClient = new ManualSoapClient();
+            var response = manualSoapClient
+                .ExecuteRequest<StarResponseBody<PartAddResponseContent>, StarRequestBody<PartAddContent>>
+                (string.Format("{0}/{1}", this.BaseUrl, "WebService.asmx"),
+                    "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"", envelope);
+
+            return response.Body.ProcessMessageResponse.Payload.Content.PartAddResponse;
         }
 
         public PartsAPI.PartsPricingLookupResponse GetPartsPricing(PartsPricingLookupRequest request)

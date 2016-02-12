@@ -1,7 +1,10 @@
-﻿using OpenTrack.Requests;
+﻿using OpenTrack.ManualSoap.Requests;
+using OpenTrack.ManualSoap.Responses;
+using OpenTrack.Requests;
 using OpenTrack.Responses;
 using System;
 using System.Collections.Generic;
+using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
 namespace OpenTrack
 {
@@ -147,5 +150,7 @@ namespace OpenTrack
         /// Updates a list of lines on a repair order.
         /// </summary>
         ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request);
+
+        PartAddResponse AddPart(PartAdd partAdd);
     }
 }
