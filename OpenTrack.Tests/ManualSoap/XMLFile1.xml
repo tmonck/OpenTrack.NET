@@ -1,0 +1,33 @@
+﻿
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <h:PayloadManifest xmlns:h="http://www.starstandards.org/webservices/2005/10/transport" xmlns="http://www.starstandards.org/webservices/2005/10/transport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <manifest contentID="00177806-d6c6-44bf-8bff-fd2f10611277" namespaceURI="" element="VehicleLookup"/>
+    </h:PayloadManifest>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2016-02-11T17:39:58.166Z</u:Created>
+        <u:Expires>2016-02-11T17:44:58.166Z</u:Expires>
+      </u:Timestamp>
+      <o:UsernameToken u:Id="uuid-2caad65e-7856-44cb-8f0e-fd4189df9341-1">
+        <o:Username>OTasrPro13</o:Username>
+        <o:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">r5T$sdP2</o:Password>
+      </o:UsernameToken>
+    </o:Security>
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ProcessMessage xmlns="http://www.starstandards.org/webservices/2005/10/transport">
+      <payload>
+        <content id="00177806-d6c6-44bf-8bff-fd2f10611277">
+          <VehicleLookup xmlns="">
+            <Dealer>
+              <EnterpriseCode>ZE</EnterpriseCode>
+              <CompanyNumber>ZE7</CompanyNumber>
+            </Dealer>
+            <VIN>2FMDK4KC8DBA52504</VIN>
+          </VehicleLookup>
+        </content>
+      </payload>
+    </ProcessMessage>
+  </s:Body>
+</s:Envelope>

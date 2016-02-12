@@ -54,6 +54,7 @@
     <Compile Include="CustomerAdd.cs" />
     <Compile Include="GetClosedRepairOrders.cs" />
     <Compile Include="GetPartsTransactions.cs" />
+    <Compile Include="ManualSoap\Temp.cs" />
     <Compile Include="PartsManufacturersTable.cs" />
     <Compile Include="FindClosedRepairOrders.cs" />
     <Compile Include="PartsStockingGroupTable.cs" />
@@ -88,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ManualSoap\XMLFile1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

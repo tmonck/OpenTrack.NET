@@ -46,6 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManualSoap\Common\Content.cs" />
+    <Compile Include="ManualSoap\Common\Envelope.cs" />
+    <Compile Include="ManualSoap\Common\Manifest.cs" />
+    <Compile Include="ManualSoap\Common\Password.cs" />
+    <Compile Include="ManualSoap\Common\Payload.cs" />
+    <Compile Include="ManualSoap\Common\PayloadManifest.cs" />
+    <Compile Include="ManualSoap\Common\SecurityHeader.cs" />
+    <Compile Include="ManualSoap\Common\Timestamp.cs" />
+    <Compile Include="ManualSoap\Common\UserNameToken.cs" />
+    <Compile Include="ManualSoap\IManualSoapClient.cs" />
+    <Compile Include="ManualSoap\Requests\Dealer.cs" />
+    <Compile Include="ManualSoap\Requests\Error.cs" />
+    <Compile Include="ManualSoap\Requests\Header.cs" />
+    <Compile Include="ManualSoap\Requests\ProcessMessage.cs" />
+    <Compile Include="ManualSoap\Requests\StarRequestBody.cs" />
+    <Compile Include="ManualSoap\Requests\VehicleLookup.cs" />
+    <Compile Include="ManualSoap\Requests\VehicleLookupContent.cs" />
+    <Compile Include="ManualSoap\Responses\ProcessMessageResponse.cs" />
+    <Compile Include="ManualSoap\Responses\StarResponseBody.cs" />
+    <Compile Include="ManualSoap\Responses\VehicleLookupResponse.cs" />
+    <Compile Include="ManualSoap\Responses\VehicleLookupResponseContent.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="IOpenTrackAPI.cs" />
     <Compile Include="OpenTrackException.cs" />
@@ -216,6 +237,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>
