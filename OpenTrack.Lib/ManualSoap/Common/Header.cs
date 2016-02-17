@@ -1,8 +1,7 @@
 using System;
 using System.Xml.Serialization;
-using OpenTrack.ManualSoap.Common;
 
-namespace OpenTrack.ManualSoap.Requests
+namespace OpenTrack.ManualSoap.Common
 {
     [Serializable]
     public class Header

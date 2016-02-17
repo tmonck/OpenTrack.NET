@@ -4,6 +4,7 @@ using OpenTrack.ManualSoap.Requests;
 using OpenTrack.ManualSoap.Responses;
 using OpenTrack.Requests;
 using OpenTrack.Responses;
+using OpenTrack.ServiceAPI;
 using OpenTrack.Utilities;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ using System.ServiceModel.Channels;
 using System.Xml;
 using System.Xml.Linq;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
+using UpdateRepairOrderLinesRequest = OpenTrack.Requests.UpdateRepairOrderLinesRequest;
 using VehicleLookupResponse = OpenTrack.Responses.VehicleLookupResponse;
 using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
@@ -39,6 +41,8 @@ namespace OpenTrack
     public class OpenTrackAPI : IOpenTrackAPI
     {
         private const string STAR_STANDARD_PROCESS_MESSAGE_ACTION = "\"http://www.starstandards.org/webservices/2005/10/transport/operations/ProcessMessage\"";
+
+        private const string SERVICE_PRICING_LOOKUP_ACTION = "opentrack.dealertrack.com/ServicePricingLookup";
 
         /// <summary>
         /// The Base Url of the web service end points, i.e. https://ot.dms.dealertrack.com
@@ -273,6 +277,25 @@ namespace OpenTrack
                     STAR_STANDARD_PROCESS_MESSAGE_ACTION, envelope);
 
             return response.Body.ProcessMessageResponse.Payload.Content.PartAddResponse;
+        }
+
+        public ServicePricingLookupResult ServicePricingLookup(ServicePricingLookupRequestBody request)
+        {
+            var url = string.Format("{0}/{1}", this.BaseUrl, "ServiceAPI.asmx");
+            var envelope = new Envelope<ServicePricingLookupRequestBody>
+            {
+                Header = new Header(),
+                Body = request
+            };
+
+            AddSecurityHeaderToEnvelope(envelope);
+
+            var manualSoapClient = new ManualSoapClient(OnManualSoapSend, OnManualSoapReceive);
+            var response =
+                manualSoapClient.ExecuteRequest<ServicePricingLookupResponseBody, ServicePricingLookupRequestBody>(url,
+                    SERVICE_PRICING_LOOKUP_ACTION, envelope);
+
+            return response.Body.ServicePricingLookupResponse.ServicePricingLookupResult;
         }
 
         public PartsAPI.PartsPricingLookupResponse GetPartsPricing(PartsPricingLookupRequest request)

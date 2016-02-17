@@ -4,6 +4,8 @@ using OpenTrack.Requests;
 using OpenTrack.Responses;
 using System;
 using System.Collections.Generic;
+using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
+using UpdateRepairOrderLinesRequest = OpenTrack.Requests.UpdateRepairOrderLinesRequest;
 using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
 namespace OpenTrack
@@ -151,6 +153,14 @@ namespace OpenTrack
         /// </summary>
         ServiceAPI.UpdateRepairOrderLinesResponse UpdateRepairOrderLines(UpdateRepairOrderLinesRequest request);
 
+        /// <summary>
+        /// Adds a part to parts inventory
+        /// </summary>
         PartAddResponse AddPart(PartAdd partAdd);
+
+        /// <summary>
+        /// Looks up service pricing for an op code.
+        /// </summary>
+        ServicePricingLookupResult ServicePricingLookup(ServicePricingLookupRequestBody request);
     }
 }

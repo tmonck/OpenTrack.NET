@@ -58,6 +58,7 @@
     <Compile Include="PartsManufacturersTable.cs" />
     <Compile Include="FindClosedRepairOrders.cs" />
     <Compile Include="PartsStockingGroupTable.cs" />
+    <Compile Include="ServicePricingLookup.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="UpdateRepairOrderLines.cs" />
     <Compile Include="VehicleAdd.cs" />
