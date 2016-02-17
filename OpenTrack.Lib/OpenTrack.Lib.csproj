@@ -65,12 +65,16 @@
     <Compile Include="ManualSoap\Requests\PartAddContent.cs" />
     <Compile Include="ManualSoap\Requests\PartAddPart.cs" />
     <Compile Include="ManualSoap\Requests\ProcessMessage.cs" />
+    <Compile Include="ManualSoap\Requests\ServicePricingLookupRequestBody.cs" />
+    <Compile Include="ManualSoap\Requests\ServicePricingLookupLabor.cs" />
+    <Compile Include="ManualSoap\Requests\ServicePricingLookupRequest.cs" />
     <Compile Include="ManualSoap\Requests\StarRequestBody.cs" />
     <Compile Include="ManualSoap\Requests\VehicleLookup.cs" />
     <Compile Include="ManualSoap\Requests\VehicleLookupContent.cs" />
     <Compile Include="ManualSoap\Responses\PartAddResponse.cs" />
     <Compile Include="ManualSoap\Responses\PartAddResponseContent.cs" />
     <Compile Include="ManualSoap\Responses\ProcessMessageResponse.cs" />
+    <Compile Include="ManualSoap\Responses\ServicePricingLookupResponseBody.cs" />
     <Compile Include="ManualSoap\Responses\StarResponseBody.cs" />
     <Compile Include="ManualSoap\Responses\VehicleLookupResponse.cs" />
     <Compile Include="ManualSoap\Responses\VehicleLookupResponseContent.cs" />
