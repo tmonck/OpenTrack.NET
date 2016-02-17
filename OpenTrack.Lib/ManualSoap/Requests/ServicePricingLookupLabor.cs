@@ -15,7 +15,7 @@ namespace OpenTrack.ManualSoap.Requests
         [XmlElement]
         public string PaymentMethod { get; set; }
 
-        [XmlElement]
+        [XmlElement(ElementName = "ServiceContractCompanyID")]
         public decimal ServiceContractCompanyId { get; set; }
 
         [XmlElement]

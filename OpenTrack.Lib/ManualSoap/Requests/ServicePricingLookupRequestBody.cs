@@ -7,10 +7,7 @@ namespace OpenTrack.ManualSoap.Requests
     [XmlRoot(Namespace = "opentrack.dealertrack.com")]
     public class ServicePricingLookupRequestBody
     {
-        [XmlElement(ElementName = "dealer")]
-        public Dealer Dealer { get; set; }
-
-        [XmlElement(ElementName = "request")]
-        public ServicePricingLookupRequest ServicePricingLookupRequest { get; set; }
+        [XmlElement]
+        public ServicePricingLookup ServicePricingLookup { get; set; }
     }
 }

@@ -6,10 +6,10 @@ namespace OpenTrack.ManualSoap.Responses
     [Serializable]
     public class ServicePricingLookupResultLabor
     {
-        [XmlElement(ElementName = "Success", Namespace = "ServicePricingResponse")]
+        [XmlElement]
         public ServicePricingLookupResultSuccess Success { get; set; }
 
-        [XmlElement(ElementName = "Error", Namespace = "ServicePricingResponse")]
+        [XmlElement]
         public ServicePricingLookupResultError Error { get; set; }
     }
 }

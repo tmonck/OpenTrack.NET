@@ -19,24 +19,8 @@ namespace OpenTrack.Tests
 
             return new OpenTrackAPI(Url, Username, Password)
             {
-                OnSend = (msg) =>
-                    {
-                        var filename = String.Format("Request.{0}.xml", request_id);
-
-                        using (var writer = new StreamWriter(filename))
-                        {
-                            writer.Write(msg.ToString());
-                        }
-                    },
-                OnReceive = (msg) =>
-                    {
-                        var filename = String.Format("Response.{0}.xml", request_id);
-
-                        using (var writer = new StreamWriter(filename))
-                        {
-                            writer.Write(msg.ToString());
-                        }
-                    },
+                OnSend = (msg) => Console.WriteLine(msg),
+                OnReceive = (msg) => Console.WriteLine(msg),
                 OnManualSoapSend = (msg) => Console.WriteLine(msg),
                 OnManualSoapReceive = (msg) => Console.WriteLine(msg)
             };

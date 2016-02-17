@@ -8,6 +8,6 @@ namespace OpenTrack.ManualSoap.Responses
     public class ServicePricingLookupResponseBody
     {
         [XmlElement]
-        public ServicePricingLookupResult ServicePricingLookupResult { get; set; }
+        public ServicePricingLookupResponse ServicePricingLookupResponse { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 namespace OpenTrack.ManualSoap.Requests
 {
     [Serializable]
-    public class ServicePricingLookupRequest
+    public class ServicePricingLookupRequestInfo
     {
         [XmlElement]
         public string CustomerKey { get; set; }

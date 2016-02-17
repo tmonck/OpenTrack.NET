@@ -5,7 +5,6 @@ using OpenTrack.Responses;
 using System;
 using System.Collections.Generic;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
-using ServicePricingLookupRequest = OpenTrack.ManualSoap.Requests.ServicePricingLookupRequest;
 using UpdateRepairOrderLinesRequest = OpenTrack.Requests.UpdateRepairOrderLinesRequest;
 using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
 
@@ -162,6 +161,6 @@ namespace OpenTrack
         /// <summary>
         /// Looks up service pricing for an op code.
         /// </summary>
-        ServicePricingLookupResult ServicePricingLookup(ServicePricingLookupRequest request);
+        ServicePricingLookupResult ServicePricingLookup(ServicePricingLookupRequestBody request);
     }
 }
