@@ -13,6 +13,6 @@ namespace OpenTrack.ManualSoap.Responses
         public decimal LaborAmount { get; set; }
 
         [XmlElement]
-        public int LaborHours { get; set; }
+        public decimal LaborHours { get; set; }
     }
 }
