@@ -71,6 +71,8 @@ namespace OpenTrack.Requests
                             new XElement("ServiceLineNumber", i.ServiceLineNumber),
                             new XElement("LineType", i.LineType),
                             new XElement("TransCode", i.TransCode),
+                            new XElement("ServiceDepartmentKey", i.ServiceDepartmentKey),
+                            new XElement("ServiceContractSequenceNumber", i.ServiceContractSequenceNumber),
                             new XElement("Comments", i.Comments),
                             new XElement("LineStatus", i.LineStatus),
                             new XElement("ServiceType", i.ServiceType),
@@ -156,6 +158,19 @@ namespace OpenTrack.Requests
         /// The transaction code. Valid options include: CP=Customer Pay, IS=RO Internal Sale, WS=Warranty Service
         /// </summary>
         public String TransCode { get; set; }
+
+        /// <summary>
+        /// Part 1 of the 2-part Service Contract key. Required if <see cref="TransCode"/> is set to "SC".
+        /// </summary>
+        public String ServiceDepartmentKey { get; set; }
+
+        /// <summary>
+        /// Part 2 of the 2-part Service Contract key. Required if <see cref="TransCode"/> is set to "SC".
+        /// </summary>
+        /// <remarks>
+        /// OpenTrack's documentation might say "Sequnce", but their actual implementation uses "Sequence".
+        /// </remarks>
+        public String ServiceContractSequenceNumber { get; set; }
 
         /// <summary>
         /// The line item description/comments. To add multiple comments (up to five) use duplicate LineItems with
