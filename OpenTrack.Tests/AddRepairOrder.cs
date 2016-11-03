@@ -1,4 +1,5 @@
-﻿using OpenTrack.Requests;
+﻿using System.Collections.Generic;
+using OpenTrack.Requests;
 using System;
 using System.Linq;
 using Xunit;
@@ -57,6 +58,39 @@ namespace OpenTrack.Tests
             .First();
 
             // Assert.True(RO_Check.Details.Any(line => line.LaborOpCode == OpCode));
+        }
+
+        [Fact(Skip = "Integration Test, Be Careful")]
+        public void Add_Repair_Order_With_Service_Contracts()
+        {
+            var api = Credentials.GetAPI();
+
+            var ro = new RepairOrder
+            {
+                CustomerNumber = "4232734",
+                VIN = "JTHFF2C20B2515555",
+                ServiceWriterID = "999",
+                OdometerIn = "40602",
+                LineItems = new List<LineItem> {
+                    new LineItem {
+                        LaborOpCode = "*",
+                        ServiceLineNumber = "1",
+                        LineType = "A",
+                        TransCode = "SC",
+                        Comments = "Test",
+                        ServiceType = "MR",
+                        ServiceDepartmentKey = "6",
+                        ServiceContractSequenceNumber = "1"
+                    }
+                },
+                TagNumber = string.Empty
+            };
+
+            var addRoResponse =
+                api.AddRepairOrder(new AddRepairOrderRequest("CRMT", "BH1")
+                {
+                    RO = ro
+                });
         }
     }
 }
