@@ -87,6 +87,7 @@
     <Compile Include="ManualSoap\Responses\VehicleLookupResponseVehicle.cs" />
     <Compile Include="Mapper.cs" />
     <Compile Include="IOpenTrackAPI.cs" />
+    <Compile Include="OpenTrackErrorItem.cs" />
     <Compile Include="OpenTrackException.cs" />
     <Compile Include="Requests\AddRepairOrderRequest.cs" />
     <Compile Include="Requests\AppointmentLookupRequest.cs" />

@@ -413,7 +413,32 @@ namespace OpenTrack
             var errorCode = errorCodeElement == null ? "Unknown" : errorCodeElement.Value;
             var message = messageElement == null ? errorElement.Value : messageElement.Value;
 
-            throw new OpenTrackException(errorCode, message, xml);
+            var openTrackException = new OpenTrackException(errorCode, message, xml);
+
+            // In addition to the single ErrorCode and ErrorMessage properties above, we also populate the ErrorItems
+            // collection with all the errors from the response, for clients that want to handle multiple errors at once.
+            try
+            {
+                var errors = linqElement.Descendants().Where(x => x.Name == "Error");
+                if (errors.Any())
+                {
+                    openTrackException.ErrorItems = new List<OpenTrackErrorItem>();
+                    foreach (var error in errors)
+                    {
+                        var errorItem = new OpenTrackErrorItem(
+                            error.Descendants().First(x => x.Name == "Code").Value,
+                            error.Descendants().First(x => x.Name == "Message").Value);
+                        openTrackException.ErrorItems.Add(errorItem);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the error details to the console, and proceed to the basic throw below.
+                Console.WriteLine("Error parsing multiple errors: " + ex);
+            }
+
+            throw openTrackException;
         }
 
         internal virtual ServiceAPI.ServiceAPISoapClient GetROService()
