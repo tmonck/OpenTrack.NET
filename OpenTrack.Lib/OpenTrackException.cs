@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Xml;
 using System.Xml.Linq;
@@ -36,12 +37,25 @@ namespace OpenTrack
         /// <summary>
         /// The DealerTrack error code from the response.
         /// </summary>
+        /// <remarks>
+        /// This will only contain the code for the first error encounted.
+        /// For a list of all errors, use the <see cref="ErrorItems"/> property.
+        /// </remarks>
         public String ErrorCode { get; private set; }
 
         /// <summary>
         /// The DealerTrack error message from the response.
         /// </summary>
+        /// <remarks>
+        /// This will only contain the message for the first error encounted.
+        /// For a list of all errors, use the <see cref="ErrorItems"/> property.
+        /// </remarks>
         public String ErrorMessage { get; private set; }
+
+        /// <summary>
+        /// Contains all errors returned in the OpenTrack response.
+        /// </summary>
+        public List<OpenTrackErrorItem> ErrorItems { get; set; }
 
         /// <summary>
         /// The response soap message containing the error message.

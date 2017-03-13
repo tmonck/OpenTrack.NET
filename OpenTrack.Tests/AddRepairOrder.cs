@@ -92,5 +92,57 @@ namespace OpenTrack.Tests
                     RO = ro
                 });
         }
+
+        [Fact(Skip = "Integration test for INS-7344.")]
+        public void Cause_response_with_multiple_errors()
+        {
+            var threwException = false;
+            var api = Credentials.GetAPI();
+
+            var ro = new RepairOrder
+            {
+                CustomerNumber = "4232734",
+                VIN = "JTHFF2C20B251555x", // RO2: VIN not found in DMS; RO22: Customer must own vehicle.
+                ServiceWriterID = "nope", // RO5: Invalid or missing ServiceWriterID.
+                OdometerIn = "-1", // invalid, but not checked due to above vehicle errors
+                LineItems = new List<LineItem> {
+                    new LineItem {
+                        LaborOpCode = "nope", // RO10: LineItem 1 has an invalid LaborOpCode.
+                        ServiceLineNumber = "1",
+                        LineType = "A",
+                        TransCode = "CP",
+                        ServiceType = "MR"
+                    },
+                    new LineItem {
+                        LaborOpCode = "*",
+                        ServiceLineNumber = "-1", // RO21: LineItem 2's ServiceLineNumber is invalid or missing.
+                        LineType = "A",
+                        TransCode = "CP",
+                        ServiceType = "MR"
+                    },
+                },
+            };
+
+            try
+            {
+                var addRoResponse =
+                    api.AddRepairOrder(new AddRepairOrderRequest("CRMT", "BH1")
+                    {
+                        RO = ro
+                    });
+            }
+            catch (Exception ex)
+            {
+                threwException = true;
+                var otex = ex as OpenTrackException;
+                Assert.True(otex != null, "The exception should have been an OpenTrackException.");
+                Assert.True(otex.ErrorItems != null, "The ErrorItems list should not be null.");
+                Assert.True(otex.ErrorItems.Count > 1, "The ErrorItems list should contain multiple items.");
+                Assert.True(otex.ErrorItems.Count(e => string.IsNullOrWhiteSpace(e.ErrorCode)) == 0, "The ErrorItems should all have an ErrorCode.");
+                Assert.True(otex.ErrorItems.Count(e => string.IsNullOrWhiteSpace(e.ErrorMessage)) == 0, "The ErrorItems should all have an ErrorMessage.");
+            }
+
+            Assert.True(threwException, "This RO was supposed to cause an exception.");
+        }
     }
 }
