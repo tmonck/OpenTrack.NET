@@ -30,7 +30,7 @@ namespace OpenTrack.Tests
                     }
                 }
                 );
-            Assert.False(result.Failure.Any());
+            Assert.False(result.Failure != null);
         }
 
         [Fact(Skip = "This should not be automated since it will actually update a Repair Order.")]
@@ -62,7 +62,7 @@ namespace OpenTrack.Tests
                     }
                 }
                 );
-            Assert.False(result.Failure.Any());
+            Assert.False(result.Failure != null);
         }
     }
 }
