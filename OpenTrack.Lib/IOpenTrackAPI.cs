@@ -4,6 +4,7 @@ using OpenTrack.Requests;
 using OpenTrack.Responses;
 using System;
 using System.Collections.Generic;
+using OpenTrack.ServiceAPI;
 using GetClosedRepairOrdersRequest = OpenTrack.Requests.GetClosedRepairOrdersRequest;
 using UpdateRepairOrderLinesRequest = OpenTrack.Requests.UpdateRepairOrderLinesRequest;
 using VehicleLookupResponseVehicle = OpenTrack.Responses.VehicleLookupResponseVehicle;
@@ -63,6 +64,7 @@ namespace OpenTrack
         /// </summary>
         AddRepairOrderLinesResponse AddRepairOrderLines(AddRepairOrderLinesRequest query);
 
+        DeleteRepairOrderLinesResponse DeleteRepairOrderLines(Requests.DeleteRepairOrderLinesRequest query);
         /// <summary>
         /// Find a list of customers matching the given criteria.
         /// </summary>
