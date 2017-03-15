@@ -13,13 +13,14 @@ namespace OpenTrack.Tests
     public class DeleteRepairOrderLinesTest
     {
 
-        [Fact]//(Skip = "This should not be automated since it will actually update a Repair Order.")]
+        [Fact(Skip = "This should not be automated since it will actually update a Repair Order.")]
         public void Test_Delete_RepairOrder_Line()
         {
             var api = Credentials.GetAPI();
-            api.DeleteRepairOrderLines(
+            var result = api.DeleteRepairOrderLines(
                 new DeleteRepairOrderLinesRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
                 {
+                    RepairOrderNumber = "6041150",
                     LineItems = new List<UpdateLineItem>()
                     {
                         new UpdateLineItem()
@@ -29,6 +30,39 @@ namespace OpenTrack.Tests
                     }
                 }
                 );
+            Assert.False(result.Failure.Any());
+        }
+
+        [Fact(Skip = "This should not be automated since it will actually update a Repair Order.")]
+        public void Test_Delete_RepairOrder_Line_PartLines_By_PartNumber()
+        {
+            var api = Credentials.GetAPI();
+            var result = api.DeleteRepairOrderLines(
+                new DeleteRepairOrderLinesRequest(Credentials.EnterpriseCode, Credentials.DealerNumber)
+                {
+                    RepairOrderNumber = "6041150",
+                    LineItems = new List<UpdateLineItem>()
+                    {
+                        new UpdateLineItem()
+                        {
+                            ServiceLineNumber = 2,
+                            Part = new PartBase()
+                            {
+                                PartNumber = "ABCDPART2"
+                            }
+                        },
+                        new UpdateLineItem()
+                        {
+                            ServiceLineNumber = 2,
+                            Part = new PartBase()
+                            {
+                                PartNumber = "60100S30A90ZZ"
+                            }
+                        },
+                    }
+                }
+                );
+            Assert.False(result.Failure.Any());
         }
     }
 }
