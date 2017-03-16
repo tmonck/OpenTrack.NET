@@ -21,7 +21,7 @@ namespace OpenTrack.Requests
         
         public string RepairOrderNumber { get; set; }
 
-        public List<UpdateLineItem> LineItems { get; set; }
+        public IList<UpdateLineItem> LineItems { get; set; }
 
         internal virtual ServiceAPI.DeleteRepairOrderLinesRequest Request
         {
