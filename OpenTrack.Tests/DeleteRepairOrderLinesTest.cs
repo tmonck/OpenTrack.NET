@@ -10,6 +10,9 @@ using DeleteRepairOrderLinesRequest = OpenTrack.Requests.DeleteRepairOrderLinesR
 
 namespace OpenTrack.Tests
 {
+    /// <summary>
+    /// In order to run these tests you should have a Repair Order and a ServiceLineNumber that exists in the DMS already.
+    /// </summary>
     public class DeleteRepairOrderLinesTest
     {
 
